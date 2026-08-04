@@ -1,3 +1,8 @@
 <Solution>
+  <Project Path="Convergex.Application/Convergex.Application.csproj" />
+  <Project Path="Convergex.Domain/Convergex.Domain.csproj" />
+  <Project Path="Convergex.Infrastructure/Convergex.Infrastructure.csproj" />
+  <Project Path="Convergex.Persistence/Convergex.Persistence.csproj" />
+  <Project Path="Convergex.Tests/Convergex.Tests.csproj" />
   <Project Path="Convergex.Web/Convergex.Web.csproj" />
 </Solution>
