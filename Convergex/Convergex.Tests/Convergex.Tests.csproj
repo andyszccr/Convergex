@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Convergex.Application\Convergex.Application.csproj" />
+    <ProjectReference Include="..\Convergex.Domain\Convergex.Domain.csproj" />
+    <ProjectReference Include="..\Convergex.Infrastructure\Convergex.Infrastructure.csproj" />
+    <ProjectReference Include="..\Convergex.Persistence\Convergex.Persistence.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

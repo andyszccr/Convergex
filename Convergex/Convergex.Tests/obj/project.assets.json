@@ -1,14 +1,92 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Convergex.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Convergex.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Convergex.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Convergex.Application.dll": {}
+        }
+      },
+      "Convergex.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Convergex.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Convergex.Domain.dll": {}
+        }
+      },
+      "Convergex.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Convergex.Application": "1.0.0",
+          "Convergex.Persistence": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Convergex.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Convergex.Infrastructure.dll": {}
+        }
+      },
+      "Convergex.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Convergex.Application": "1.0.0",
+          "Convergex.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Convergex.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Convergex.Persistence.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Convergex.Application/1.0.0": {
+      "type": "project",
+      "path": "../Convergex.Application/Convergex.Application.csproj",
+      "msbuildProject": "../Convergex.Application/Convergex.Application.csproj"
+    },
+    "Convergex.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Convergex.Domain/Convergex.Domain.csproj",
+      "msbuildProject": "../Convergex.Domain/Convergex.Domain.csproj"
+    },
+    "Convergex.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Convergex.Infrastructure/Convergex.Infrastructure.csproj",
+      "msbuildProject": "../Convergex.Infrastructure/Convergex.Infrastructure.csproj"
+    },
+    "Convergex.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../Convergex.Persistence/Convergex.Persistence.csproj",
+      "msbuildProject": "../Convergex.Persistence/Convergex.Persistence.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Convergex.Application >= 1.0.0",
+      "Convergex.Domain >= 1.0.0",
+      "Convergex.Infrastructure >= 1.0.0",
+      "Convergex.Persistence >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {},
+    "C:\\Users\\andre\\AppData\\Local\\Temp\\cursor-sandbox-cache\\e21ef10e05599923fde35ace383fd0f0\\nuget": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -17,7 +95,7 @@
       "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
       "projectName": "Convergex.Tests",
       "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\andre\\AppData\\Local\\Temp\\cursor-sandbox-cache\\e21ef10e05599923fde35ace383fd0f0\\nuget",
       "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -40,7 +118,20 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
+            },
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
+            },
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
+            },
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

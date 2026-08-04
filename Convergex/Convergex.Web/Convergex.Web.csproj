@@ -1,5 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Convergex.Application\Convergex.Application.csproj" />
+    <ProjectReference Include="..\Convergex.Infrastructure\Convergex.Infrastructure.csproj" />
+    <ProjectReference Include="..\Convergex.Persistence\Convergex.Persistence.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
