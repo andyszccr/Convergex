@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Convergex.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f9dd54c12e1eeaed95bc6edf4b1bdf8b9974b8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba3995c26493a2320d0aa18a43260c58e2844c69")]
 [assembly: System.Reflection.AssemblyProductAttribute("Convergex.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Convergex.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

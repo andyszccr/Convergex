@@ -3,3 +3,10 @@
 ################################################################################
 
 /Convergex/.vs/Convergex.slnx/FileContentIndex
+
+# SQLite local
+**/convergex.db
+**/convergex.db-*
+*.db
+*.db-shm
+*.db-wal

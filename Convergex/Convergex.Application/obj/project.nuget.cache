@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mf4n/dyh9Sk=",
+  "dgSpecHash": "74a+N1Bg4mc=",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.10\\microsoft.extensions.dependencyinjection.abstractions.10.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

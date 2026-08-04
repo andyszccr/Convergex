@@ -37,12 +37,12 @@ Mostrar información general del sistema mediante indicadores y gráficos.
 
 ### Issues
 
-- [ ] Crear Dashboard
-- [ ] Cards informativas
-- [ ] Gráfico de conversiones
-- [ ] Tabla de últimas conversiones
-- [ ] Mostrar tasa de cambio
-- [ ] Responsive
+- [x] Crear Dashboard
+- [x] Cards informativas
+- [x] Gráfico de conversiones
+- [x] Tabla de últimas conversiones
+- [x] Mostrar tasa de cambio
+- [x] Responsive
 
 ---
 

@@ -1,47 +1,120 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? string.Empty;
+    var isDashboard = string.Equals(controller, "Dashboard", StringComparison.OrdinalIgnoreCase);
+}
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Convergex.Web</title>
-    <script type="importmap"></script>
+    <title>@ViewData["Title"] - Convergex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Convergex.Web.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Convergex.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <div class="app-frame" id="appFrame">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <a asp-controller="Dashboard" asp-action="Index" class="sidebar-logo-link">
+                    <img src="~/img/logo.png" alt="Convergex" class="sidebar-logo" asp-append-version="true" />
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="sidebar-link @(isDashboard ? "active" : "")" asp-controller="Dashboard" asp-action="Index">
+                    <i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-arrow-left-right"></i><span>Conversión</span><i class="bi bi-chevron-down ms-auto chevron"></i>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-currency-exchange"></i><span>Monedas</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-rulers"></i><span>Unidades</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-clock-history"></i><span>Historial</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-graph-up"></i><span>Tasas de cambio</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-shield-check"></i><span>Auditoría</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-people"></i><span>Usuarios</span>
+                </a>
+                <a class="sidebar-link" asp-controller="Home" asp-action="Privacy">
+                    <i class="bi bi-gear"></i><span>Configuración</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="avatar">AN</div>
+                <div>
+                    <strong>Alexander Navarro</strong>
+                    <span>Administrador</span>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </aside>
+
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <div class="app-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button type="button" class="icon-btn" id="sidebarToggle" aria-label="Abrir menú">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="breadcrumb-title">
+                        <span>@ViewData["Title"]</span>
+                    </div>
+                </div>
+
+                <form class="topbar-search" role="search" onsubmit="return false;">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="Buscar..." aria-label="Buscar" />
+                </form>
+
+                <div class="topbar-right">
+                    <button type="button" class="icon-btn notification-btn" aria-label="Notificaciones">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge-dot">3</span>
+                    </button>
+                    <button type="button" class="icon-btn" aria-label="Ayuda">
+                        <i class="bi bi-question-circle"></i>
+                    </button>
+                    <div class="topbar-user">
+                        <div class="avatar avatar-sm">AN</div>
+                        <div class="topbar-user-meta d-none d-md-block">
+                            <strong>Alexander Navarro</strong>
+                            <span>Administrador</span>
+                        </div>
+                        <i class="bi bi-chevron-down d-none d-md-inline"></i>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page-main">
+                @RenderBody()
+            </main>
+
+            <footer class="app-footer">
+                <span>© @DateTime.Now.Year Convergex. Todos los derechos reservados.</span>
+                <span>Versión 1.0.0</span>
+            </footer>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Convergex.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

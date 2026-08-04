@@ -1,0 +1,240 @@
+@model Convergex.Web.ViewModels.Dashboard.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+    var firstName = Model.UserDisplayName.Split(' ').FirstOrDefault() ?? "Usuario";
+    var currencyShare = Model.TypeShares.FirstOrDefault(x => x.Type == "Moneda");
+    var unitShare = Model.TypeShares.FirstOrDefault(x => x.Type == "Unidad");
+}
+
+<section class="dashboard-page">
+    <div class="welcome-row">
+        <div>
+            <h1 class="welcome-title">Bienvenido, @firstName</h1>
+            <p class="welcome-subtitle">Aquí tienes un resumen general de Convergex.</p>
+        </div>
+        <button type="button" class="date-chip">
+            <i class="bi bi-calendar3"></i>
+            <span>@Model.CurrentDateLabel</span>
+        </button>
+    </div>
+
+    <div class="kpi-grid">
+        <article class="stat-card">
+            <div class="stat-icon bg-blue"><i class="bi bi-lightning-charge-fill"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Conversiones hoy</span>
+                <strong class="stat-value">@Model.ConversionsToday.ToString("N0")</strong>
+                <span class="stat-trend @(Model.TodayGrowthPercent >= 0 ? "up" : "down")">
+                    @(Model.TodayGrowthPercent >= 0 ? "↑" : "↓")
+                    @Math.Abs(Model.TodayGrowthPercent).ToString("0.#")% vs ayer
+                </span>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon bg-green"><i class="bi bi-arrow-left-right"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Total conversiones</span>
+                <strong class="stat-value">@Model.TotalConversions.ToString("N0")</strong>
+                <span class="stat-hint">Todas las conversiones</span>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon bg-violet"><i class="bi bi-cash-stack"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Monedas activas</span>
+                <strong class="stat-value">@Model.ActiveCurrencies.ToString("N0")</strong>
+                <span class="stat-hint">Monedas disponibles</span>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon bg-orange"><i class="bi bi-rulers"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Unidades activas</span>
+                <strong class="stat-value">@Model.ActiveUnits.ToString("N0")</strong>
+                <span class="stat-hint">Unidades disponibles</span>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon bg-teal"><i class="bi bi-currency-exchange"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Tasa de cambio (@(Model.LatestExchangeRate?.Pair ?? "USD/CRC"))</span>
+                <strong class="stat-value">@(Model.LatestExchangeRate?.Rate.ToString("N4") ?? "—")</strong>
+                @if (Model.LatestExchangeRate is not null)
+                {
+                    <span class="stat-trend @(Model.LatestExchangeRate.VariationPercent >= 0 ? "up" : "down")">
+                        @(Model.LatestExchangeRate.VariationPercent >= 0 ? "↑" : "↓")
+                        @Math.Abs(Model.LatestExchangeRate.VariationPercent).ToString("0.##")%
+                    </span>
+                }
+            </div>
+        </article>
+    </div>
+
+    <div class="dashboard-mid">
+        <article class="panel chart-panel">
+            <div class="panel-head">
+                <h2>Conversiones últimos 7 días</h2>
+                <span class="chip">Últimos 7 días</span>
+            </div>
+            <div class="chart-box">
+                <canvas id="conversionsChart"
+                        data-labels='@Html.Raw(Model.ChartLabelsJson)'
+                        data-values='@Html.Raw(Model.ChartValuesJson)'></canvas>
+            </div>
+        </article>
+
+        <article class="panel donut-panel">
+            <div class="panel-head">
+                <h2>Tipos de conversión</h2>
+            </div>
+            <div class="donut-wrap">
+                <canvas id="typesChart"
+                        data-labels='@Html.Raw(Model.TypeLabelsJson)'
+                        data-values='@Html.Raw(Model.TypeValuesJson)'></canvas>
+                <div class="donut-center">
+                    <strong>@Model.TotalConversions.ToString("N0")</strong>
+                    <span>Total</span>
+                </div>
+            </div>
+            <div class="legend-list">
+                <div class="legend-item">
+                    <span class="dot blue"></span>
+                    <span>Moneda</span>
+                    <strong>@(currencyShare?.Percentage.ToString("0.#") ?? "0")%</strong>
+                </div>
+                <div class="legend-item">
+                    <span class="dot green"></span>
+                    <span>Unidad</span>
+                    <strong>@(unitShare?.Percentage.ToString("0.#") ?? "0")%</strong>
+                </div>
+            </div>
+        </article>
+
+        <article class="panel activity-panel">
+            <div class="panel-head">
+                <h2>Actividad reciente</h2>
+            </div>
+            <ul class="activity-list">
+                @foreach (var item in Model.RecentConversions.Take(5))
+                {
+                    var isCurrency = item.Type == "Currency";
+                    <li>
+                        <div class="activity-icon @(isCurrency ? "blue" : "green")">
+                            <i class="bi @(isCurrency ? "bi-currency-dollar" : "bi-bounding-box")"></i>
+                        </div>
+                        <div class="activity-body">
+                            <strong>Conversión @item.FromCode → @item.ToCode</strong>
+                            <span>@item.Amount.ToString("N2") → @item.Result.ToString("N2")</span>
+                        </div>
+                        <time>@item.CreatedAt.ToLocalTime().ToString("HH:mm")</time>
+                    </li>
+                }
+            </ul>
+            <a class="panel-link" asp-controller="Home" asp-action="Index">Ver todas las actividades →</a>
+        </article>
+    </div>
+
+    <div class="dashboard-bottom">
+        <article class="panel table-panel">
+            <div class="panel-head">
+                <h2>Últimas conversiones</h2>
+                <a class="panel-link" asp-controller="Home" asp-action="Index">Ver todas</a>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Tipo</th>
+                            <th>De</th>
+                            <th>A</th>
+                            <th>Valor origen</th>
+                            <th>Valor convertido</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @if (!Model.RecentConversions.Any())
+                    {
+                        <tr>
+                            <td colspan="7" class="empty-cell">Sin conversiones registradas.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.RecentConversions)
+                        {
+                            <tr>
+                                <td>@item.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>
+                                    <span class="pill @(item.Type == "Currency" ? "pill-blue" : "pill-green")">
+                                        @(item.Type == "Currency" ? "Moneda" : "Unidad")
+                                    </span>
+                                </td>
+                                <td>@item.FromCode</td>
+                                <td>@item.ToCode</td>
+                                <td>@item.Amount.ToString("N2")</td>
+                                <td>@item.Result.ToString("N4")</td>
+                                <td>@(item.UserName ?? "—")</td>
+                            </tr>
+                        }
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <article class="panel rates-panel">
+            <div class="panel-head">
+                <h2>Tasas de cambio principales</h2>
+                <a class="panel-link" asp-controller="Home" asp-action="Index">Ver todas</a>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Moneda</th>
+                            <th>Paridad</th>
+                            <th>Valor</th>
+                            <th>Variación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @if (!Model.TopRates.Any())
+                    {
+                        <tr>
+                            <td colspan="4" class="empty-cell">Sin tasas registradas.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var rate in Model.TopRates)
+                        {
+                            <tr>
+                                <td>@rate.BaseCode</td>
+                                <td>@rate.Pair</td>
+                                <td>@rate.Rate.ToString("N4")</td>
+                                <td>
+                                    <span class="variation @(rate.VariationPercent >= 0 ? "up" : "down")">
+                                        @(rate.VariationPercent >= 0 ? "↑" : "↓")
+                                        @Math.Abs(rate.VariationPercent).ToString("0.##")%
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="~/js/dashboard.js" asp-append-version="true"></script>
+}
