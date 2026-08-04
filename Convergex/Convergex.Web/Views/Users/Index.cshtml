@@ -1,0 +1,67 @@
+@model IReadOnlyList<Convergex.Application.DTOs.Users.UserDto>
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Usuarios</h1>
+            <p>Administra las cuentas y roles del sistema.</p>
+        </div>
+        <div class="module-actions">
+            <a asp-action="Roles" class="btn btn-outline-secondary">Ver roles</a>
+            <a asp-action="Create" class="btn btn-primary-cx"><i class="bi bi-plus-lg"></i> Nuevo usuario</a>
+        </div>
+    </div>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="alert alert-success">@success</div>
+    }
+    @if (TempData["Error"] is string error)
+    {
+        <div class="alert alert-danger">@error</div>
+    }
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Último acceso</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.FullName</td>
+                        <td>@user.Email</td>
+                        <td><span class="pill pill-blue">@user.RoleName</span></td>
+                        <td>
+                            <span class="pill @(user.IsActive ? "pill-green" : "pill-muted")">
+                                @(user.IsActive ? "Activo" : "Inactivo")
+                            </span>
+                        </td>
+                        <td>@(user.LastLoginAt?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "—")</td>
+                        <td class="table-actions">
+                            <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                            <form asp-action="Delete" asp-route-id="@user.Id" method="post" class="d-inline"
+                                  onsubmit="return confirm('¿Eliminar este usuario?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>

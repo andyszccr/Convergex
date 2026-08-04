@@ -1,0 +1,30 @@
+@model Convergex.Web.ViewModels.ExchangeRates.ExchangeRateFormViewModel
+
+<article class="panel form-panel">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+    <form asp-action="@(Model.IsEdit ? "Edit" : "Create")" asp-route-id="@(Model.IsEdit ? Model.Id : null)" method="post" class="row g-3">
+        <div class="col-md-4">
+            <label asp-for="BaseCurrencyId" class="form-label"></label>
+            <select asp-for="BaseCurrencyId" asp-items="Model.Currencies" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="BaseCurrencyId" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="TargetCurrencyId" class="form-label"></label>
+            <select asp-for="TargetCurrencyId" asp-items="Model.Currencies" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="TargetCurrencyId" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Rate" class="form-label"></label>
+            <input asp-for="Rate" class="form-control" />
+            <span asp-validation-for="Rate" class="text-danger"></span>
+        </div>
+        <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-primary-cx">@(Model.IsEdit ? "Guardar" : "Crear")</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        </div>
+    </form>
+</article>

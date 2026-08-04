@@ -1,0 +1,19 @@
+@model Convergex.Web.ViewModels.Users.UserFormViewModel
+@{
+    ViewData["Title"] = "Editar usuario";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Editar usuario</h1>
+            <p>Actualiza datos, rol o contraseña.</p>
+        </div>
+    </div>
+
+    <partial name="_UserForm" model="Model" />
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

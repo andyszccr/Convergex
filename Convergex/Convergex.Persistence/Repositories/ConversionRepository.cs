@@ -58,4 +58,44 @@ public class ConversionRepository : IConversionRepository
 
         return rows.ToDictionary(x => x.Type, x => x.Count);
     }
+
+    public async Task<IReadOnlyList<Conversion>> GetHistoryAsync(
+        ConversionType? type = null,
+        string? userName = null,
+        DateTime? fromUtc = null,
+        DateTime? toUtc = null,
+        CancellationToken cancellationToken = default)
+    {
+        var query = _context.Conversions.AsNoTracking().AsQueryable();
+
+        if (type.HasValue)
+        {
+            query = query.Where(c => c.Type == type.Value);
+        }
+
+        if (!string.IsNullOrWhiteSpace(userName))
+        {
+            query = query.Where(c => c.UserName != null && c.UserName.Contains(userName));
+        }
+
+        if (fromUtc.HasValue)
+        {
+            query = query.Where(c => c.CreatedAt >= fromUtc.Value);
+        }
+
+        if (toUtc.HasValue)
+        {
+            query = query.Where(c => c.CreatedAt <= toUtc.Value);
+        }
+
+        return await query
+            .OrderByDescending(c => c.CreatedAt)
+            .ToListAsync(cancellationToken);
+    }
+
+    public async Task AddAsync(Conversion conversion, CancellationToken cancellationToken = default)
+        => await _context.Conversions.AddAsync(conversion, cancellationToken);
+
+    public Task SaveChangesAsync(CancellationToken cancellationToken = default)
+        => _context.SaveChangesAsync(cancellationToken);
 }

@@ -15,6 +15,19 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Cookies/2.3.11": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Build.Framework/18.0.2": {
         "type": "package",
         "compile": {
@@ -865,6 +878,19 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Cookies/2.3.11": {
+      "sha512": "EDkglBhZoP7BZZBk9JIVocautOyvL1ZaRECXLwJkDiveWxAOk8C5/UvVlLmEnWLBhpIoNbrtbSmIMDAbcmt9jw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.cookies/2.3.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.xml",
+        "microsoft.aspnetcore.authentication.cookies.2.3.11.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.cookies.nuspec"
       ]
     },
     "Microsoft.Build.Framework/18.0.2": {
@@ -2470,11 +2496,12 @@
       "Convergex.Application >= 1.0.0",
       "Convergex.Infrastructure >= 1.0.0",
       "Convergex.Persistence >= 1.0.0",
+      "Microsoft.AspNetCore.Authentication.Cookies >= 2.3.11",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.10"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {},
+    "C:\\Users\\andre\\AppData\\Local\\Temp\\cursor-sandbox-cache\\e21ef10e05599923fde35ace383fd0f0\\nuget": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -2483,7 +2510,7 @@
       "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
       "projectName": "Convergex.Web",
       "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\andre\\AppData\\Local\\Temp\\cursor-sandbox-cache\\e21ef10e05599923fde35ace383fd0f0\\nuget",
       "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -2536,6 +2563,10 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Cookies": {
+            "target": "Package",
+            "version": "[2.3.11, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -2981,6 +3012,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "PackageReference Microsoft.AspNetCore.Authentication.Cookies no se eliminará. Considere la posibilidad de quitar este paquete de las dependencias, ya que es probable que no sea necesario.",
+      "libraryId": "Microsoft.AspNetCore.Authentication.Cookies",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1903",
       "level": "Warning",

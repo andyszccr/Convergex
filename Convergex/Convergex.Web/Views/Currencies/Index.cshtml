@@ -1,0 +1,63 @@
+@model IReadOnlyList<Convergex.Application.DTOs.Currencies.CurrencyDto>
+@{
+    ViewData["Title"] = "Monedas";
+    var isAdmin = User.IsInRole("Administrador");
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Monedas</h1>
+            <p>Catálogo de monedas del sistema.</p>
+        </div>
+        @if (isAdmin)
+        {
+            <a asp-action="Create" class="btn btn-primary-cx">Nueva moneda</a>
+        }
+    </div>
+
+    @if (TempData["Success"] is string success) { <div class="alert alert-success">@success</div> }
+    @if (TempData["Error"] is string error) { <div class="alert alert-danger">@error</div> }
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Símbolo</th>
+                        <th>Estado</th>
+                        @if (isAdmin) { <th></th> }
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Code</td>
+                        <td>@item.Name</td>
+                        <td>@item.Symbol</td>
+                        <td>
+                            <span class="pill @(item.IsActive ? "pill-green" : "pill-muted")">
+                                @(item.IsActive ? "Activa" : "Inactiva")
+                            </span>
+                        </td>
+                        @if (isAdmin)
+                        {
+                            <td class="table-actions">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                                <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline"
+                                      onsubmit="return confirm('¿Eliminar esta moneda?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                </form>
+                            </td>
+                        }
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>

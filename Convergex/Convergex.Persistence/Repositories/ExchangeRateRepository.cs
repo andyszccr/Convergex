@@ -15,19 +15,45 @@ public class ExchangeRateRepository : IExchangeRateRepository
     }
 
     public Task<ExchangeRate?> GetLatestAsync(CancellationToken cancellationToken = default)
-        => _context.ExchangeRates
-            .AsNoTracking()
-            .Include(x => x.BaseCurrency)
-            .Include(x => x.TargetCurrency)
-            .OrderByDescending(x => x.UpdatedAt)
-            .FirstOrDefaultAsync(cancellationToken);
+        => Query().OrderByDescending(x => x.UpdatedAt).FirstOrDefaultAsync(cancellationToken);
 
     public async Task<IReadOnlyList<ExchangeRate>> GetTopAsync(int take, CancellationToken cancellationToken = default)
-        => await _context.ExchangeRates
-            .AsNoTracking()
+        => await Query().OrderByDescending(x => x.UpdatedAt).Take(take).ToListAsync(cancellationToken);
+
+    public async Task<IReadOnlyList<ExchangeRate>> GetAllAsync(CancellationToken cancellationToken = default)
+        => await Query().OrderByDescending(x => x.UpdatedAt).ToListAsync(cancellationToken);
+
+    public Task<ExchangeRate?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+        => Query().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+
+    public Task<ExchangeRate?> GetByPairAsync(
+        int baseCurrencyId,
+        int targetCurrencyId,
+        CancellationToken cancellationToken = default)
+        => Query().FirstOrDefaultAsync(
+            x => x.BaseCurrencyId == baseCurrencyId && x.TargetCurrencyId == targetCurrencyId,
+            cancellationToken);
+
+    public async Task AddAsync(ExchangeRate rate, CancellationToken cancellationToken = default)
+        => await _context.ExchangeRates.AddAsync(rate, cancellationToken);
+
+    public Task UpdateAsync(ExchangeRate rate, CancellationToken cancellationToken = default)
+    {
+        _context.ExchangeRates.Update(rate);
+        return Task.CompletedTask;
+    }
+
+    public Task DeleteAsync(ExchangeRate rate, CancellationToken cancellationToken = default)
+    {
+        _context.ExchangeRates.Remove(rate);
+        return Task.CompletedTask;
+    }
+
+    public Task SaveChangesAsync(CancellationToken cancellationToken = default)
+        => _context.SaveChangesAsync(cancellationToken);
+
+    private IQueryable<ExchangeRate> Query()
+        => _context.ExchangeRates
             .Include(x => x.BaseCurrency)
-            .Include(x => x.TargetCurrency)
-            .OrderByDescending(x => x.UpdatedAt)
-            .Take(take)
-            .ToListAsync(cancellationToken);
+            .Include(x => x.TargetCurrency);
 }

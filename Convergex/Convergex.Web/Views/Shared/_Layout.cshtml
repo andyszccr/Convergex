@@ -1,6 +1,21 @@
 ﻿@{
     var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? string.Empty;
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? string.Empty;
     var isDashboard = string.Equals(controller, "Dashboard", StringComparison.OrdinalIgnoreCase);
+    var isConversion = string.Equals(controller, "CurrencyConversion", StringComparison.OrdinalIgnoreCase);
+    var isCurrencies = string.Equals(controller, "Currencies", StringComparison.OrdinalIgnoreCase);
+    var isHistory = string.Equals(controller, "History", StringComparison.OrdinalIgnoreCase);
+    var isRates = string.Equals(controller, "ExchangeRates", StringComparison.OrdinalIgnoreCase);
+    var isUsers = string.Equals(controller, "Users", StringComparison.OrdinalIgnoreCase);
+    var isProfile = string.Equals(controller, "Account", StringComparison.OrdinalIgnoreCase)
+        && string.Equals(action, "Profile", StringComparison.OrdinalIgnoreCase);
+
+    var fullName = User.Identity?.Name ?? "Usuario";
+    var roleName = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? "Usuario";
+    var initials = string.Concat(
+        fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Take(2)
+            .Select(p => char.ToUpperInvariant(p[0])));
 }
 <!DOCTYPE html>
 <html lang="es">
@@ -29,19 +44,19 @@
                 <a class="sidebar-link @(isDashboard ? "active" : "")" asp-controller="Dashboard" asp-action="Index">
                     <i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-arrow-left-right"></i><span>Conversión</span><i class="bi bi-chevron-down ms-auto chevron"></i>
+                <a class="sidebar-link @(isConversion ? "active" : "")" asp-controller="CurrencyConversion" asp-action="Index">
+                    <i class="bi bi-arrow-left-right"></i><span>Conversión</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isCurrencies ? "active" : "")" asp-controller="Currencies" asp-action="Index">
                     <i class="bi bi-currency-exchange"></i><span>Monedas</span>
                 </a>
                 <a class="sidebar-link" asp-controller="Home" asp-action="Index">
                     <i class="bi bi-rulers"></i><span>Unidades</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isHistory ? "active" : "")" asp-controller="History" asp-action="Index">
                     <i class="bi bi-clock-history"></i><span>Historial</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isRates ? "active" : "")" asp-controller="ExchangeRates" asp-action="Index">
                     <i class="bi bi-graph-up"></i><span>Tasas de cambio</span>
                 </a>
                 <a class="sidebar-link" asp-controller="Home" asp-action="Index">
@@ -50,8 +65,14 @@
                 <a class="sidebar-link" asp-controller="Home" asp-action="Index">
                     <i class="bi bi-shield-check"></i><span>Auditoría</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-people"></i><span>Usuarios</span>
+                @if (User.IsInRole("Administrador"))
+                {
+                    <a class="sidebar-link @(isUsers ? "active" : "")" asp-controller="Users" asp-action="Index">
+                        <i class="bi bi-people"></i><span>Usuarios</span>
+                    </a>
+                }
+                <a class="sidebar-link @(isProfile ? "active" : "")" asp-controller="Account" asp-action="Profile">
+                    <i class="bi bi-person-circle"></i><span>Mi perfil</span>
                 </a>
                 <a class="sidebar-link" asp-controller="Home" asp-action="Privacy">
                     <i class="bi bi-gear"></i><span>Configuración</span>
@@ -59,10 +80,10 @@
             </nav>
 
             <div class="sidebar-user">
-                <div class="avatar">AN</div>
+                <div class="avatar">@initials</div>
                 <div>
-                    <strong>Alexander Navarro</strong>
-                    <span>Administrador</span>
+                    <strong>@fullName</strong>
+                    <span>@roleName</span>
                 </div>
             </div>
         </aside>
@@ -90,16 +111,30 @@
                         <i class="bi bi-bell"></i>
                         <span class="badge-dot">3</span>
                     </button>
-                    <button type="button" class="icon-btn" aria-label="Ayuda">
-                        <i class="bi bi-question-circle"></i>
-                    </button>
-                    <div class="topbar-user">
-                        <div class="avatar avatar-sm">AN</div>
-                        <div class="topbar-user-meta d-none d-md-block">
-                            <strong>Alexander Navarro</strong>
-                            <span>Administrador</span>
-                        </div>
-                        <i class="bi bi-chevron-down d-none d-md-inline"></i>
+                    <div class="dropdown">
+                        <button class="topbar-user dropdown-toggle-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="avatar avatar-sm">@initials</div>
+                            <div class="topbar-user-meta d-none d-md-block">
+                                <strong>@fullName</strong>
+                                <span>@roleName</span>
+                            </div>
+                            <i class="bi bi-chevron-down d-none d-md-inline"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Mi perfil</a></li>
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <li><a class="dropdown-item" asp-controller="Users" asp-action="Index">Usuarios</a></li>
+                                <li><a class="dropdown-item" asp-controller="Users" asp-action="Roles">Roles</a></li>
+                            }
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="dropdown-item text-danger">Cerrar sesión</button>
+                                </form>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </header>

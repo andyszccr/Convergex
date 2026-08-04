@@ -77,12 +77,12 @@ Gestionar el acceso al sistema.
 
 ### Issues
 
-- [ ] Login
-- [ ] Logout
-- [ ] CRUD Usuarios
-- [ ] Gestión de Roles
-- [ ] Perfil de usuario
-- [ ] Recuperar contraseña
+- [x] Login
+- [x] Logout
+- [x] CRUD Usuarios
+- [x] Gestión de Roles
+- [x] Perfil de usuario
+- [x] Recuperar contraseña
 
 ---
 
@@ -108,12 +108,12 @@ Permitir convertir valores entre distintas monedas utilizando tasas de cambio.
 
 ### Issues
 
-- [ ] CRUD Monedas
-- [ ] Obtener tasas
-- [ ] Conversión
-- [ ] Validaciones
-- [ ] Historial
-- [ ] Mensajes de éxito
+- [x] CRUD Monedas
+- [x] Obtener tasas
+- [x] Conversión
+- [x] Validaciones
+- [x] Historial
+- [x] Mensajes de éxito
 
 ---
 

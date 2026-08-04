@@ -11,4 +11,12 @@ public interface IConversionRepository
     Task<IReadOnlyList<Conversion>> GetRecentAsync(int take, CancellationToken cancellationToken = default);
     Task<IReadOnlyDictionary<DateOnly, int>> GetDailyCountsAsync(DateTime fromUtc, CancellationToken cancellationToken = default);
     Task<IReadOnlyDictionary<ConversionType, int>> GetCountsByTypeAsync(CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<Conversion>> GetHistoryAsync(
+        ConversionType? type = null,
+        string? userName = null,
+        DateTime? fromUtc = null,
+        DateTime? toUtc = null,
+        CancellationToken cancellationToken = default);
+    Task AddAsync(Conversion conversion, CancellationToken cancellationToken = default);
+    Task SaveChangesAsync(CancellationToken cancellationToken = default);
 }

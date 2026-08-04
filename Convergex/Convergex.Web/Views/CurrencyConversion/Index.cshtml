@@ -1,0 +1,82 @@
+@model Convergex.Web.ViewModels.Conversions.CurrencyConversionViewModel
+@{
+    ViewData["Title"] = "Conversión de monedas";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Conversión de monedas</h1>
+            <p>Selecciona origen, destino y monto para convertir.</p>
+        </div>
+        <a asp-controller="History" asp-action="Index" class="btn btn-outline-secondary">Ver historial</a>
+    </div>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="alert alert-success">@success</div>
+    }
+
+    <article class="panel form-panel">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <form asp-action="Index" method="post" class="row g-3" id="conversionForm">
+            <div class="col-md-4">
+                <label asp-for="FromCurrencyId" class="form-label"></label>
+                <select asp-for="FromCurrencyId" asp-items="Model.Currencies" class="form-select" id="fromCurrency">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span asp-validation-for="FromCurrencyId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="ToCurrencyId" class="form-label"></label>
+                <select asp-for="ToCurrencyId" asp-items="Model.Currencies" class="form-select" id="toCurrency">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span asp-validation-for="ToCurrencyId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Amount" class="form-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <p class="mb-0">
+                    Tasa actual:
+                    <strong id="rateLabel">@(Model.CurrentRate?.ToString("N6") ?? "Selecciona un par")</strong>
+                </p>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-cx">Convertir</button>
+            </div>
+        </form>
+    </article>
+
+    @if (Model.LastResult is not null)
+    {
+        <article class="panel">
+            <h2 class="panel-title">Resultado</h2>
+            <p class="mb-1"><strong>@Model.LastResult.Amount.ToString("N2") @Model.LastResult.FromCode</strong> = <strong>@Model.LastResult.Result.ToString("N4") @Model.LastResult.ToCode</strong></p>
+            <p class="mb-0 text-secondary">Tasa aplicada: @Model.LastResult.Rate.ToString("N6") · @Model.LastResult.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p>
+        </article>
+    }
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        async function refreshRate() {
+            const fromId = document.getElementById('fromCurrency').value;
+            const toId = document.getElementById('toCurrency').value;
+            const label = document.getElementById('rateLabel');
+            if (!fromId || !toId || fromId === toId) {
+                label.textContent = 'Selecciona un par';
+                return;
+            }
+            const response = await fetch(`/ExchangeRates/GetRate?fromId=${fromId}&toId=${toId}`);
+            const data = await response.json();
+            label.textContent = data.found ? `${data.rate} (${data.source})` : (data.message || 'Sin tasa');
+        }
+        document.getElementById('fromCurrency').addEventListener('change', refreshRate);
+        document.getElementById('toCurrency').addEventListener('change', refreshRate);
+    </script>
+}

@@ -1,0 +1,32 @@
+@model Convergex.Web.ViewModels.Currencies.CurrencyFormViewModel
+
+<article class="panel form-panel">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+    <form asp-action="@(Model.IsEdit ? "Edit" : "Create")" asp-route-id="@(Model.IsEdit ? Model.Id : null)" method="post" class="row g-3">
+        <div class="col-md-4">
+            <label asp-for="Code" class="form-label"></label>
+            <input asp-for="Code" class="form-control" />
+            <span asp-validation-for="Code" class="text-danger"></span>
+        </div>
+        <div class="col-md-5">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="Symbol" class="form-label"></label>
+            <input asp-for="Symbol" class="form-control" />
+            <span asp-validation-for="Symbol" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input asp-for="IsActive" class="form-check-input" />
+                <label asp-for="IsActive" class="form-check-label"></label>
+            </div>
+        </div>
+        <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-primary-cx">@(Model.IsEdit ? "Guardar" : "Crear")</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        </div>
+    </form>
+</article>

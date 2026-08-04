@@ -1,6 +1,8 @@
 using Convergex.Domain.Entities;
 using Convergex.Domain.Enums;
 using Convergex.Persistence.Context;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
 namespace Convergex.Persistence.Seed;
@@ -9,8 +11,109 @@ public static class DbSeeder
 {
     public static async Task SeedAsync(ConvergexDbContext context, CancellationToken cancellationToken = default)
     {
+        await EnsureSchemaAsync(context, cancellationToken);
+
+        await SeedRolesAndUsersAsync(context, cancellationToken);
+        await SeedCatalogAsync(context, cancellationToken);
+    }
+
+    private static async Task EnsureSchemaAsync(ConvergexDbContext context, CancellationToken cancellationToken)
+    {
         await context.Database.EnsureCreatedAsync(cancellationToken);
 
+        if (await TableExistsAsync(context, "Users", cancellationToken))
+        {
+            return;
+        }
+
+        // SQLite mantiene el archivo bloqueado si hay conexiones abiertas/pool.
+        await context.Database.CloseConnectionAsync();
+        SqliteConnection.ClearAllPools();
+
+        await context.Database.EnsureDeletedAsync(cancellationToken);
+        await context.Database.EnsureCreatedAsync(cancellationToken);
+    }
+
+    private static async Task<bool> TableExistsAsync(
+        ConvergexDbContext context,
+        string tableName,
+        CancellationToken cancellationToken)
+    {
+        var connection = context.Database.GetDbConnection();
+        var shouldClose = connection.State != System.Data.ConnectionState.Open;
+
+        if (shouldClose)
+        {
+            await connection.OpenAsync(cancellationToken);
+        }
+
+        try
+        {
+            await using var command = connection.CreateCommand();
+            command.CommandText = "SELECT COUNT(1) FROM sqlite_master WHERE type='table' AND name=$name;";
+            var parameter = command.CreateParameter();
+            parameter.ParameterName = "$name";
+            parameter.Value = tableName;
+            command.Parameters.Add(parameter);
+
+            var result = await command.ExecuteScalarAsync(cancellationToken);
+            return Convert.ToInt32(result) > 0;
+        }
+        finally
+        {
+            if (shouldClose)
+            {
+                await connection.CloseAsync();
+            }
+        }
+    }
+
+    private static async Task SeedRolesAndUsersAsync(ConvergexDbContext context, CancellationToken cancellationToken)
+    {
+        if (!await context.Roles.AnyAsync(cancellationToken))
+        {
+            context.Roles.AddRange(
+                new Role { Name = "Administrador", Description = "Acceso completo al sistema" },
+                new Role { Name = "Operador", Description = "Puede realizar conversiones y consultar historial" },
+                new Role { Name = "Consulta", Description = "Solo lectura de información" });
+            await context.SaveChangesAsync(cancellationToken);
+        }
+
+        if (await context.Users.AnyAsync(cancellationToken))
+        {
+            return;
+        }
+
+        var adminRole = await context.Roles.FirstAsync(r => r.Name == "Administrador", cancellationToken);
+        var operatorRole = await context.Roles.FirstAsync(r => r.Name == "Operador", cancellationToken);
+        var hasher = new PasswordHasher<User>();
+
+        var admin = new User
+        {
+            FullName = "Alexander Navarro",
+            Email = "admin@convergex.com",
+            RoleId = adminRole.Id,
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow
+        };
+        admin.PasswordHash = hasher.HashPassword(admin, "Admin123!");
+
+        var operatorUser = new User
+        {
+            FullName = "María Rodríguez",
+            Email = "operador@convergex.com",
+            RoleId = operatorRole.Id,
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow
+        };
+        operatorUser.PasswordHash = hasher.HashPassword(operatorUser, "Operador123!");
+
+        context.Users.AddRange(admin, operatorUser);
+        await context.SaveChangesAsync(cancellationToken);
+    }
+
+    private static async Task SeedCatalogAsync(ConvergexDbContext context, CancellationToken cancellationToken)
+    {
         if (await context.Currencies.AnyAsync(cancellationToken))
         {
             return;

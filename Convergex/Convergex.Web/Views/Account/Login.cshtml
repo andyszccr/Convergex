@@ -1,0 +1,124 @@
+@model Convergex.Web.ViewModels.Account.LoginViewModel
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Iniciar sesión";
+}
+
+<div class="auth-shell">
+    <section class="auth-hero">
+        <div class="auth-hero-glow"></div>
+        <div class="auth-hero-content">
+            <div class="auth-brand">
+                <img src="~/img/logo2.png" alt="Convergex" class="auth-logo" asp-append-version="true" />
+                <p class="auth-tagline">Conversor inteligente de monedas y unidades</p>
+            </div>
+
+            <div class="auth-hero-copy">
+                <h1>Convierte sin límites, <span>decide sin fronteras.</span></h1>
+                <p>
+                    Convergex te permite realizar conversiones de monedas y unidades
+                    de manera rápida, precisa y segura.
+                </p>
+            </div>
+
+            <div class="auth-features">
+                <div class="auth-feature">
+                    <div class="auth-feature-icon"><i class="bi bi-arrow-left-right"></i></div>
+                    <span>Rápido y preciso</span>
+                </div>
+                <div class="auth-feature">
+                    <div class="auth-feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <span>Seguro y confiable</span>
+                </div>
+                <div class="auth-feature">
+                    <div class="auth-feature-icon"><i class="bi bi-bar-chart-line"></i></div>
+                    <span>Historial y auditoría</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-panel">
+        <div class="auth-card">
+            <h2>Iniciar sesión</h2>
+            <p class="auth-subtitle">Accede a tu cuenta para continuar</p>
+
+            @if (TempData["Success"] is string success)
+            {
+                <div class="alert alert-success">@success</div>
+            }
+            @if (TempData["Info"] is string info)
+            {
+                <div class="alert alert-info">@info</div>
+            }
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <form asp-action="Login" method="post" class="auth-form" novalidate>
+                <input type="hidden" asp-for="ReturnUrl" />
+
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <div class="input-wrap">
+                        <i class="bi bi-envelope"></i>
+                        <input asp-for="Email" class="form-control" placeholder="usuario@convergex.com" autocomplete="username" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <div class="input-wrap">
+                        <i class="bi bi-lock"></i>
+                        <input asp-for="Password" class="form-control" placeholder="Ingresa tu contraseña" autocomplete="current-password" id="passwordInput" />
+                        <button type="button" class="toggle-password" data-target="passwordInput" aria-label="Mostrar contraseña">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="auth-row">
+                    <label class="remember">
+                        <input asp-for="RememberMe" />
+                        <span>Recordarme</span>
+                    </label>
+                    <a asp-action="ForgotPassword" class="link">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-login">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    Iniciar sesión
+                </button>
+            </form>
+
+            <div class="auth-divider"><span>o continúa con</span></div>
+
+            <div class="social-row">
+                <button type="button" class="btn-social" disabled title="Próximamente">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="" width="18" height="18" />
+                    Google
+                </button>
+                <button type="button" class="btn-social" disabled title="Próximamente">
+                    <i class="bi bi-microsoft"></i>
+                    Microsoft
+                </button>
+            </div>
+
+            <p class="auth-register">
+                ¿No tienes una cuenta?
+                <a asp-action="Register" class="link">Regístrate aquí</a>
+            </p>
+        </div>
+
+        <div class="auth-footer">
+            <p><i class="bi bi-shield-lock"></i> Tus datos están protegidos con encriptación de nivel empresarial.</p>
+            <p>© @DateTime.Now.Year Convergex. Todos los derechos reservados.</p>
+            <p class="demo-hint">Demo: admin@convergex.com / Admin123!</p>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

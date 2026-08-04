@@ -1,0 +1,16 @@
+@model Convergex.Web.ViewModels.Currencies.CurrencyFormViewModel
+@{
+    ViewData["Title"] = "Nueva moneda";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Nueva moneda</h1>
+            <p>Registra una moneda en el catálogo.</p>
+        </div>
+    </div>
+    <partial name="_CurrencyForm" model="Model" />
+</section>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

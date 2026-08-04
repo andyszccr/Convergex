@@ -1,0 +1,88 @@
+@model Convergex.Web.ViewModels.Conversions.ConversionHistoryFilterViewModel
+@{
+    ViewData["Title"] = "Historial de conversiones";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Historial</h1>
+            <p>Conversiones registradas en el sistema.</p>
+        </div>
+        <a asp-controller="CurrencyConversion" asp-action="Index" class="btn btn-primary-cx">Nueva conversión</a>
+    </div>
+
+    <article class="panel form-panel">
+        <form method="get" class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Tipo</label>
+                <select name="type" class="form-select" asp-for="Type">
+                    <option value="">Todos</option>
+                    <option value="Currency">Moneda</option>
+                    <option value="Unit">Unidad</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Usuario</label>
+                <input name="userName" value="@Model.UserName" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Desde</label>
+                <input type="date" name="fromDate" value="@(Model.FromDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Hasta</label>
+                <input type="date" name="toDate" value="@(Model.ToDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-cx">Filtrar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Limpiar</a>
+            </div>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>De</th>
+                        <th>A</th>
+                        <th>Monto</th>
+                        <th>Resultado</th>
+                        <th>Tasa</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if (!Model.Items.Any())
+                {
+                    <tr><td colspan="8" class="empty-cell">No hay conversiones para los filtros seleccionados.</td></tr>
+                }
+                else
+                {
+                    foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td>@item.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>
+                                <span class="pill @(item.Type == "Currency" ? "pill-blue" : "pill-green")">
+                                    @(item.Type == "Currency" ? "Moneda" : "Unidad")
+                                </span>
+                            </td>
+                            <td>@item.FromCode</td>
+                            <td>@item.ToCode</td>
+                            <td>@item.Amount.ToString("N2")</td>
+                            <td>@item.Result.ToString("N4")</td>
+                            <td>@item.RateApplied.ToString("N6")</td>
+                            <td>@(item.UserName ?? "—")</td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>

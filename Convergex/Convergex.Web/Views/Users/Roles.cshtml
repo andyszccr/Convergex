@@ -1,0 +1,25 @@
+@model IReadOnlyList<Convergex.Application.DTOs.Users.RoleDto>
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Gestión de roles</h1>
+            <p>Roles disponibles en Convergex.</p>
+        </div>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver a usuarios</a>
+    </div>
+
+    <div class="roles-grid">
+        @foreach (var role in Model)
+        {
+            <article class="panel role-card">
+                <div class="stat-icon bg-blue"><i class="bi bi-shield-lock"></i></div>
+                <h3>@role.Name</h3>
+                <p>@role.Description</p>
+            </article>
+        }
+    </div>
+</section>
