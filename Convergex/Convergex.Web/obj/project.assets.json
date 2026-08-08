@@ -2501,17 +2501,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\AppData\\Local\\Temp\\cursor-sandbox-cache\\e21ef10e05599923fde35ace383fd0f0\\nuget": {},
+    "C:\\Users\\andre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+      "projectUniqueName": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
       "projectName": "Convergex.Web",
-      "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
-      "packagesPath": "C:\\Users\\andre\\AppData\\Local\\Temp\\cursor-sandbox-cache\\e21ef10e05599923fde35ace383fd0f0\\nuget",
-      "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Web\\obj\\",
+      "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2527,21 +2527,22 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/ChristopherHG-007/index.json": {}
       },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
-              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
+            "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+              "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
             },
-            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
+            "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
+              "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
             },
-            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
-              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
+            "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
+              "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
             }
           }
         }

@@ -20,3 +20,25 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.deps.json
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.pdb
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.pdb
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.pdb
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.pdb
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.pdb
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.AssemblyReference.cache
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.GeneratedMSBuildEditorConfig.editorconfig
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfoInputs.cache
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfo.cs
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.CoreCompileInputs.cache
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.sourcelink.json
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Converge.FEE501D5.Up2Date
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll

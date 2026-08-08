@@ -1,4 +1,5 @@
 using Convergex.Application.DTOs.Conversions;
+using Convergex.Application.DTOs.ExternalApis;
 using Convergex.Application.Interfaces;
 using Convergex.Web.ViewModels.Conversions;
 using Microsoft.AspNetCore.Authorization;
@@ -13,15 +14,18 @@ public class CurrencyConversionController : Controller
     private readonly ICurrencyConversionService _conversionService;
     private readonly ICurrencyService _currencyService;
     private readonly IExchangeRateService _exchangeRateService;
+    private readonly IExternalExchangeRateService _externalExchangeRateService;
 
     public CurrencyConversionController(
         ICurrencyConversionService conversionService,
         ICurrencyService currencyService,
-        IExchangeRateService exchangeRateService)
+        IExchangeRateService exchangeRateService,
+        IExternalExchangeRateService externalExchangeRateService)
     {
         _conversionService = conversionService;
         _currencyService = currencyService;
         _exchangeRateService = exchangeRateService;
+        _externalExchangeRateService = externalExchangeRateService;
     }
 
     [HttpGet]
@@ -73,6 +77,7 @@ public class CurrencyConversionController : Controller
             if (direct is not null)
             {
                 model.CurrentRate = direct.Rate;
+                ViewData["RateSource"] = "Base de datos";
             }
             else
             {
@@ -80,6 +85,37 @@ public class CurrencyConversionController : Controller
                 if (inverse is not null && inverse.Rate != 0)
                 {
                     model.CurrentRate = Math.Round(1m / inverse.Rate, 8);
+                    ViewData["RateSource"] = "Base de datos (inversa)";
+                }
+                else
+                {
+                    // Intentar obtener de API externa para mostrar la tasa actual
+                    var from = await _currencyService.GetActiveAsync(cancellationToken);
+                    var fromCurrency = from.FirstOrDefault(c => c.Id == model.FromCurrencyId);
+                    var toCurrency = from.FirstOrDefault(c => c.Id == model.ToCurrencyId);
+
+                    if (fromCurrency != null && toCurrency != null)
+                    {
+                        ExternalExchangeRateDto? externalRate = null;
+                        if (fromCurrency.Code == "USD" && toCurrency.Code == "CRC")
+                        {
+                            externalRate = await _externalExchangeRateService.GetTdcRateAsync(cancellationToken);
+                            if (externalRate != null)
+                            {
+                                model.CurrentRate = Math.Round(externalRate.Venta, 6);
+                                ViewData["RateSource"] = "API Externa (TDC)";
+                            }
+                        }
+                        else if (fromCurrency.Code == "CRC" && toCurrency.Code == "USD")
+                        {
+                            externalRate = await _externalExchangeRateService.GetTdcRateAsync(cancellationToken);
+                            if (externalRate != null)
+                            {
+                                model.CurrentRate = Math.Round(1m / externalRate.Compra, 6);
+                                ViewData["RateSource"] = "API Externa (TDC)";
+                            }
+                        }
+                    }
                 }
             }
         }

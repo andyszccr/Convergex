@@ -43,6 +43,10 @@
                 <p class="mb-0">
                     Tasa actual:
                     <strong id="rateLabel">@(Model.CurrentRate?.ToString("N6") ?? "Selecciona un par")</strong>
+                    @if (ViewData["RateSource"] is string rateSource)
+                    {
+                        <span class="badge bg-info ms-2">@rateSource</span>
+                    }
                 </p>
             </div>
             <div class="col-12">

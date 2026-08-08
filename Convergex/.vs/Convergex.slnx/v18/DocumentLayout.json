@@ -1,29 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\",
+  "WorkspaceRootPath": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.application\\dtos\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\dtos\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.application\\dtos\\auth\\authenticateduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\dtos\\auth\\authenticateduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.persistence\\context\\convergexdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\context\\convergexdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E310-B086-58C4-8415-B068F9B7FD18}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E310-B086-58C4-8415-B068F9B7FD18}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|solutionrelative:convergex.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{572CFD7F-A04A-4BB3-A773-386C032ABE7E}|Convergex.Application\\Convergex.Application.csproj|c:\\users\\andre\\onedrive\\documentos\\06 universidad\\paradigmas de programaci\u00F3n\\convergex\\convergex\\convergex.application\\convergex.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{572CFD7F-A04A-4BB3-A773-386C032ABE7E}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\convergex.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.application\\convergex.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\convergex.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7855853-5C20-41DA-9542-74B543022D45}|Convergex.Domain\\Convergex.Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\06 universidad\\paradigmas de programaci\u00F3n\\convergex\\convergex\\convergex.domain\\convergex.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C7855853-5C20-41DA-9542-74B543022D45}|Convergex.Domain\\Convergex.Domain.csproj|solutionrelative:convergex.domain\\convergex.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6E17CEBE-065C-FDFD-EA42-AEF9C3202D6E}|Convergex.Domain\\Convergex.Domain.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.domain\\convergex.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6E17CEBE-065C-FDFD-EA42-AEF9C3202D6E}|Convergex.Domain\\Convergex.Domain.csproj|solutionrelative:convergex.domain\\convergex.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8A68453-372E-4D4C-BC67-16A159FB7FBD}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|c:\\users\\andre\\onedrive\\documentos\\06 universidad\\paradigmas de programaci\u00F3n\\convergex\\convergex\\convergex.infrastructure\\convergex.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F8A68453-372E-4D4C-BC67-16A159FB7FBD}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|solutionrelative:convergex.infrastructure\\convergex.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0104E310-B086-58C4-8415-B068F9B7FD18}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.infrastructure\\convergex.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0104E310-B086-58C4-8415-B068F9B7FD18}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|solutionrelative:convergex.infrastructure\\convergex.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E541012D-DDC7-4449-9C1E-0C801D1DC19B}|Convergex.Persistence\\Convergex.Persistence.csproj|c:\\users\\andre\\onedrive\\documentos\\06 universidad\\paradigmas de programaci\u00F3n\\convergex\\convergex\\convergex.persistence\\convergex.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E541012D-DDC7-4449-9C1E-0C801D1DC19B}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\convergex.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.persistence\\convergex.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\convergex.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D2DC58-9500-4E63-B4C1-06063000DBA4}|Convergex.Tests\\Convergex.Tests.csproj|c:\\users\\andre\\onedrive\\documentos\\06 universidad\\paradigmas de programaci\u00F3n\\convergex\\convergex\\convergex.tests\\convergex.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{83D2DC58-9500-4E63-B4C1-06063000DBA4}|Convergex.Tests\\Convergex.Tests.csproj|solutionrelative:convergex.tests\\convergex.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3653778C-63C3-9DB6-BDD2-AD0EA5D5C2F1}|Convergex.Tests\\Convergex.Tests.csproj|d:\\documentos\\04 universidad  \u0026 cursos\\01 fidelitas\\2026\\02 cuatri ii -26\\04 paradigmas de programacion\\convergex\\convergex\\convergex.tests\\convergex.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3653778C-63C3-9DB6-BDD2-AD0EA5D5C2F1}|Convergex.Tests\\Convergex.Tests.csproj|solutionrelative:convergex.tests\\convergex.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,23 +62,99 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "Convergex.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T00:58:59.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "RelativeToolTip": "Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T00:58:55.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Convergex.Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Convergex.Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T00:58:28.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConvergexDbContext.cs",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "RelativeDocumentMoniker": "Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "RelativeToolTip": "Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T00:58:11.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Convergex.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "Convergex.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T00:57:52.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticatedUserDto.cs",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Auth\\AuthenticatedUserDto.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\DTOs\\Auth\\AuthenticatedUserDto.cs",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Auth\\AuthenticatedUserDto.cs",
+              "RelativeToolTip": "Convergex.Application\\DTOs\\Auth\\AuthenticatedUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T00:57:42.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAOITAAAAAAAAAAAawOoTAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAOITAAAAAAAAAAAawPMTAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-08-04T19:58:59.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Convergex.Application",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
+              "DocumentIndex": 7,
+              "Title": "Convergex.Application.csproj",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
               "RelativeDocumentMoniker": "Convergex.Application\\Convergex.Application.csproj",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
               "RelativeToolTip": "Convergex.Application\\Convergex.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -63,11 +163,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Convergex.Domain",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
+              "DocumentIndex": 8,
+              "Title": "Convergex.Domain.csproj",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
               "RelativeDocumentMoniker": "Convergex.Domain\\Convergex.Domain.csproj",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
               "RelativeToolTip": "Convergex.Domain\\Convergex.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -76,11 +176,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Convergex.Infrastructure",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+              "DocumentIndex": 9,
+              "Title": "Convergex.Infrastructure.csproj",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
               "RelativeToolTip": "Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -89,11 +189,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Convergex.Persistence",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
+              "DocumentIndex": 10,
+              "Title": "Convergex.Persistence.csproj",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
               "RelativeDocumentMoniker": "Convergex.Persistence\\Convergex.Persistence.csproj",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
               "RelativeToolTip": "Convergex.Persistence\\Convergex.Persistence.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -102,11 +202,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Convergex.Tests",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
+              "DocumentIndex": 11,
+              "Title": "Convergex.Tests.csproj",
+              "DocumentMoniker": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
               "RelativeDocumentMoniker": "Convergex.Tests\\Convergex.Tests.csproj",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programaci\u00F3n\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
+              "ToolTip": "D:\\Documentos\\04 Universidad  \u0026 Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
               "RelativeToolTip": "Convergex.Tests\\Convergex.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",

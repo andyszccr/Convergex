@@ -1,3 +1,4 @@
+using Convergex.Application;
 using Convergex.Infrastructure;
 using Convergex.Persistence.Context;
 using Convergex.Persistence.Seed;
@@ -35,6 +36,7 @@ public class Program
 
         builder.Services.AddAuthorization();
         builder.Services.AddInfrastructure(builder.Configuration);
+        builder.Services.AddApplication();
 
         var app = builder.Build();
 
