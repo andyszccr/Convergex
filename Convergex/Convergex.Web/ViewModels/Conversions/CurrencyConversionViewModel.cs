@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Convergex.Application.DTOs.Conversions;
+using Convergex.Application.DTOs.ExternalApis;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Convergex.Web.ViewModels.Conversions;
@@ -22,4 +23,10 @@ public class CurrencyConversionViewModel
     public decimal? CurrentRate { get; set; }
     public CurrencyConversionResultDto? LastResult { get; set; }
     public IEnumerable<SelectListItem> Currencies { get; set; } = [];
+    
+    // Precios de la API externa para USD/CRC
+    public decimal? ExternalCompraRate { get; set; }
+    public decimal? ExternalVentaRate { get; set; }
+    public string? ExternalRateDate { get; set; }
+    public bool HasExternalRate { get; set; }
 }

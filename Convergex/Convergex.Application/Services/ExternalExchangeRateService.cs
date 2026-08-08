@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using Convergex.Application.DTOs.ExternalApis;
 using Convergex.Application.Interfaces;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Convergex.Application.Services;
@@ -10,14 +11,17 @@ public class ExternalExchangeRateService : IExternalExchangeRateService, IDispos
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<ExternalExchangeRateService> _logger;
+    private readonly string _apiUrl;
     private bool _disposed;
 
     public ExternalExchangeRateService(
         HttpClient httpClient,
-        ILogger<ExternalExchangeRateService> logger)
+        ILogger<ExternalExchangeRateService> logger,
+        IConfiguration configuration)
     {
         _httpClient = httpClient;
         _logger = logger;
+        _apiUrl = configuration["ExternalApis:TdcRateUrl"] ?? "http://apis.gometa.org/tdc/tdc.json";
 
         // Configurar el cliente HTTP para mayor seguridad
         _httpClient.Timeout = TimeSpan.FromSeconds(10);
@@ -29,10 +33,10 @@ public class ExternalExchangeRateService : IExternalExchangeRateService, IDispos
     {
         try
         {
-            _logger.LogInformation("Consultando API de tasas de cambio TDC...");
+            _logger.LogInformation("Consultando API de tasas de cambio TDC desde: {ApiUrl}", _apiUrl);
 
             using var response = await _httpClient.GetAsync(
-                "http://apis.gometa.org/tdc/tdc.json",
+                _apiUrl,
                 cancellationToken);
 
             // Validar que la respuesta sea exitosa

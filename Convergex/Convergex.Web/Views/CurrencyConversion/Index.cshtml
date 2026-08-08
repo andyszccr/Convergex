@@ -48,6 +48,14 @@
                         <span class="badge bg-info ms-2">@rateSource</span>
                     }
                 </p>
+                @if (Model.HasExternalRate && Model.ExternalCompraRate.HasValue && Model.ExternalVentaRate.HasValue)
+                {
+                    <div class="alert alert-info mt-2 mb-0">
+                        <strong>Tasas TDC del @Model.ExternalRateDate:</strong><br/>
+                        <span class="me-3">Compra: <strong>@Model.ExternalCompraRate.Value.ToString("N4")</strong></span>
+                        <span>Venta: <strong>@Model.ExternalVentaRate.Value.ToString("N4")</strong></span>
+                    </div>
+                }
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary-cx">Convertir</button>

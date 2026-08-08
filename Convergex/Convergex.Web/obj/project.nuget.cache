@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7H9HCWV0wEM=",
+  "dgSpecHash": "zOWJL64pzTI=",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+  "projectFilePath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.3.11\\microsoft.aspnetcore.authentication.cookies.2.3.11.nupkg.sha512",
@@ -42,9 +42,9 @@
       "code": "NU1510",
       "level": "Warning",
       "message": "PackageReference Microsoft.AspNetCore.Authentication.Cookies no se eliminará. Considere la posibilidad de quitar este paquete de las dependencias, ya que es probable que no sea necesario.",
-      "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+      "projectPath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+      "filePath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
       "libraryId": "Microsoft.AspNetCore.Authentication.Cookies",
       "targetGraphs": [
         "net10.0"
@@ -54,9 +54,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"SQLitePCLRaw.lib.e_sqlite3\" 2.1.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+      "projectPath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+      "filePath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"

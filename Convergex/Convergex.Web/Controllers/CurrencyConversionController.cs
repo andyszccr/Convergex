@@ -103,6 +103,10 @@ public class CurrencyConversionController : Controller
                             if (externalRate != null)
                             {
                                 model.CurrentRate = Math.Round(externalRate.Venta, 6);
+                                model.ExternalCompraRate = externalRate.Compra;
+                                model.ExternalVentaRate = externalRate.Venta;
+                                model.ExternalRateDate = externalRate.VentaDate;
+                                model.HasExternalRate = true;
                                 ViewData["RateSource"] = "API Externa (TDC)";
                             }
                         }
@@ -112,6 +116,10 @@ public class CurrencyConversionController : Controller
                             if (externalRate != null)
                             {
                                 model.CurrentRate = Math.Round(1m / externalRate.Compra, 6);
+                                model.ExternalCompraRate = externalRate.Compra;
+                                model.ExternalVentaRate = externalRate.Venta;
+                                model.ExternalRateDate = externalRate.VentaDate;
+                                model.HasExternalRate = true;
                                 ViewData["RateSource"] = "API Externa (TDC)";
                             }
                         }

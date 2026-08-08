@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SiebAlEXVBs=",
+  "dgSpecHash": "KhShC+r6rEY=",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+  "projectFilePath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\10.0.10\\microsoft.aspnetcore.cryptography.internal.10.0.10.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\10.0.10\\microsoft.aspnetcore.cryptography.keyderivation.10.0.10.nupkg.sha512",
@@ -40,9 +40,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"SQLitePCLRaw.lib.e_sqlite3\" 2.1.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "projectPath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+      "projectPath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+      "filePath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"
