@@ -1,0 +1,54 @@
+@model IReadOnlyList<Convergex.Application.DTOs.Units.UnitDto>
+@{
+    ViewData["Title"] = "Catálogo de unidades";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Catálogo de unidades</h1>
+            <p>Unidades de medida disponibles para conversión.</p>
+        </div>
+        <a asp-controller="UnitConversion" asp-action="Index" class="btn btn-primary-cx">Convertir unidades</a>
+    </div>
+
+    @foreach (var group in Model.GroupBy(u => u.Category))
+    {
+        <article class="panel mt-4">
+            <h2 class="panel-title">@CategoryName(group.Key)</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Símbolo</th>
+                            <th>Factor a unidad base</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var unit in group)
+                    {
+                        <tr>
+                            <td>@unit.Code</td>
+                            <td>@unit.Name</td>
+                            <td>@unit.Symbol</td>
+                            <td>@unit.FactorToBase.ToString("G12")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    }
+</section>
+
+@functions {
+    private static string CategoryName(Convergex.Domain.Enums.UnitCategory category) => category switch
+    {
+        Convergex.Domain.Enums.UnitCategory.Length => "Longitud",
+        Convergex.Domain.Enums.UnitCategory.Weight => "Peso",
+        Convergex.Domain.Enums.UnitCategory.Volume => "Volumen",
+        _ => "Otra categoria"
+    };
+}

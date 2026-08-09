@@ -1,0 +1,100 @@
+@model Convergex.Web.ViewModels.Units.UnitConversionViewModel
+@{
+    ViewData["Title"] = "Conversión de unidades";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Conversión de unidades</h1>
+            <p>Selecciona categoría, unidades y cantidad para convertir.</p>
+        </div>
+        <a asp-controller="Units" asp-action="Index" class="btn btn-outline-secondary">Ver catálogo</a>
+    </div>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="alert alert-success">@success</div>
+    }
+
+    <article class="panel form-panel">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <form asp-action="Index" method="post" class="row g-3" id="unitConversionForm">
+            <div class="col-md-4">
+                <label asp-for="Category" class="form-label"></label>
+                <select asp-for="Category" class="form-select" id="unitCategory" onchange="changeCategory(this.value)">
+                    <option value="1">Longitud</option>
+                    <option value="2">Peso</option>
+                    <option value="3">Volumen</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="FromUnitId" class="form-label"></label>
+                <select asp-for="FromUnitId" asp-items="Model.FromUnits" class="form-select" id="fromUnit">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span asp-validation-for="FromUnitId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="ToUnitId" class="form-label"></label>
+                <select asp-for="ToUnitId" asp-items="Model.ToUnits" class="form-select" id="toUnit">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span asp-validation-for="ToUnitId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Amount" class="form-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <p class="mb-0">
+                    Factor:
+                    <strong id="factorLabel">@(Model.CurrentFactor?.ToString("N12") ?? "Selecciona un par")</strong>
+                </p>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-cx">Convertir</button>
+            </div>
+        </form>
+    </article>
+
+    @if (Model.LastResult is not null)
+    {
+        <article class="panel">
+            <h2 class="panel-title">Resultado</h2>
+            <p class="mb-1">
+                <strong>@Model.LastResult.Amount.ToString("N2") @Model.LastResult.FromCode</strong>
+                (@Model.LastResult.FromName) =
+                <strong>@Model.LastResult.Result.ToString("N4") @Model.LastResult.ToCode</strong>
+                (@Model.LastResult.ToName)
+            </p>
+            <p class="mb-0 text-secondary">Factor aplicado: @Model.LastResult.Rate.ToString("N12") · @Model.LastResult.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p>
+        </article>
+    }
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function changeCategory(value) {
+            window.location.href = '/UnitConversion?category=' + value;
+        }
+
+        async function refreshFactor() {
+            const fromId = document.getElementById('fromUnit').value;
+            const toId = document.getElementById('toUnit').value;
+            const label = document.getElementById('factorLabel');
+            if (!fromId || !toId || fromId === toId) {
+                label.textContent = 'Selecciona un par';
+                return;
+            }
+            const response = await fetch(`/UnitConversion/GetFactor?fromId=${fromId}&toId=${toId}`);
+            const data = await response.json();
+            label.textContent = data.found ? data.factor.toLocaleString('en-US', { minimumFractionDigits: 6 }) : (data.message || 'Sin factor');
+        }
+
+        document.getElementById('fromUnit').addEventListener('change', refreshFactor);
+        document.getElementById('toUnit').addEventListener('change', refreshFactor);
+    </script>
+}
