@@ -21,12 +21,14 @@ public class HistoryController : Controller
         string? userName,
         DateTime? fromDate,
         DateTime? toDate,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        int page = 1)
     {
-        DateTime? fromUtc = fromDate?.ToUniversalTime().Date;
-        DateTime? toUtc = toDate?.ToUniversalTime().Date.AddDays(1).AddTicks(-1);
+        DateTime? fromUtc = fromDate?.ToUniversalTime();
+        DateTime? toUtc = toDate?.ToUniversalTime().AddDays(1);
 
-        var items = await _conversionService.GetHistoryAsync(type, userName, fromUtc, toUtc, cancellationToken);
+        const int pageSize = 10;
+        var result = await _conversionService.GetHistoryPagedAsync(type, userName, fromUtc, toUtc, page, pageSize, cancellationToken);
 
         return View(new ConversionHistoryFilterViewModel
         {
@@ -34,7 +36,10 @@ public class HistoryController : Controller
             UserName = userName,
             FromDate = fromDate,
             ToDate = toDate,
-            Items = items
+            Page = page,
+            PageSize = pageSize,
+            TotalItems = result.Total,
+            Items = result.Items
         });
     }
 }

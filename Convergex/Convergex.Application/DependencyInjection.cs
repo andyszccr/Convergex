@@ -14,6 +14,8 @@ public static class DependencyInjection
         services.AddScoped<ICurrencyService, CurrencyService>();
         services.AddScoped<IExchangeRateService, ExchangeRateService>();
         services.AddScoped<ICurrencyConversionService, CurrencyConversionService>();
+        services.AddScoped<IUnitService, UnitService>();
+        services.AddScoped<IUnitConversionService, UnitConversionService>();
         return services;
     }
 }

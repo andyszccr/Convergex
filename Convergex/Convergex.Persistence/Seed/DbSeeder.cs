@@ -15,6 +15,7 @@ public static class DbSeeder
 
         await SeedRolesAndUsersAsync(context, cancellationToken);
         await SeedCatalogAsync(context, cancellationToken);
+        await SeedUnitsAsync(context, cancellationToken);
     }
 
     private static async Task EnsureSchemaAsync(ConvergexDbContext context, CancellationToken cancellationToken)
@@ -192,6 +193,39 @@ public static class DbSeeder
         }
 
         context.Conversions.AddRange(conversions);
+        await context.SaveChangesAsync(cancellationToken);
+    }
+
+    private static async Task SeedUnitsAsync(ConvergexDbContext context, CancellationToken cancellationToken)
+    {
+        if (await context.Units.AnyAsync(cancellationToken))
+        {
+            return;
+        }
+
+        context.Units.AddRange(
+            // Longitud (base: metro)
+            new Unit { Code = "m", Name = "Metro", Symbol = "m", Category = UnitCategory.Length, FactorToBase = 1m },
+            new Unit { Code = "km", Name = "Kilómetro", Symbol = "km", Category = UnitCategory.Length, FactorToBase = 1000m },
+            new Unit { Code = "cm", Name = "Centímetro", Symbol = "cm", Category = UnitCategory.Length, FactorToBase = 0.01m },
+            new Unit { Code = "mm", Name = "Milímetro", Symbol = "mm", Category = UnitCategory.Length, FactorToBase = 0.001m },
+            new Unit { Code = "mi", Name = "Milla", Symbol = "mi", Category = UnitCategory.Length, FactorToBase = 1609.344m },
+            new Unit { Code = "ft", Name = "Pie", Symbol = "ft", Category = UnitCategory.Length, FactorToBase = 0.3048m },
+            new Unit { Code = "in", Name = "Pulgada", Symbol = "in", Category = UnitCategory.Length, FactorToBase = 0.0254m },
+
+            // Peso (base: kilogramo)
+            new Unit { Code = "kg", Name = "Kilogramo", Symbol = "kg", Category = UnitCategory.Weight, FactorToBase = 1m },
+            new Unit { Code = "g", Name = "Gramo", Symbol = "g", Category = UnitCategory.Weight, FactorToBase = 0.001m },
+            new Unit { Code = "mg", Name = "Miligramo", Symbol = "mg", Category = UnitCategory.Weight, FactorToBase = 0.000001m },
+            new Unit { Code = "lb", Name = "Libra", Symbol = "lb", Category = UnitCategory.Weight, FactorToBase = 0.45359237m },
+            new Unit { Code = "t", Name = "Tonelada", Symbol = "t", Category = UnitCategory.Weight, FactorToBase = 1000m },
+
+            // Volumen (base: litro)
+            new Unit { Code = "L", Name = "Litro", Symbol = "L", Category = UnitCategory.Volume, FactorToBase = 1m },
+            new Unit { Code = "mL", Name = "Mililitro", Symbol = "mL", Category = UnitCategory.Volume, FactorToBase = 0.001m },
+            new Unit { Code = "m3", Name = "Metro cúbico", Symbol = "m³", Category = UnitCategory.Volume, FactorToBase = 1000m },
+            new Unit { Code = "gal", Name = "Galón", Symbol = "gal", Category = UnitCategory.Volume, FactorToBase = 3.78541m });
+
         await context.SaveChangesAsync(cancellationToken);
     }
 }

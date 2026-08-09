@@ -1,4 +1,5 @@
 using Convergex.Domain.Entities;
+using Convergex.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace Convergex.Persistence.Context;
@@ -11,6 +12,7 @@ public class ConvergexDbContext : DbContext
     }
 
     public DbSet<Currency> Currencies => Set<Currency>();
+    public DbSet<Unit> Units => Set<Unit>();
     public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>();
     public DbSet<Conversion> Conversions => Set<Conversion>();
     public DbSet<User> Users => Set<User>();
@@ -26,6 +28,17 @@ public class ConvergexDbContext : DbContext
             entity.Property(x => x.Code).HasMaxLength(10).IsRequired();
             entity.Property(x => x.Name).HasMaxLength(100).IsRequired();
             entity.Property(x => x.Symbol).HasMaxLength(10).IsRequired();
+            entity.HasIndex(x => x.Code).IsUnique();
+        });
+
+        modelBuilder.Entity<Unit>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Code).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.Name).HasMaxLength(100).IsRequired();
+            entity.Property(x => x.Symbol).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.Category).HasConversion<int>();
+            entity.Property(x => x.FactorToBase).HasPrecision(18, 12);
             entity.HasIndex(x => x.Code).IsUnique();
         });
 
