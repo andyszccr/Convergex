@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8/YGCqCG25c=",
+  "dgSpecHash": "E4wi/KN38w8=",
   "success": true,
-  "projectFilePath": "d:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
+  "projectFilePath": "D:\\Documentos\\04 Universidad  & Cursos\\01 Fidelitas\\2026\\02 Cuatri II -26\\04 paradigmas de programacion\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\10.0.10\\microsoft.aspnetcore.cryptography.internal.10.0.10.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\10.0.10\\microsoft.aspnetcore.cryptography.keyderivation.10.0.10.nupkg.sha512",

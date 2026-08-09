@@ -449,4 +449,5 @@ D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 par
 D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\Convergex.Web.pdb
 D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\Convergex.Web.genruntimeconfig.cache
 D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\ref\Convergex.Web.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\7i4l9npc7a-{0}-rb86ek6sr1-rb86ek6sr1.gz
+d:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\7i4l9npc7a-{0}-m24s2t8kk1-m24s2t8kk1.gz
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
