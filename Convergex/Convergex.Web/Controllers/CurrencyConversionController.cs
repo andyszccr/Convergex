@@ -90,9 +90,8 @@ public class CurrencyConversionController : Controller
                 else
                 {
                     // Intentar obtener de API externa para mostrar la tasa actual
-                    var from = await _currencyService.GetActiveAsync(cancellationToken);
-                    var fromCurrency = from.FirstOrDefault(c => c.Id == model.FromCurrencyId);
-                    var toCurrency = from.FirstOrDefault(c => c.Id == model.ToCurrencyId);
+                    var fromCurrency = currencies.FirstOrDefault(c => c.Id == model.FromCurrencyId);
+                    var toCurrency = currencies.FirstOrDefault(c => c.Id == model.ToCurrencyId);
 
                     if (fromCurrency != null && toCurrency != null)
                     {
