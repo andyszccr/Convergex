@@ -2063,23 +2063,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\andre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
       "projectName": "Convergex.Tests",
-      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Tests\\obj\\",
+      "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Tests\\Convergex.Tests.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2096,17 +2096,17 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
             },
-            "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
             },
-            "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
             },
-            "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
+            "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
+              "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\06 Universidad\\Paradigmas de programación\\Backup\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
             }
           }
         }
@@ -2143,7 +2143,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -2426,7 +2426,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "message": "El paquete \"SQLitePCLRaw.lib.e_sqlite3\" 2.1.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"
