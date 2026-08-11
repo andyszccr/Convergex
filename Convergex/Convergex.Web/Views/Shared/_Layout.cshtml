@@ -4,6 +4,8 @@
     var isDashboard = string.Equals(controller, "Dashboard", StringComparison.OrdinalIgnoreCase);
     var isConversion = string.Equals(controller, "CurrencyConversion", StringComparison.OrdinalIgnoreCase);
     var isCurrencies = string.Equals(controller, "Currencies", StringComparison.OrdinalIgnoreCase);
+    var isUnits = string.Equals(controller, "UnitConversion", StringComparison.OrdinalIgnoreCase)
+        || string.Equals(controller, "Units", StringComparison.OrdinalIgnoreCase);
     var isHistory = string.Equals(controller, "History", StringComparison.OrdinalIgnoreCase);
     var isRates = string.Equals(controller, "ExchangeRates", StringComparison.OrdinalIgnoreCase);
     var isUsers = string.Equals(controller, "Users", StringComparison.OrdinalIgnoreCase);
@@ -50,7 +52,7 @@
                 <a class="sidebar-link @(isCurrencies ? "active" : "")" asp-controller="Currencies" asp-action="Index">
                     <i class="bi bi-currency-exchange"></i><span>Monedas</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isUnits ? "active" : "")" asp-controller="UnitConversion" asp-action="Index">
                     <i class="bi bi-rulers"></i><span>Unidades</span>
                 </a>
                 <a class="sidebar-link @(isHistory ? "active" : "")" asp-controller="History" asp-action="Index">

@@ -15,6 +15,8 @@ public static class DependencyInjection
         services.AddScoped<IExchangeRateService, ExchangeRateService>();
         services.AddScoped<ICurrencyConversionService, CurrencyConversionService>();
         services.AddHttpClient<IExternalExchangeRateService, ExternalExchangeRateService>();
+        services.AddScoped<IUnitService, UnitService>();
+        services.AddScoped<IUnitConversionService, UnitConversionService>();
         return services;
     }
 }

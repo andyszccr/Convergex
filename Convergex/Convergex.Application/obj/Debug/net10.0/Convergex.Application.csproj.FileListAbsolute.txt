@@ -14,19 +14,19 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\refint\Convergex.Application.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\ref\Convergex.Application.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Application.deps.json
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Application.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Application.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Domain.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Domain.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.csproj.AssemblyReference.cache
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.AssemblyInfoInputs.cache
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.AssemblyInfo.cs
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.csproj.CoreCompileInputs.cache
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.sourcelink.json
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Converge.5DCE8AF6.Up2Date
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\refint\Convergex.Application.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\ref\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Application.deps.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Application.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Domain.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\bin\Debug\net10.0\Convergex.Domain.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.csproj.AssemblyReference.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.AssemblyInfoInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.AssemblyInfo.cs
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.csproj.CoreCompileInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.sourcelink.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Converge.5DCE8AF6.Up2Date
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\refint\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\Convergex.Application.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Application\obj\Debug\net10.0\ref\Convergex.Application.dll

@@ -113,6 +113,33 @@ public class CurrencyConversionService : ICurrencyConversionService
         }).ToList();
     }
 
+    public async Task<(IReadOnlyList<ConversionHistoryItemDto> Items, int Total)> GetHistoryPagedAsync(
+        ConversionType? type = null,
+        string? userName = null,
+        DateTime? fromUtc = null,
+        DateTime? toUtc = null,
+        int page = 1,
+        int pageSize = 10,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await _conversionRepository.GetHistoryPagedAsync(type, userName, fromUtc, toUtc, page, pageSize, cancellationToken);
+
+        var items = result.Items.Select(c => new ConversionHistoryItemDto
+        {
+            Id = c.Id,
+            Type = c.Type.ToString(),
+            FromCode = c.FromCode,
+            ToCode = c.ToCode,
+            Amount = c.Amount,
+            Result = c.Result,
+            RateApplied = c.RateApplied,
+            UserName = c.UserName,
+            CreatedAt = c.CreatedAt
+        }).ToList();
+
+        return (items, result.Total);
+    }
+
     private async Task<decimal?> ResolveRateAsync(int fromId, int toId, CancellationToken cancellationToken)
     {
         // Intentar obtener tasa directa de la base de datos

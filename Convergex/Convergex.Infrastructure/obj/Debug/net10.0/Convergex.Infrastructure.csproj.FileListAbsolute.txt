@@ -18,23 +18,23 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.deps.json
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.AssemblyReference.cache
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfoInputs.cache
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfo.cs
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.CoreCompileInputs.cache
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.sourcelink.json
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Converge.078D2622.Up2Date
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
-D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.deps.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.AssemblyReference.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfoInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfo.cs
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.sourcelink.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Converge.078D2622.Up2Date
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
