@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ispIObrkr34=",
+  "dgSpecHash": "GJuseTIUINc=",
   "success": true,
   "projectFilePath": "/home/runner/work/Convergex/Convergex/Convergex/Convergex.Domain/Convergex.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/tmp/codeql-scratch-7d2fd39e46f9feff/dbs/csharp/working/packages/microsoft.netcore.app.ref/10.0.10/microsoft.netcore.app.ref.10.0.10.nupkg.sha512",
+    "/tmp/codeql-scratch-7d2fd39e46f9feff/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/10.0.10/microsoft.aspnetcore.app.ref.10.0.10.nupkg.sha512"
+  ],
   "logs": []
 }
