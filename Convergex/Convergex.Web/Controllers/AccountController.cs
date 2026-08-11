@@ -1,5 +1,7 @@
+using Convergex.Application.DTOs.Audit;
 using Convergex.Application.DTOs.Auth;
 using Convergex.Application.Interfaces;
+using Convergex.Domain.Enums;
 using Convergex.Web.ViewModels.Account;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
@@ -12,10 +14,12 @@ namespace Convergex.Web.Controllers;
 public class AccountController : Controller
 {
     private readonly IAuthService _authService;
+    private readonly IAuditService _auditService;
 
-    public AccountController(IAuthService authService)
+    public AccountController(IAuthService authService, IAuditService auditService)
     {
         _authService = authService;
+        _auditService = auditService;
     }
 
     [HttpGet]
@@ -48,6 +52,15 @@ public class AccountController : Controller
 
         if (user is null)
         {
+            await _auditService.LogAsync(new AuditLogEntryDto
+            {
+                Action = AuditAction.LoginFailed,
+                EntityName = "Auth",
+                Detail = $"Intento de inicio de sesión fallido: {model.Email}",
+                Status = AuditStatus.Failed,
+                UserName = model.Email
+            }, cancellationToken);
+
             ModelState.AddModelError(string.Empty, "Correo o contraseña incorrectos.");
             return View(model);
         }
@@ -70,6 +83,17 @@ public class AccountController : Controller
 
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, properties);
 
+        await _auditService.LogAsync(new AuditLogEntryDto
+        {
+            Action = AuditAction.Login,
+            EntityName = "Auth",
+            EntityId = user.Id.ToString(),
+            Detail = $"Inicio de sesión exitoso: {user.Email}",
+            Status = AuditStatus.Success,
+            UserId = user.Id,
+            UserName = user.FullName
+        }, cancellationToken);
+
         if (!string.IsNullOrWhiteSpace(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
         {
             return Redirect(model.ReturnUrl);
@@ -81,9 +105,24 @@ public class AccountController : Controller
     [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Logout()
+    public async Task<IActionResult> Logout(CancellationToken cancellationToken)
     {
+        var userId = GetUserId();
+        var userName = User.Identity?.Name ?? "Usuario";
+
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+        await _auditService.LogAsync(new AuditLogEntryDto
+        {
+            Action = AuditAction.Logout,
+            EntityName = "Auth",
+            EntityId = userId.ToString(),
+            Detail = $"Cierre de sesión: {userName}",
+            Status = AuditStatus.Success,
+            UserId = userId,
+            UserName = userName
+        }, cancellationToken);
+
         return RedirectToAction(nameof(Login));
     }
 

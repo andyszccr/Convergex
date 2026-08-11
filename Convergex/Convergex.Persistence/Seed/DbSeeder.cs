@@ -114,6 +114,8 @@ public static class DbSeeder
 
     private static async Task SeedCatalogAsync(ConvergexDbContext context, CancellationToken cancellationToken)
     {
+        await SeedUnitsAsync(context, cancellationToken);
+
         if (await context.Currencies.AnyAsync(cancellationToken))
         {
             return;
@@ -128,27 +130,43 @@ public static class DbSeeder
         await context.SaveChangesAsync(cancellationToken);
 
         var now = DateTime.UtcNow;
+        const string seedAdminName = "Alexander Navarro";
         context.ExchangeRates.AddRange(
             new ExchangeRate
             {
-                BaseCurrencyId = usd.Id,
-                TargetCurrencyId = crc.Id,
-                Rate = 512.45m,
-                UpdatedAt = now.AddMinutes(-15)
+                BaseCurrencyId = usd.Id, TargetCurrencyId = crc.Id, BuyRate = 505.20m, SellRate = 515.80m,
+                EffectiveAt = now.AddDays(-2), CreatedAt = now.AddDays(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Historical, CreatedByName = seedAdminName
             },
             new ExchangeRate
             {
-                BaseCurrencyId = usd.Id,
-                TargetCurrencyId = eur.Id,
-                Rate = 0.92m,
-                UpdatedAt = now.AddHours(-2)
+                BaseCurrencyId = usd.Id, TargetCurrencyId = crc.Id, BuyRate = 508.10m, SellRate = 518.45m,
+                EffectiveAt = now.AddMinutes(-15), CreatedAt = now.AddMinutes(-15),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Active, CreatedByName = seedAdminName
             },
             new ExchangeRate
             {
-                BaseCurrencyId = eur.Id,
-                TargetCurrencyId = crc.Id,
-                Rate = 557.10m,
-                UpdatedAt = now.AddHours(-5)
+                BaseCurrencyId = usd.Id, TargetCurrencyId = eur.Id, BuyRate = 0.900m, SellRate = 0.940m,
+                EffectiveAt = now.AddDays(-2), CreatedAt = now.AddDays(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Historical, CreatedByName = seedAdminName
+            },
+            new ExchangeRate
+            {
+                BaseCurrencyId = usd.Id, TargetCurrencyId = eur.Id, BuyRate = 0.905m, SellRate = 0.935m,
+                EffectiveAt = now.AddHours(-2), CreatedAt = now.AddHours(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Active, CreatedByName = seedAdminName
+            },
+            new ExchangeRate
+            {
+                BaseCurrencyId = eur.Id, TargetCurrencyId = crc.Id, BuyRate = 548.00m, SellRate = 566.00m,
+                EffectiveAt = now.AddDays(-2), CreatedAt = now.AddDays(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Historical, CreatedByName = seedAdminName
+            },
+            new ExchangeRate
+            {
+                BaseCurrencyId = eur.Id, TargetCurrencyId = crc.Id, BuyRate = 552.30m, SellRate = 562.90m,
+                EffectiveAt = now.AddHours(-5), CreatedAt = now.AddHours(-5),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Active, CreatedByName = seedAdminName
             });
 
         var conversions = new List<Conversion>();
@@ -192,6 +210,25 @@ public static class DbSeeder
         }
 
         context.Conversions.AddRange(conversions);
+        await context.SaveChangesAsync(cancellationToken);
+    }
+
+    private static async Task SeedUnitsAsync(ConvergexDbContext context, CancellationToken cancellationToken)
+    {
+        if (await context.Units.AnyAsync(cancellationToken))
+        {
+            return;
+        }
+
+        context.Units.AddRange(
+            new Unit { Name = "Onza troy", Symbol = "oz t", Category = UnitCategory.Peso, ConversionFactor = 31.1035m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Name = "Gramo", Symbol = "g", Category = UnitCategory.Peso, ConversionFactor = 1m, DecimalPrecision = 2, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Name = "Kilogramo", Symbol = "kg", Category = UnitCategory.Peso, ConversionFactor = 1000m, DecimalPrecision = 2, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Name = "Metro", Symbol = "m", Category = UnitCategory.Longitud, ConversionFactor = 1m, DecimalPrecision = 2, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Name = "Centímetro", Symbol = "cm", Category = UnitCategory.Longitud, ConversionFactor = 0.01m, DecimalPrecision = 2, RoundingMode = RoundingMode.Truncate, IsActive = true },
+            new Unit { Name = "Lote de transacción", Symbol = "lote", Category = UnitCategory.Volumen, ConversionFactor = 1000m, DecimalPrecision = 0, RoundingMode = RoundingMode.Truncate, IsActive = true },
+            new Unit { Name = "Fracción monetaria", Symbol = "frac", Category = UnitCategory.Volumen, ConversionFactor = 0.01m, DecimalPrecision = 2, RoundingMode = RoundingMode.HalfUp, IsActive = true });
+
         await context.SaveChangesAsync(cancellationToken);
     }
 }

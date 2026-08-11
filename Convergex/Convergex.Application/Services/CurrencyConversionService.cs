@@ -1,3 +1,5 @@
+using System.Text.Json;
+using Convergex.Application.DTOs.Audit;
 using Convergex.Application.DTOs.Conversions;
 using Convergex.Application.Interfaces;
 using Convergex.Domain.Entities;
@@ -10,15 +12,18 @@ public class CurrencyConversionService : ICurrencyConversionService
     private readonly ICurrencyRepository _currencyRepository;
     private readonly IExchangeRateRepository _exchangeRateRepository;
     private readonly IConversionRepository _conversionRepository;
+    private readonly IAuditService _auditService;
 
     public CurrencyConversionService(
         ICurrencyRepository currencyRepository,
         IExchangeRateRepository exchangeRateRepository,
-        IConversionRepository conversionRepository)
+        IConversionRepository conversionRepository,
+        IAuditService auditService)
     {
         _currencyRepository = currencyRepository;
         _exchangeRateRepository = exchangeRateRepository;
         _conversionRepository = conversionRepository;
+        _auditService = auditService;
     }
 
     public async Task<(bool Success, string Message, CurrencyConversionResultDto? Result)> ConvertAsync(
@@ -71,6 +76,25 @@ public class CurrencyConversionService : ICurrencyConversionService
         await _conversionRepository.AddAsync(conversion, cancellationToken);
         await _conversionRepository.SaveChangesAsync(cancellationToken);
 
+        await _auditService.LogAsync(new AuditLogEntryDto
+        {
+            Action = AuditAction.Conversion,
+            EntityName = "Conversion",
+            EntityId = conversion.Id.ToString(),
+            Detail = $"Conversión {from.Code} → {to.Code}: {request.Amount:N2} → {resultValue:N4} (tasa {rateInfo.Value:N6})",
+            NewValues = JsonSerializer.Serialize(new
+            {
+                conversion.FromCode,
+                conversion.ToCode,
+                conversion.Amount,
+                conversion.RateApplied,
+                conversion.Result,
+                conversion.UserName
+            }),
+            Status = AuditStatus.Success,
+            UserName = request.UserName
+        }, cancellationToken);
+
         return (true, "Conversión realizada y guardada en el historial.", new CurrencyConversionResultDto
         {
             ConversionId = conversion.Id,
@@ -107,16 +131,18 @@ public class CurrencyConversionService : ICurrencyConversionService
 
     private async Task<decimal?> ResolveRateAsync(int fromId, int toId, CancellationToken cancellationToken)
     {
-        var direct = await _exchangeRateRepository.GetByPairAsync(fromId, toId, cancellationToken);
+        // Par almacenado Base->Destino: convertir Base->Destino es el cambista comprando la Base (BuyRate);
+        // convertir Destino->Base (par inverso) es el cambista vendiendo la Base (1 / SellRate).
+        var direct = await _exchangeRateRepository.GetActiveByPairAsync(fromId, toId, cancellationToken);
         if (direct is not null)
         {
-            return direct.Rate;
+            return direct.BuyRate;
         }
 
-        var inverse = await _exchangeRateRepository.GetByPairAsync(toId, fromId, cancellationToken);
-        if (inverse is not null && inverse.Rate != 0)
+        var inverse = await _exchangeRateRepository.GetActiveByPairAsync(toId, fromId, cancellationToken);
+        if (inverse is not null && inverse.SellRate != 0)
         {
-            return Math.Round(1m / inverse.Rate, 8);
+            return Math.Round(1m / inverse.SellRate, 8);
         }
 
         return null;

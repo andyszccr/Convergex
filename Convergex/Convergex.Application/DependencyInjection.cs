@@ -12,8 +12,11 @@ public static class DependencyInjection
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<ICurrencyService, CurrencyService>();
+        services.AddScoped<IUnitService, UnitService>();
         services.AddScoped<IExchangeRateService, ExchangeRateService>();
         services.AddScoped<ICurrencyConversionService, CurrencyConversionService>();
+        services.AddScoped<IAuditService, AuditService>();
+        services.AddScoped<IReportService, ReportService>();
         return services;
     }
 }

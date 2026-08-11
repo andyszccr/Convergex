@@ -69,17 +69,17 @@ public class CurrencyConversionController : Controller
 
         if (model.FromCurrencyId > 0 && model.ToCurrencyId > 0 && model.FromCurrencyId != model.ToCurrencyId)
         {
-            var direct = await _exchangeRateService.GetByPairAsync(model.FromCurrencyId, model.ToCurrencyId, cancellationToken);
+            var direct = await _exchangeRateService.GetActiveByPairAsync(model.FromCurrencyId, model.ToCurrencyId, cancellationToken);
             if (direct is not null)
             {
-                model.CurrentRate = direct.Rate;
+                model.CurrentRate = direct.BuyRate;
             }
             else
             {
-                var inverse = await _exchangeRateService.GetByPairAsync(model.ToCurrencyId, model.FromCurrencyId, cancellationToken);
-                if (inverse is not null && inverse.Rate != 0)
+                var inverse = await _exchangeRateService.GetActiveByPairAsync(model.ToCurrencyId, model.FromCurrencyId, cancellationToken);
+                if (inverse is not null && inverse.SellRate != 0)
                 {
-                    model.CurrentRate = Math.Round(1m / inverse.Rate, 8);
+                    model.CurrentRate = Math.Round(1m / inverse.SellRate, 8);
                 }
             }
         }

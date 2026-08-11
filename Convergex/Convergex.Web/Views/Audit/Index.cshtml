@@ -1,0 +1,216 @@
+@model Convergex.Web.ViewModels.Audit.AuditLogFilterViewModel
+@using Convergex.Domain.Enums
+@{
+    ViewData["Title"] = "Auditoría";
+
+    string ActionPill(AuditAction action) => action switch
+    {
+        AuditAction.Create => "pill-green",
+        AuditAction.Login => "pill-green",
+        AuditAction.Update => "pill-orange",
+        AuditAction.Delete => "pill-red",
+        AuditAction.LoginFailed => "pill-red",
+        AuditAction.Conversion => "pill-blue",
+        AuditAction.Logout => "pill-muted",
+        _ => "pill-muted"
+    };
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Auditoría</h1>
+            <p>Traza inalterable de eventos del sistema: creaciones, ediciones, eliminaciones, accesos y conversiones.</p>
+        </div>
+    </div>
+
+    <article class="panel form-panel">
+        <form method="get" class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Buscar</label>
+                <input name="keyword" value="@Model.Keyword" class="form-control" placeholder="Usuario, IP o detalle..." />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Tipo de evento</label>
+                <select class="form-select" asp-for="EventType">
+                    <option value="">Todos</option>
+                    <option value="Create">Creación</option>
+                    <option value="Update">Edición</option>
+                    <option value="Delete">Eliminación</option>
+                    <option value="Login">Inicio de sesión</option>
+                    <option value="LoginFailed">Inicio fallido</option>
+                    <option value="Logout">Cierre de sesión</option>
+                    <option value="Conversion">Conversión</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Módulo</label>
+                <select name="entityName" class="form-select" asp-for="EntityName">
+                    <option value="">Todos</option>
+                    <option value="Moneda">Monedas</option>
+                    <option value="Unidad">Unidades</option>
+                    <option value="TasaDeCambio">Tasas de cambio</option>
+                    <option value="Usuario">Usuarios</option>
+                    <option value="Rol">Roles</option>
+                    <option value="Conversion">Conversiones</option>
+                    <option value="Auth">Autenticación</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Desde</label>
+                <input type="date" name="fromDate" value="@(Model.FromDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Hasta</label>
+                <input type="date" name="toDate" value="@(Model.ToDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-cx">Filtrar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Limpiar</a>
+            </div>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Usuario</th>
+                        <th>Evento</th>
+                        <th>Módulo</th>
+                        <th>Entidad</th>
+                        <th>IP</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if (!Model.Result.Items.Any())
+                {
+                    <tr><td colspan="8" class="empty-cell">No hay eventos para los filtros seleccionados.</td></tr>
+                }
+                else
+                {
+                    foreach (var item in Model.Result.Items)
+                    {
+                        <tr>
+                            <td>@item.Timestamp.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss.fff")</td>
+                            <td>@item.UserName</td>
+                            <td><span class="pill @ActionPill(item.Action)">@item.ActionName</span></td>
+                            <td>@item.EntityName</td>
+                            <td>@(item.EntityId ?? "—")</td>
+                            <td>@(item.IpAddress ?? "—")</td>
+                            <td>
+                                <span class="pill @(item.Status == AuditStatus.Success ? "pill-green" : "pill-red")">
+                                    @item.StatusName
+                                </span>
+                            </td>
+                            <td class="table-actions">
+                                <button type="button" class="btn btn-sm btn-outline-primary audit-detail-btn" data-id="@item.Id">
+                                    Ver detalle
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.Result.TotalPages > 1)
+        {
+            <nav aria-label="Paginación de auditoría" class="mt-3">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (var p = 1; p <= Model.Result.TotalPages; p++)
+                    {
+                        <li class="page-item @(p == Model.Result.Page ? "active" : "")">
+                            <a class="page-link" asp-action="Index"
+                               asp-route-keyword="@Model.Keyword"
+                               asp-route-eventType="@Model.EventType"
+                               asp-route-entityName="@Model.EntityName"
+                               asp-route-fromDate="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+                               asp-route-toDate="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+                               asp-route-page="@p">@p</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </article>
+</section>
+
+<div class="modal fade" id="auditDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalle del evento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <dl class="row mb-3">
+                    <dt class="col-sm-3">Fecha</dt>
+                    <dd class="col-sm-9" id="auditDetailTimestamp"></dd>
+                    <dt class="col-sm-3">Usuario</dt>
+                    <dd class="col-sm-9" id="auditDetailUser"></dd>
+                    <dt class="col-sm-3">Evento</dt>
+                    <dd class="col-sm-9" id="auditDetailAction"></dd>
+                    <dt class="col-sm-3">Módulo / Entidad</dt>
+                    <dd class="col-sm-9" id="auditDetailEntity"></dd>
+                    <dt class="col-sm-3">IP</dt>
+                    <dd class="col-sm-9" id="auditDetailIp"></dd>
+                    <dt class="col-sm-3">Detalle</dt>
+                    <dd class="col-sm-9" id="auditDetailText"></dd>
+                </dl>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <h6>Valores anteriores</h6>
+                        <pre class="audit-json-box" id="auditDetailOldValues">—</pre>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Valores nuevos</h6>
+                        <pre class="audit-json-box" id="auditDetailNewValues">—</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function formatJson(raw) {
+            if (!raw) {
+                return '—';
+            }
+            try {
+                return JSON.stringify(JSON.parse(raw), null, 2);
+            } catch {
+                return raw;
+            }
+        }
+
+        document.querySelectorAll('.audit-detail-btn').forEach(function (btn) {
+            btn.addEventListener('click', async function () {
+                const id = btn.getAttribute('data-id');
+                const response = await fetch(`/Audit/Details/${id}`);
+                if (!response.ok) {
+                    return;
+                }
+                const data = await response.json();
+
+                document.getElementById('auditDetailTimestamp').textContent = new Date(data.timestamp).toLocaleString('es-CR');
+                document.getElementById('auditDetailUser').textContent = data.userName;
+                document.getElementById('auditDetailAction').textContent = data.actionName;
+                document.getElementById('auditDetailEntity').textContent = `${data.entityName}${data.entityId ? ' #' + data.entityId : ''}`;
+                document.getElementById('auditDetailIp').textContent = data.ipAddress || '—';
+                document.getElementById('auditDetailText').textContent = data.detail || '—';
+                document.getElementById('auditDetailOldValues').textContent = formatJson(data.oldValues);
+                document.getElementById('auditDetailNewValues').textContent = formatJson(data.newValues);
+
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('auditDetailModal')).show();
+            });
+        });
+    </script>
+}

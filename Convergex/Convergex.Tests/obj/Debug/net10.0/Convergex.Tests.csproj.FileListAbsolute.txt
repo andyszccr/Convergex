@@ -20,3 +20,44 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.deps.json
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.sourcelink.json
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Converge.FEE501D5.Up2Date
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Black.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Bold.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Italic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Light.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Medium.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Regular.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-Thin.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\LatoFont\OFL.txt
