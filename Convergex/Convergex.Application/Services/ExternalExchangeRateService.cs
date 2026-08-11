@@ -22,6 +22,10 @@ public class ExternalExchangeRateService : IExternalExchangeRateService, IDispos
         _httpClient = httpClient;
         _logger = logger;
         _apiUrl = configuration["ExternalApis:TdcRateUrl"] ?? "http://apis.gometa.org/tdc/tdc.json";
+        if (Uri.TryCreate(_apiUrl, UriKind.Absolute, out var uri) && uri.Scheme != Uri.UriSchemeHttps)
+        {
+            _logger.LogWarning("External exchange rate API is configured with non-HTTPS URL: {ApiUrl}", _apiUrl);
+        }
 
         // Configurar el cliente HTTP para mayor seguridad
         _httpClient.Timeout = TimeSpan.FromSeconds(10);
