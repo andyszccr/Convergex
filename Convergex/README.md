@@ -73,10 +73,9 @@ Convergex/
 - Interfaz limpia y profesional
 - Responsive para móviles y desktop
 
-**Credenciales de demo:**
+**Credenciales de demo (solo local):**
 - Email: `admin@convergex.com`
-- Contraseña: `Admin123!`
-
+- Contraseña: *(definida en el seeding/configuración local; no se versiona en el repositorio)*
 ### 3. Dashboard (`/Dashboard`)
 
 **Funcionalidad:**
