@@ -51,12 +51,12 @@ public class ExchangeRatesController : Controller
 
     [Authorize(Roles = "Administrador")]
     public async Task<IActionResult> Create(CancellationToken cancellationToken)
-        => View(await BuildFormAsync(new ExchangeRateFormViewModel(), cancellationToken));
+        => View(await BuildFormAsync(new HistoryReportViewModel(), cancellationToken));
 
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = "Administrador")]
-    public async Task<IActionResult> Create(ExchangeRateFormViewModel model, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create(HistoryReportViewModel model, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
@@ -83,7 +83,7 @@ public class ExchangeRatesController : Controller
             return NotFound();
         }
 
-        var model = new ExchangeRateFormViewModel
+        var model = new HistoryReportViewModel
         {
             Id = item.Id,
             BaseCurrencyId = item.BaseCurrencyId,
@@ -98,7 +98,7 @@ public class ExchangeRatesController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = "Administrador")]
-    public async Task<IActionResult> Edit(int id, ExchangeRateFormViewModel model, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit(int id, HistoryReportViewModel model, CancellationToken cancellationToken)
     {
         model.Id = id;
         model.IsEdit = true;
@@ -129,8 +129,8 @@ public class ExchangeRatesController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    private async Task<ExchangeRateFormViewModel> BuildFormAsync(
-        ExchangeRateFormViewModel model,
+    private async Task<HistoryReportViewModel> BuildFormAsync(
+        HistoryReportViewModel model,
         CancellationToken cancellationToken)
     {
         var currencies = await _currencyService.GetActiveAsync(cancellationToken);
@@ -142,7 +142,7 @@ public class ExchangeRatesController : Controller
         return model;
     }
 
-    private static ExchangeRateFormDto ToDto(ExchangeRateFormViewModel model) => new()
+    private static ExchangeRateFormDto ToDto(HistoryReportViewModel model) => new()
     {
         Id = model.Id,
         BaseCurrencyId = model.BaseCurrencyId,

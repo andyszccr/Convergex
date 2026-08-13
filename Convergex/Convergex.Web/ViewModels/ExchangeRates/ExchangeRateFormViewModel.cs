@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Convergex.Web.ViewModels.ExchangeRates;
 
-public class ExchangeRateFormViewModel
+public class HistoryReportViewModel
 {
     public int Id { get; set; }
 

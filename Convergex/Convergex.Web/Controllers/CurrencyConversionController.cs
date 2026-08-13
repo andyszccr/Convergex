@@ -13,73 +13,143 @@ public class CurrencyConversionController : Controller
     private readonly ICurrencyConversionService _conversionService;
     private readonly ICurrencyService _currencyService;
     private readonly IExchangeRateService _exchangeRateService;
+    private readonly IAuditService _auditService;
 
     public CurrencyConversionController(
         ICurrencyConversionService conversionService,
         ICurrencyService currencyService,
-        IExchangeRateService exchangeRateService)
+        IExchangeRateService exchangeRateService,
+        IAuditService auditService)
     {
         _conversionService = conversionService;
         _currencyService = currencyService;
         _exchangeRateService = exchangeRateService;
+        _auditService = auditService;
     }
 
     [HttpGet]
-    public async Task<IActionResult> Index(CancellationToken cancellationToken)
-        => View(await BuildAsync(new CurrencyConversionViewModel(), cancellationToken));
+    public async Task<IActionResult> Index(
+        CancellationToken cancellationToken)
+    {
+        return View(
+            await BuildAsync(
+                new CurrencyConversionViewModel(),
+                cancellationToken));
+    }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Index(CurrencyConversionViewModel model, CancellationToken cancellationToken)
+    public async Task<IActionResult> Index(
+        CurrencyConversionViewModel model,
+        CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
-            return View(await BuildAsync(model, cancellationToken));
+            return View(
+                await BuildAsync(
+                    model,
+                    cancellationToken));
         }
 
-        var result = await _conversionService.ConvertAsync(new CurrencyConversionRequestDto
-        {
-            FromCurrencyId = model.FromCurrencyId,
-            ToCurrencyId = model.ToCurrencyId,
-            Amount = model.Amount,
-            UserName = User.Identity?.Name
-        }, cancellationToken);
+        var result = await _conversionService.ConvertAsync(
+            new CurrencyConversionRequestDto
+            {
+                FromCurrencyId = model.FromCurrencyId,
+                ToCurrencyId = model.ToCurrencyId,
+                Amount = model.Amount,
+                UserName = User.Identity?.Name
+            },
+            cancellationToken);
 
         if (!result.Success)
         {
-            ModelState.AddModelError(string.Empty, result.Message);
-            return View(await BuildAsync(model, cancellationToken));
+            ModelState.AddModelError(
+                string.Empty,
+                result.Message);
+
+            return View(
+                await BuildAsync(
+                    model,
+                    cancellationToken));
+        }
+
+
+        if (result.Result is not null)
+        {
+            var userName =
+                User.Identity?.Name ?? "Usuario desconocido";
+
+            var ipAddress =
+                HttpContext.Connection.RemoteIpAddress?.ToString();
+
+            await _auditService.LogAsync(
+                userName: userName,
+                action: "Conversión realizada",
+                module: "Conversiones",
+                description:
+                    $"Conversión de {result.Result.Amount:N2} " +
+                    $"{result.Result.FromCode} a " +
+                    $"{result.Result.ToCode}. " +
+                    $"Resultado: {result.Result.Result:N4}.",
+                ipAddress: ipAddress,
+                cancellationToken: cancellationToken);
         }
 
         TempData["Success"] = result.Message;
         model.LastResult = result.Result;
-        return View(await BuildAsync(model, cancellationToken));
+
+        return View(
+            await BuildAsync(
+                model,
+                cancellationToken));
     }
 
     private async Task<CurrencyConversionViewModel> BuildAsync(
         CurrencyConversionViewModel model,
         CancellationToken cancellationToken)
     {
-        var currencies = await _currencyService.GetActiveAsync(cancellationToken);
-        model.Currencies = currencies.Select(c => new SelectListItem
-        {
-            Value = c.Id.ToString(),
-            Text = $"{c.Code} - {c.Name} ({c.Symbol})"
-        });
+        var currencies =
+            await _currencyService.GetActiveAsync(
+                cancellationToken);
 
-        if (model.FromCurrencyId > 0 && model.ToCurrencyId > 0 && model.FromCurrencyId != model.ToCurrencyId)
+        model.Currencies =
+            currencies.Select(c =>
+                new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = $"{c.Code} - {c.Name} ({c.Symbol})"
+                });
+
+        if (model.FromCurrencyId > 0
+            && model.ToCurrencyId > 0
+            && model.FromCurrencyId != model.ToCurrencyId)
         {
-            var direct = await _exchangeRateService.GetByPairAsync(model.FromCurrencyId, model.ToCurrencyId, cancellationToken);
+            var direct =
+                await _exchangeRateService.GetByPairAsync(
+                    model.FromCurrencyId,
+                    model.ToCurrencyId,
+                    cancellationToken);
+
             if (direct is not null)
             {
-                model.CurrentRate = direct.Rate;
+                model.CurrentRate =
+                    direct.Rate;
             }
             else
             {
-                var inverse = await _exchangeRateService.GetByPairAsync(model.ToCurrencyId, model.FromCurrencyId, cancellationToken);
-                if (inverse is not null && inverse.Rate != 0)
+                var inverse =
+                    await _exchangeRateService.GetByPairAsync(
+                        model.ToCurrencyId,
+                        model.FromCurrencyId,
+                        cancellationToken);
+
+                if (inverse is not null
+                    && inverse.Rate != 0)
                 {
-                    model.CurrentRate = Math.Round(1m / inverse.Rate, 8);
+                    model.CurrentRate =
+                        Math.Round(
+                            1m / inverse.Rate,
+                            8);
                 }
             }
         }

@@ -9,8 +9,12 @@
     var isUsers = string.Equals(controller, "Users", StringComparison.OrdinalIgnoreCase);
     var isProfile = string.Equals(controller, "Account", StringComparison.OrdinalIgnoreCase)
         && string.Equals(action, "Profile", StringComparison.OrdinalIgnoreCase);
-
+    var isReports =
+    string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase)
+    && string.Equals(action, "Index", StringComparison.OrdinalIgnoreCase);
     var fullName = User.Identity?.Name ?? "Usuario";
+    var isAudit = string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase)
+    && string.Equals(action, "Audit", StringComparison.OrdinalIgnoreCase);
     var roleName = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? "Usuario";
     var initials = string.Concat(
         fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries)
@@ -59,10 +63,10 @@
                 <a class="sidebar-link @(isRates ? "active" : "")" asp-controller="ExchangeRates" asp-action="Index">
                     <i class="bi bi-graph-up"></i><span>Tasas de cambio</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isReports ? "active" : "")" asp-controller="Reports" asp-action="Index">
                     <i class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isAudit ? "active" : "")" asp-controller="Reports" asp-action="Audit">
                     <i class="bi bi-shield-check"></i><span>Auditoría</span>
                 </a>
                 @if (User.IsInRole("Administrador"))

@@ -16,3 +16,21 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\refint\Convergex.Persistence.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\ref\Convergex.Persistence.dll
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Persistence.deps.json
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Persistence.dll
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Persistence.pdb
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Application.dll
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Domain.dll
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Domain.pdb
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\bin\Debug\net10.0\Convergex.Application.pdb
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.csproj.AssemblyReference.cache
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.AssemblyInfoInputs.cache
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.AssemblyInfo.cs
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.csproj.CoreCompileInputs.cache
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.sourcelink.json
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Converge.B9A6F3EC.Up2Date
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.dll
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\refint\Convergex.Persistence.dll
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\Convergex.Persistence.pdb
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Persistence\obj\Debug\net10.0\ref\Convergex.Persistence.dll

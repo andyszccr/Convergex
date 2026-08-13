@@ -1,0 +1,183 @@
+﻿@model Convergex.Web.ViewModels.Reports.AuditReportViewModel
+
+@{
+    ViewData["Title"] = "Auditoría";
+}
+
+<section class="module-page">
+
+    <div class="module-header">
+        <div>
+            <h1>Auditoría</h1>
+            <p>Consulta de acciones registradas en el sistema.</p>
+        </div>
+    </div>
+
+    <article class="panel form-panel">
+
+        <h5 class="mb-3">Filtros de auditoría</h5>
+
+        <form method="get" class="row g-3">
+
+            <div class="col-md-3">
+                <label class="form-label">Usuario</label>
+
+                <input type="text"
+                       name="userName"
+                       value="@Model.UserName"
+                       class="form-control"
+                       placeholder="Nombre de usuario" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Módulo</label>
+
+                <input type="text"
+                       name="module"
+                       value="@Model.Module"
+                       class="form-control"
+                       placeholder="Ej: Conversiones" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Desde</label>
+
+                <input type="date"
+                       name="fromDate"
+                       value="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+                       class="form-control" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Hasta</label>
+
+                <input type="date"
+                       name="toDate"
+                       value="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+                       class="form-control" />
+            </div>
+
+            <div class="col-12">
+
+                <button type="submit"
+                        class="btn btn-primary-cx">
+                    Filtrar
+                </button>
+
+                <a asp-controller="Reports"
+                   asp-action="Audit"
+                   class="btn btn-outline-secondary">
+                    Limpiar
+                </a>
+
+            </div>
+
+        </form>
+
+    </article>
+
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-4">
+            <article class="panel h-100">
+
+                <small class="text-muted">
+                    Registros encontrados
+                </small>
+
+                <h3 class="mt-2 mb-0">
+                    @Model.TotalRecords
+                </h3>
+
+            </article>
+        </div>
+
+    </div>
+
+    <article class="panel">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <div>
+                <h5 class="mb-1">
+                    Registro de auditoría
+                </h5>
+
+                <small class="text-muted">
+                    @Model.TotalRecords registros encontrados
+                </small>
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Usuario</th>
+                        <th>Acción</th>
+                        <th>Módulo</th>
+                        <th>Descripción</th>
+                        <th>IP</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @if (!Model.Items.Any())
+                    {
+                        <tr>
+                            <td colspan="6"
+                                class="empty-cell">
+                                No hay registros de auditoría para los filtros seleccionados.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var item in Model.Items)
+                        {
+                            <tr>
+
+                                <td>
+                                    @item.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                                </td>
+
+                                <td>
+                                    @item.UserName
+                                </td>
+
+                                <td>
+                                    <span class="pill pill-blue">
+                                        @item.Action
+                                    </span>
+                                </td>
+
+                                <td>
+                                    @item.Module
+                                </td>
+
+                                <td>
+                                    @item.Description
+                                </td>
+
+                                <td>
+                                    @(item.IpAddress ?? "—")
+                                </td>
+
+                            </tr>
+                        }
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </article>
+
+</section>

@@ -1,0 +1,377 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\views\\reports\\audit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\views\\reports\\audit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\controllers\\exchangeratescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\controllers\\exchangeratescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\viewmodels\\reports\\auditreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\viewmodels\\reports\\auditreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.persistence\\repositories\\auditrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\repositories\\auditrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\services\\auditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\services\\auditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\interfaces\\iauditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\interfaces\\iauditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\interfaces\\iauditrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\interfaces\\iauditrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E17CEBE-065C-FDFD-EA42-AEF9C3202D6E}|Convergex.Domain\\Convergex.Domain.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E17CEBE-065C-FDFD-EA42-AEF9C3202D6E}|Convergex.Domain\\Convergex.Domain.csproj|solutionrelative:convergex.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\controllers\\currencyconversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\controllers\\currencyconversioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CBA25E-A691-8A70-BAF2-354E35CF86CE}|Convergex.Web\\Convergex.Web.csproj|solutionrelative:convergex.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.persistence\\migrations\\20260813215613_addauditlogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\migrations\\20260813215613_addauditlogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.persistence\\migrations\\20260813215613_addauditlogs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\migrations\\20260813215613_addauditlogs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E310-B086-58C4-8415-B068F9B7FD18}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E310-B086-58C4-8415-B068F9B7FD18}|Convergex.Infrastructure\\Convergex.Infrastructure.csproj|solutionrelative:convergex.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\dtos\\audits\\auditlogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\dtos\\audits\\auditlogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.persistence\\context\\convergexdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9C2210B-F910-B43F-4238-2C2AF497F8EE}|Convergex.Persistence\\Convergex.Persistence.csproj|solutionrelative:convergex.persistence\\context\\convergexdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|e:\\ingenieria en sistemas\\8vo cuatrimestre\\paradigmas de programacion\\convergex\\convergex\\convergex\\convergex.application\\dtos\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27B7E9FB-6050-D1F0-FC59-B2B8AAE41FA4}|Convergex.Application\\Convergex.Application.csproj|solutionrelative:convergex.application\\dtos\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Convergex.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Convergex.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-13T22:15:22.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Audit.cshtml",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Views\\Reports\\Audit.cshtml",
+              "RelativeDocumentMoniker": "Convergex.Web\\Views\\Reports\\Audit.cshtml",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Views\\Reports\\Audit.cshtml",
+              "RelativeToolTip": "Convergex.Web\\Views\\Reports\\Audit.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAowLgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-13T22:15:04.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Convergex.Web\\Controllers\\ReportsController.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Convergex.Web\\Controllers\\ReportsController.cs",
+              "ViewState": "AgIAALkBAAAAAAAAAAAAANUBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T22:12:33.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuditReportViewModel.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\ViewModels\\Reports\\AuditReportViewModel.cs",
+              "RelativeDocumentMoniker": "Convergex.Web\\ViewModels\\Reports\\AuditReportViewModel.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\ViewModels\\Reports\\AuditReportViewModel.cs",
+              "RelativeToolTip": "Convergex.Web\\ViewModels\\Reports\\AuditReportViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T22:12:18.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CurrencyConversionController.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\CurrencyConversionController.cs",
+              "RelativeDocumentMoniker": "Convergex.Web\\Controllers\\CurrencyConversionController.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\CurrencyConversionController.cs",
+              "RelativeToolTip": "Convergex.Web\\Controllers\\CurrencyConversionController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAkwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T22:07:02.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\DependencyInjection.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "Convergex.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:47:23.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Domain\\Entities\\AuditLog.cs",
+              "RelativeDocumentMoniker": "Convergex.Domain\\Entities\\AuditLog.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Domain\\Entities\\AuditLog.cs",
+              "RelativeToolTip": "Convergex.Domain\\Entities\\AuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:36:31.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuditRepository.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Interfaces\\IAuditRepository.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\Interfaces\\IAuditRepository.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Interfaces\\IAuditRepository.cs",
+              "RelativeToolTip": "Convergex.Application\\Interfaces\\IAuditRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:41:40.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAuditService.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Interfaces\\IAuditService.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\Interfaces\\IAuditService.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Interfaces\\IAuditService.cs",
+              "RelativeToolTip": "Convergex.Application\\Interfaces\\IAuditService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:45:25.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExchangeRatesController.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\ExchangeRatesController.cs",
+              "RelativeDocumentMoniker": "Convergex.Web\\Controllers\\ExchangeRatesController.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\ExchangeRatesController.cs",
+              "RelativeToolTip": "Convergex.Web\\Controllers\\ExchangeRatesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T22:06:43.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Convergex.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Convergex.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:50:35.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuditService.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Services\\AuditService.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\Services\\AuditService.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Services\\AuditService.cs",
+              "RelativeToolTip": "Convergex.Application\\Services\\AuditService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:45:58.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuditRepository.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Repositories\\AuditRepository.cs",
+              "RelativeDocumentMoniker": "Convergex.Persistence\\Repositories\\AuditRepository.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Repositories\\AuditRepository.cs",
+              "RelativeToolTip": "Convergex.Persistence\\Repositories\\AuditRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:42:10.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20260813215613_AddAuditLogs.Designer.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.Designer.cs",
+              "RelativeDocumentMoniker": "Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.Designer.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.Designer.cs",
+              "RelativeToolTip": "Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T22:03:16.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20260813215613_AddAuditLogs.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.cs",
+              "RelativeDocumentMoniker": "Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.cs",
+              "RelativeToolTip": "Convergex.Persistence\\Migrations\\20260813215613_AddAuditLogs.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T22:03:26.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Convergex.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "Convergex.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:46:43.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Convergex.Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:44:06.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\Services\\AuthService.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "Convergex.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAowPQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:43:43.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuditLogDto.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Audits\\AuditLogDto.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\DTOs\\Audits\\AuditLogDto.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Audits\\AuditLogDto.cs",
+              "RelativeToolTip": "Convergex.Application\\DTOs\\Audits\\AuditLogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:43:08.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "RelativeToolTip": "Convergex.Application\\DTOs\\Auth\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:42:47.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ConvergexDbContext.cs",
+              "DocumentMoniker": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "RelativeDocumentMoniker": "Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "ToolTip": "E:\\Ingenieria en Sistemas\\8vo Cuatrimestre\\Paradigmas de Programacion\\Convergex\\Convergex\\Convergex\\Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "RelativeToolTip": "Convergex.Persistence\\Context\\ConvergexDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T21:38:49.567Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
