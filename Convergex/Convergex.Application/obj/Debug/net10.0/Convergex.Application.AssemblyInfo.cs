@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Convergex.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93f6d6f64bf8d9ee961f4ab38153a2ee41e06561")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1659137dfe3599e7f258b2e1698131037b96a951")]
 [assembly: System.Reflection.AssemblyProductAttribute("Convergex.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Convergex.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

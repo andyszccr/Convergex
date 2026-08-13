@@ -20,6 +20,11 @@
         fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries)
             .Take(2)
             .Select(p => char.ToUpperInvariant(p[0])));
+    var isSettings =
+    string.Equals(
+        controller,
+        "Settings",
+        StringComparison.OrdinalIgnoreCase);
 }
 <!DOCTYPE html>
 <html lang="es">
@@ -78,8 +83,13 @@
                 <a class="sidebar-link @(isProfile ? "active" : "")" asp-controller="Account" asp-action="Profile">
                     <i class="bi bi-person-circle"></i><span>Mi perfil</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Privacy">
-                    <i class="bi bi-gear"></i><span>Configuración</span>
+                <a class="sidebar-link @(isSettings ? "active" : "")"
+                   asp-controller="Settings"
+                   asp-action="Index">
+
+                    <i class="bi bi-gear"></i>
+                    <span>Configuración</span>
+
                 </a>
             </nav>
 

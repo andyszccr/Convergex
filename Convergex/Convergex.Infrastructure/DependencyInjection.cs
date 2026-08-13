@@ -1,5 +1,6 @@
 using Convergex.Application;
 using Convergex.Application.Interfaces;
+using Convergex.Application.Services;
 using Convergex.Persistence.Context;
 using Convergex.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,8 @@ public static class DependencyInjection
         services.AddScoped<IExchangeRateRepository, ExchangeRateRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IAuditRepository, AuditRepository>();
-
+        services.AddScoped<ISystemSettingRepository, SystemSettingRepository>();
+        services.AddScoped<ISystemSettingService, SystemSettingService>();
         services.AddApplication();
 
         return services;
