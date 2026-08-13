@@ -1,5 +1,5 @@
 ﻿@model Convergex.Web.ViewModels.Reports.AuditReportViewModel
-
+@using Convergex.Application.Helpers
 @{
     ViewData["Title"] = "Auditoría";
 }
@@ -143,7 +143,7 @@
                             <tr>
 
                                 <td>
-                                    @item.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                                    @TimeZoneHelper.ToLocal(item.CreatedAt, Model.TimeZoneId).ToString("dd/MM/yyyy HH:mm")
                                 </td>
 
                                 <td>

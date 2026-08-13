@@ -7,7 +7,7 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using ClosedXML.Excel;
-
+using Convergex.Application.Helpers;
 
 namespace Convergex.Web.Controllers;
 
@@ -16,13 +16,16 @@ public class ReportsController : Controller
 {
     private readonly ICurrencyConversionService _conversionService;
     private readonly IAuditService _auditService;
+    private readonly ISystemSettingService _settingService;
 
     public ReportsController(
-        ICurrencyConversionService conversionService,
-        IAuditService auditService)
+    ICurrencyConversionService conversionService,
+    IAuditService auditService,
+    ISystemSettingService settingService)
     {
         _conversionService = conversionService;
         _auditService = auditService;
+        _settingService = settingService;
     }
 
     public async Task<IActionResult> Index(
@@ -325,7 +328,7 @@ public class ReportsController : Controller
         headerRange.Style.Border.BottomBorder =
             XLBorderStyleValues.Thin;
 
- 
+
 
         int currentRow = headerRow + 1;
 
@@ -395,7 +398,7 @@ public class ReportsController : Controller
                 .Style.NumberFormat.Format =
                     "#,##0.000000";
 
-            
+
             worksheet.Range(
                     headerRow,
                     1,
@@ -404,7 +407,7 @@ public class ReportsController : Controller
                 .SetAutoFilter();
         }
 
-        
+
         worksheet.SheetView.FreezeRows(headerRow);
 
         worksheet.Columns().AdjustToContents();

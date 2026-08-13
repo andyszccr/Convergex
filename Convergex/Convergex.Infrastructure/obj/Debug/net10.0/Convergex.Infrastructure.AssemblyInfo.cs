@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Convergex.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1659137dfe3599e7f258b2e1698131037b96a951")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab022fce754dcb765013451f28d69001791c993e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Convergex.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Convergex.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

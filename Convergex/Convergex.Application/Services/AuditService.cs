@@ -28,6 +28,8 @@ public class AuditService : IAuditService
             Module = module,
             Description = description,
             IpAddress = ipAddress,
+
+            // Siempre guardamos UTC en la BD
             CreatedAt = DateTime.UtcNow
         };
 

@@ -417,7 +417,7 @@ E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\scopedcss\bundle\Convergex.Web.styles.css
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\scopedcss\projectbundle\Convergex.Web.bundle.scp.css
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\7i4l9npc7a-{0}-zckiy6fjkh-zckiy6fjkh.gz
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\b3gut6knie-{0}-05w4p9y0aq-05w4p9y0aq.gz
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\b3gut6knie-{0}-r96tkrdtqj-r96tkrdtqj.gz
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\yzxf705lb4-{0}-61n19gt1b8-61n19gt1b8.gz
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\my3wcdhio1-{0}-ndw5no0o8g-ndw5no0o8g.gz
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\v3z112ad3i-{0}-v84zz0qa6p-v84zz0qa6p.gz
@@ -488,10 +488,10 @@ E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\staticwebassets.development.json
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\swae.build.ex.cache
+E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\Converge.D926A017.Up2Date
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\Convergex.Web.dll
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\refint\Convergex.Web.dll
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\Convergex.Web.pdb
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\Convergex.Web.genruntimeconfig.cache
 E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\ref\Convergex.Web.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

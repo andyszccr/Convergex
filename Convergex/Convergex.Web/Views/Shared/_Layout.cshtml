@@ -1,4 +1,9 @@
-﻿@{
+﻿@inject Convergex.Application.Interfaces.ISystemSettingService SettingService
+@{
+    var systemSettings = await SettingService.GetAsync();
+    var themeClass = systemSettings.Theme == "dark"
+        ? "theme-dark"
+        : "theme-light";
     var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? string.Empty;
     var action = ViewContext.RouteData.Values["action"]?.ToString() ?? string.Empty;
     var isDashboard = string.Equals(controller, "Dashboard", StringComparison.OrdinalIgnoreCase);
@@ -40,7 +45,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Convergex.Web.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="@themeClass">
     <div class="app-frame" id="appFrame">
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">

@@ -12,6 +12,9 @@ public class AuditReportViewModel
 
     public DateTime? ToDate { get; set; }
 
+    public string TimeZoneId { get; set; }
+        = "Central America Standard Time";
+
     public IReadOnlyList<AuditLogDto> Items { get; set; } = [];
 
     public int TotalRecords => Items.Count;

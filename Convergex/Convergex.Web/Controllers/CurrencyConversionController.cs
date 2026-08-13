@@ -14,26 +14,48 @@ public class CurrencyConversionController : Controller
     private readonly ICurrencyService _currencyService;
     private readonly IExchangeRateService _exchangeRateService;
     private readonly IAuditService _auditService;
+    private readonly ISystemSettingService _settingService;
 
     public CurrencyConversionController(
         ICurrencyConversionService conversionService,
         ICurrencyService currencyService,
         IExchangeRateService exchangeRateService,
-        IAuditService auditService)
+        IAuditService auditService,
+        ISystemSettingService settingService)
     {
         _conversionService = conversionService;
         _currencyService = currencyService;
         _exchangeRateService = exchangeRateService;
         _auditService = auditService;
+        _settingService = settingService;
     }
 
     [HttpGet]
     public async Task<IActionResult> Index(
         CancellationToken cancellationToken)
     {
+        var model = new CurrencyConversionViewModel();
+
+        var settings = await _settingService.GetAsync(
+            cancellationToken);
+
+        var currencies = await _currencyService.GetActiveAsync(
+            cancellationToken);
+
+        var defaultCurrency = currencies.FirstOrDefault(
+            x => string.Equals(
+                x.Code,
+                settings.DefaultCurrencyCode,
+                StringComparison.OrdinalIgnoreCase));
+
+        if (defaultCurrency is not null)
+        {
+            model.FromCurrencyId = defaultCurrency.Id;
+        }
+
         return View(
             await BuildAsync(
-                new CurrencyConversionViewModel(),
+                model,
                 cancellationToken));
     }
 
@@ -72,7 +94,6 @@ public class CurrencyConversionController : Controller
                     model,
                     cancellationToken));
         }
-
 
         if (result.Result is not null)
         {
@@ -132,8 +153,7 @@ public class CurrencyConversionController : Controller
 
             if (direct is not null)
             {
-                model.CurrentRate =
-                    direct.Rate;
+                model.CurrentRate = direct.Rate;
             }
             else
             {
