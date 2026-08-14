@@ -10,5 +10,9 @@ public class UnitDto
     public string Symbol { get; set; } = string.Empty;
     public UnitCategory Category { get; set; }
     public decimal FactorToBase { get; set; }
+    public decimal ConversionFactor { get; set; }
+    public string FormattedConversionFactor { get; set; } = string.Empty;
+    public int DecimalPrecision { get; set; }
+    public RoundingMode RoundingMode { get; set; }
     public bool IsActive { get; set; }
 }

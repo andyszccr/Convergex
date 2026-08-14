@@ -1,0 +1,16 @@
+@model Convergex.Web.ViewModels.Units.UnitFormViewModel
+@{
+    ViewData["Title"] = "Nueva unidad";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Nueva unidad</h1>
+            <p>Registra una unidad de medida en el catálogo.</p>
+        </div>
+    </div>
+    <partial name="_UnitForm" model="Model" />
+</section>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

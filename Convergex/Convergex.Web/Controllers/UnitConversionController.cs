@@ -24,7 +24,7 @@ public class UnitConversionController : Controller
     public async Task<IActionResult> Index(UnitCategory? category, CancellationToken cancellationToken)
         => View(await BuildAsync(new UnitConversionViewModel
         {
-            Category = category ?? UnitCategory.Length
+            Category = category ?? UnitCategory.Longitud
         }, cancellationToken));
 
     [HttpPost]
@@ -91,7 +91,7 @@ public class UnitConversionController : Controller
     {
         var category = Enum.IsDefined(model.Category) && model.Category != 0
             ? model.Category
-            : UnitCategory.Length;
+            : UnitCategory.Longitud;
 
         var units = await _unitService.GetActiveByCategoryAsync(category, cancellationToken);
 

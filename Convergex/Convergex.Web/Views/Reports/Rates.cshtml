@@ -1,0 +1,170 @@
+@model Convergex.Web.ViewModels.Reports.RatesReportViewModel
+@using Convergex.Domain.Enums
+@{
+    ViewData["Title"] = "Reportes - Tasas de cambio";
+    ViewData["ActiveTab"] = "rates";
+    var f = Model.Filter;
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Centro de Reportes</h1>
+            <p>Consulta, previsualiza y exporta la información operativa y estratégica de Convergex.</p>
+        </div>
+        <div class="module-actions">
+            <a asp-action="Export" asp-route-report="rates" asp-route-format="pdf"
+               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+               asp-route-baseCurrencyId="@f.BaseCurrencyId" asp-route-targetCurrencyId="@f.TargetCurrencyId" asp-route-source="@f.Source"
+               class="btn btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> Exportar PDF</a>
+            <a asp-action="Export" asp-route-report="rates" asp-route-format="excel"
+               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+               asp-route-baseCurrencyId="@f.BaseCurrencyId" asp-route-targetCurrencyId="@f.TargetCurrencyId" asp-route-source="@f.Source"
+               class="btn btn-outline-success"><i class="bi bi-file-earmark-excel"></i> Exportar Excel</a>
+        </div>
+    </div>
+
+    <partial name="_ReportTabs" />
+
+    <div class="kpi-grid">
+        <article class="stat-card">
+            <div class="stat-icon bg-blue"><i class="bi bi-graph-up"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Registros</span>
+                <strong class="stat-value">@Model.Report.TotalRecords.ToString("N0")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-green"><i class="bi bi-arrow-down-circle"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Compra promedio</span>
+                <strong class="stat-value">@Model.Report.AverageBuyRate.ToString("N4")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-violet"><i class="bi bi-arrow-up-circle"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Venta promedio</span>
+                <strong class="stat-value">@Model.Report.AverageSellRate.ToString("N4")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-orange"><i class="bi bi-percent"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Spread promedio</span>
+                <strong class="stat-value">@Model.Report.AverageSpreadPercent.ToString("N2")%</strong>
+            </div>
+        </article>
+    </div>
+
+    <article class="panel form-panel">
+        <form method="get" class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Moneda origen</label>
+                <select name="baseCurrencyId" class="form-select">
+                    <option value="">Todas</option>
+                    @foreach (var item in f.Currencies)
+                    {
+                        <option value="@item.Value" selected="@(f.BaseCurrencyId?.ToString() == item.Value)">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Moneda destino</label>
+                <select name="targetCurrencyId" class="form-select">
+                    <option value="">Todas</option>
+                    @foreach (var item in f.Currencies)
+                    {
+                        <option value="@item.Value" selected="@(f.TargetCurrencyId?.ToString() == item.Value)">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Fuente</label>
+                <select name="source" class="form-select">
+                    <option value="" selected="@(f.Source is null)">Todas</option>
+                    <option value="Manual" selected="@(f.Source == ExchangeRateSource.Manual)">Manual</option>
+                    <option value="Api" selected="@(f.Source == ExchangeRateSource.Api)">API</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Desde</label>
+                <input type="date" name="fromDate" value="@(f.FromDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Hasta</label>
+                <input type="date" name="toDate" value="@(f.ToDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-cx">Filtrar</button>
+            </div>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Vigente desde</th>
+                        <th>Par</th>
+                        <th>Compra</th>
+                        <th>Venta</th>
+                        <th>Fuente</th>
+                        <th>Estado</th>
+                        <th>Variación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if (!Model.Report.Items.Any())
+                {
+                    <tr><td colspan="7" class="empty-cell">No hay registros para los filtros seleccionados.</td></tr>
+                }
+                else
+                {
+                    foreach (var item in Model.Report.Items)
+                    {
+                        <tr>
+                            <td>@item.EffectiveAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@item.Pair</td>
+                            <td>@item.BuyRate.ToString("N6")</td>
+                            <td>@item.SellRate.ToString("N6")</td>
+                            <td><span class="pill @(item.SourceName == "API" ? "pill-teal" : "pill-blue")">@item.SourceName</span></td>
+                            <td>@item.StatusName</td>
+                            <td>
+                                @if (item.VariationPercent.HasValue)
+                                {
+                                    <span class="variation @(item.VariationPercent.Value >= 0 ? "up" : "down")">
+                                        @(item.VariationPercent.Value >= 0 ? "↑" : "↓") @Math.Abs(item.VariationPercent.Value).ToString("0.##")%
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-secondary">—</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.TotalPages > 1)
+        {
+            <nav aria-label="Paginación de reporte" class="mt-3">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (var p = 1; p <= Model.TotalPages; p++)
+                    {
+                        <li class="page-item @(p == f.Page ? "active" : "")">
+                            <a class="page-link" asp-action="Rates"
+                               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+                               asp-route-baseCurrencyId="@f.BaseCurrencyId" asp-route-targetCurrencyId="@f.TargetCurrencyId" asp-route-source="@f.Source"
+                               asp-route-page="@p">@p</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </article>
+</section>

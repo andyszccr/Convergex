@@ -2,7 +2,7 @@ namespace Convergex.Domain.Enums;
 
 public enum UnitCategory
 {
-    Length = 1,
-    Weight = 2,
-    Volume = 3
+    Longitud = 1,
+    Peso = 2,
+    Volumen = 3
 }

@@ -8,12 +8,19 @@
     <div class="module-header">
         <div>
             <h1>Tasas de cambio</h1>
-            <p>Consulta y administra las paridades disponibles.</p>
+            <p>Paridades vigentes de la casa de cambio (compra / venta).</p>
         </div>
-        @if (isAdmin)
-        {
-            <a asp-action="Create" class="btn btn-primary-cx">Nueva tasa</a>
-        }
+        <div class="module-actions">
+            <a asp-action="History" class="btn btn-outline-secondary"><i class="bi bi-clock-history"></i> Ver historial</a>
+            @if (isAdmin)
+            {
+                <form asp-action="SyncNow" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-outline-primary"><i class="bi bi-arrow-repeat"></i> Sincronizar ahora</button>
+                </form>
+                <a asp-action="Create" class="btn btn-primary-cx"><i class="bi bi-plus-lg"></i> Nueva tasa</a>
+            }
+        </div>
     </div>
 
     @if (TempData["Success"] is string success) { <div class="alert alert-success">@success</div> }
@@ -25,34 +32,43 @@
                 <thead>
                     <tr>
                         <th>Par</th>
-                        <th>Origen</th>
-                        <th>Destino</th>
-                        <th>Tasa</th>
-                        <th>Actualizada</th>
+                        <th>Compra</th>
+                        <th>Venta</th>
+                        <th>Vigente desde</th>
+                        <th>Fuente</th>
+                        <th>Publicada por</th>
                         @if (isAdmin) { <th></th> }
                     </tr>
                 </thead>
                 <tbody>
-                @foreach (var item in Model)
+                @if (!Model.Any())
                 {
-                    <tr>
-                        <td>@item.Pair</td>
-                        <td>@item.BaseCode</td>
-                        <td>@item.TargetCode</td>
-                        <td>@item.Rate.ToString("N6")</td>
-                        <td>@item.UpdatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
-                        @if (isAdmin)
-                        {
-                            <td class="table-actions">
-                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Editar</a>
-                                <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline"
-                                      onsubmit="return confirm('¿Eliminar esta tasa?');">
-                                    @Html.AntiForgeryToken()
-                                    <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                </form>
-                            </td>
-                        }
-                    </tr>
+                    <tr><td colspan="7" class="empty-cell">No hay tasas activas registradas.</td></tr>
+                }
+                else
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Pair</td>
+                            <td>@item.BuyRate.ToString("N6")</td>
+                            <td>@item.SellRate.ToString("N6")</td>
+                            <td>@item.EffectiveAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
+                            <td><span class="pill @(item.Source == Convergex.Domain.Enums.ExchangeRateSource.Api ? "pill-teal" : "pill-blue")">@item.SourceName</span></td>
+                            <td>@(item.CreatedByName ?? "—")</td>
+                            @if (isAdmin)
+                            {
+                                <td class="table-actions">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                                    <form asp-action="Deactivate" asp-route-id="@item.Id" method="post" class="d-inline"
+                                          onsubmit="return confirm('¿Desactivar esta tasa? Ya no se usará para conversiones.');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">Desactivar</button>
+                                    </form>
+                                </td>
+                            }
+                        </tr>
+                    }
                 }
                 </tbody>
             </table>

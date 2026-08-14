@@ -17,6 +17,7 @@ public class ConvergexDbContext : DbContext
     public DbSet<Conversion> Conversions => Set<Conversion>();
     public DbSet<User> Users => Set<User>();
     public DbSet<Role> Roles => Set<Role>();
+    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -40,12 +41,17 @@ public class ConvergexDbContext : DbContext
             entity.Property(x => x.Category).HasConversion<int>();
             entity.Property(x => x.FactorToBase).HasPrecision(18, 12);
             entity.HasIndex(x => x.Code).IsUnique();
+            entity.HasIndex(x => x.Name).IsUnique();
+            entity.HasIndex(x => x.Symbol).IsUnique();
         });
 
         modelBuilder.Entity<ExchangeRate>(entity =>
         {
             entity.HasKey(x => x.Id);
-            entity.Property(x => x.Rate).HasPrecision(18, 6);
+            entity.Property(x => x.BuyRate).HasPrecision(18, 6);
+            entity.Property(x => x.SellRate).HasPrecision(18, 6);
+            entity.Property(x => x.CreatedByName).HasMaxLength(120);
+            entity.HasIndex(x => new { x.BaseCurrencyId, x.TargetCurrencyId, x.Status });
             entity.HasOne(x => x.BaseCurrency)
                 .WithMany(x => x.BaseRates)
                 .HasForeignKey(x => x.BaseCurrencyId)
@@ -87,6 +93,19 @@ public class ConvergexDbContext : DbContext
                 .WithMany(x => x.Users)
                 .HasForeignKey(x => x.RoleId)
                 .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<AuditLog>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.UserName).HasMaxLength(120).IsRequired();
+            entity.Property(x => x.EntityName).HasMaxLength(60).IsRequired();
+            entity.Property(x => x.EntityId).HasMaxLength(40);
+            entity.Property(x => x.IpAddress).HasMaxLength(64);
+            entity.HasIndex(x => x.Timestamp);
+            entity.HasIndex(x => x.UserId);
+            entity.HasIndex(x => x.Action);
+            entity.HasIndex(x => x.EntityName);
         });
     }
 }

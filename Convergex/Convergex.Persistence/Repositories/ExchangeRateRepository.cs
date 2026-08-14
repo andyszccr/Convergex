@@ -1,5 +1,6 @@
 using Convergex.Application.Interfaces;
 using Convergex.Domain.Entities;
+using Convergex.Domain.Enums;
 using Convergex.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,25 +15,96 @@ public class ExchangeRateRepository : IExchangeRateRepository
         _context = context;
     }
 
-    public Task<ExchangeRate?> GetLatestAsync(CancellationToken cancellationToken = default)
-        => Query().OrderByDescending(x => x.UpdatedAt).FirstOrDefaultAsync(cancellationToken);
+    private IQueryable<ExchangeRate> Query()
+        => _context.ExchangeRates.Include(x => x.BaseCurrency).Include(x => x.TargetCurrency);
 
-    public async Task<IReadOnlyList<ExchangeRate>> GetTopAsync(int take, CancellationToken cancellationToken = default)
-        => await Query().OrderByDescending(x => x.UpdatedAt).Take(take).ToListAsync(cancellationToken);
+    public Task<ExchangeRate?> GetActiveByPairAsync(int baseCurrencyId, int targetCurrencyId, CancellationToken cancellationToken = default)
+        => Query().FirstOrDefaultAsync(
+            x => x.BaseCurrencyId == baseCurrencyId && x.TargetCurrencyId == targetCurrencyId && x.Status == ExchangeRateStatus.Active,
+            cancellationToken);
 
-    public async Task<IReadOnlyList<ExchangeRate>> GetAllAsync(CancellationToken cancellationToken = default)
-        => await Query().OrderByDescending(x => x.UpdatedAt).ToListAsync(cancellationToken);
+    public async Task<IReadOnlyList<ExchangeRate>> GetActiveAsync(CancellationToken cancellationToken = default)
+        => await Query().AsNoTracking()
+            .Where(x => x.Status == ExchangeRateStatus.Active)
+            .OrderBy(x => x.BaseCurrency.Code).ThenBy(x => x.TargetCurrency.Code)
+            .ToListAsync(cancellationToken);
+
+    public Task<ExchangeRate?> GetLatestActiveAsync(CancellationToken cancellationToken = default)
+        => Query().AsNoTracking()
+            .Where(x => x.Status == ExchangeRateStatus.Active)
+            .OrderByDescending(x => x.EffectiveAt)
+            .FirstOrDefaultAsync(cancellationToken);
+
+    public async Task<IReadOnlyList<ExchangeRate>> GetTopActiveAsync(int take, CancellationToken cancellationToken = default)
+        => await Query().AsNoTracking()
+            .Where(x => x.Status == ExchangeRateStatus.Active)
+            .OrderByDescending(x => x.EffectiveAt)
+            .Take(take)
+            .ToListAsync(cancellationToken);
 
     public Task<ExchangeRate?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
         => Query().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 
-    public Task<ExchangeRate?> GetByPairAsync(
+    public Task<ExchangeRate?> GetPreviousAsync(
         int baseCurrencyId,
         int targetCurrencyId,
+        DateTime beforeEffectiveAt,
+        int excludeId,
         CancellationToken cancellationToken = default)
-        => Query().FirstOrDefaultAsync(
-            x => x.BaseCurrencyId == baseCurrencyId && x.TargetCurrencyId == targetCurrencyId,
-            cancellationToken);
+        => _context.ExchangeRates.AsNoTracking()
+            .Where(x => x.BaseCurrencyId == baseCurrencyId
+                && x.TargetCurrencyId == targetCurrencyId
+                && x.Id != excludeId
+                && x.EffectiveAt < beforeEffectiveAt)
+            .OrderByDescending(x => x.EffectiveAt)
+            .FirstOrDefaultAsync(cancellationToken);
+
+    public async Task<(IReadOnlyList<ExchangeRate> Items, int TotalCount)> GetHistoryAsync(
+        int? baseCurrencyId,
+        int? targetCurrencyId,
+        DateTime? fromUtc,
+        DateTime? toUtc,
+        ExchangeRateSource? source,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken = default)
+    {
+        var query = Query().AsNoTracking().AsQueryable();
+
+        if (baseCurrencyId.HasValue)
+        {
+            query = query.Where(x => x.BaseCurrencyId == baseCurrencyId.Value);
+        }
+
+        if (targetCurrencyId.HasValue)
+        {
+            query = query.Where(x => x.TargetCurrencyId == targetCurrencyId.Value);
+        }
+
+        if (fromUtc.HasValue)
+        {
+            query = query.Where(x => x.EffectiveAt >= fromUtc.Value);
+        }
+
+        if (toUtc.HasValue)
+        {
+            query = query.Where(x => x.EffectiveAt <= toUtc.Value);
+        }
+
+        if (source.HasValue)
+        {
+            query = query.Where(x => x.Source == source.Value);
+        }
+
+        var totalCount = await query.CountAsync(cancellationToken);
+        var items = await query
+            .OrderByDescending(x => x.EffectiveAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync(cancellationToken);
+
+        return (items, totalCount);
+    }
 
     public async Task AddAsync(ExchangeRate rate, CancellationToken cancellationToken = default)
         => await _context.ExchangeRates.AddAsync(rate, cancellationToken);
@@ -43,17 +115,6 @@ public class ExchangeRateRepository : IExchangeRateRepository
         return Task.CompletedTask;
     }
 
-    public Task DeleteAsync(ExchangeRate rate, CancellationToken cancellationToken = default)
-    {
-        _context.ExchangeRates.Remove(rate);
-        return Task.CompletedTask;
-    }
-
     public Task SaveChangesAsync(CancellationToken cancellationToken = default)
         => _context.SaveChangesAsync(cancellationToken);
-
-    private IQueryable<ExchangeRate> Query()
-        => _context.ExchangeRates
-            .Include(x => x.BaseCurrency)
-            .Include(x => x.TargetCurrency);
 }

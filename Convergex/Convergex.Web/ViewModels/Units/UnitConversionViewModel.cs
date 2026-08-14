@@ -8,7 +8,7 @@ namespace Convergex.Web.ViewModels.Units;
 public class UnitConversionViewModel
 {
     [Display(Name = "Categoría")]
-    public UnitCategory Category { get; set; } = UnitCategory.Length;
+    public UnitCategory Category { get; set; } = UnitCategory.Longitud;
 
     [Required(ErrorMessage = "Selecciona la unidad de origen.")]
     [Display(Name = "Unidad origen")]
