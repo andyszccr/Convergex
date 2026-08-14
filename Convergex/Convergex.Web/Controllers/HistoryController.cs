@@ -26,49 +26,33 @@ public class HistoryController : Controller
         string? userName,
         DateTime? fromDate,
         DateTime? toDate,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        int page = 1)
     {
-        var settings =
-            await _settingService.GetAsync(
-                cancellationToken);
+        var settings = await _settingService.GetAsync(cancellationToken);
 
-        DateTime? fromUtc = null;
-        DateTime? toUtc = null;
+        DateTime? fromUtc = fromDate.HasValue
+            ? TimeZoneHelper.LocalToUtc(fromDate.Value.Date, settings.TimeZoneId)
+            : null;
+        DateTime? toUtc = toDate.HasValue
+            ? TimeZoneHelper.LocalToUtc(toDate.Value.Date.AddDays(1), settings.TimeZoneId).AddTicks(-1)
+            : null;
 
-        if (fromDate.HasValue)
+        const int pageSize = 10;
+        var result = await _conversionService.GetHistoryPagedAsync(
+            type, userName, fromUtc, toUtc, page, pageSize, cancellationToken);
+
+        return View(new ConversionHistoryFilterViewModel
         {
-            fromUtc =
-                TimeZoneHelper.LocalToUtc(
-                    fromDate.Value.Date,
-                    settings.TimeZoneId);
-        }
-
-        if (toDate.HasValue)
-        {
-            toUtc =
-                TimeZoneHelper.LocalToUtc(
-                    toDate.Value.Date.AddDays(1),
-                    settings.TimeZoneId)
-                .AddTicks(-1);
-        }
-
-        var items =
-            await _conversionService.GetHistoryAsync(
-                type,
-                userName,
-                fromUtc,
-                toUtc,
-                cancellationToken);
-
-        return View(
-            new ConversionHistoryFilterViewModel
-            {
-                Type = type,
-                UserName = userName,
-                FromDate = fromDate,
-                ToDate = toDate,
-                TimeZoneId = settings.TimeZoneId,
-                Items = items
-            });
+            Type = type,
+            UserName = userName,
+            FromDate = fromDate,
+            ToDate = toDate,
+            TimeZoneId = settings.TimeZoneId,
+            Page = page,
+            PageSize = pageSize,
+            TotalItems = result.Total,
+            Items = result.Items
+        });
     }
 }

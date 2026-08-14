@@ -28,7 +28,7 @@ public class UserService : IUserService
     }
 
     public async Task<(bool Success, string Message, UserDto? User)> CreateAsync(
-        SystemSettingDto dto,
+        CreateUserDto dto,
         CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrWhiteSpace(dto.FullName) || string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))

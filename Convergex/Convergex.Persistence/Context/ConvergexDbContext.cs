@@ -1,4 +1,5 @@
 using Convergex.Domain.Entities;
+using Convergex.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace Convergex.Persistence.Context;
@@ -11,6 +12,7 @@ public class ConvergexDbContext : DbContext
     }
 
     public DbSet<Currency> Currencies => Set<Currency>();
+    public DbSet<Unit> Units => Set<Unit>();
     public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>();
     public DbSet<Conversion> Conversions => Set<Conversion>();
     public DbSet<User> Users => Set<User>();
@@ -31,10 +33,26 @@ public class ConvergexDbContext : DbContext
             entity.HasIndex(x => x.Code).IsUnique();
         });
 
+        modelBuilder.Entity<Unit>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Code).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.Name).HasMaxLength(100).IsRequired();
+            entity.Property(x => x.Symbol).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.Category).HasConversion<int>();
+            entity.Property(x => x.FactorToBase).HasPrecision(18, 12);
+            entity.HasIndex(x => x.Code).IsUnique();
+            entity.HasIndex(x => x.Name).IsUnique();
+            entity.HasIndex(x => x.Symbol).IsUnique();
+        });
+
         modelBuilder.Entity<ExchangeRate>(entity =>
         {
             entity.HasKey(x => x.Id);
-            entity.Property(x => x.Rate).HasPrecision(18, 6);
+            entity.Property(x => x.BuyRate).HasPrecision(18, 6);
+            entity.Property(x => x.SellRate).HasPrecision(18, 6);
+            entity.Property(x => x.CreatedByName).HasMaxLength(120);
+            entity.HasIndex(x => new { x.BaseCurrencyId, x.TargetCurrencyId, x.Status });
             entity.HasOne(x => x.BaseCurrency)
                 .WithMany(x => x.BaseRates)
                 .HasForeignKey(x => x.BaseCurrencyId)
@@ -81,47 +99,23 @@ public class ConvergexDbContext : DbContext
         modelBuilder.Entity<AuditLog>(entity =>
         {
             entity.HasKey(x => x.Id);
-
-            entity.Property(x => x.UserName)
-                .HasMaxLength(120)
-                .IsRequired();
-
-            entity.Property(x => x.Action)
-                .HasMaxLength(100)
-                .IsRequired();
-
-            entity.Property(x => x.Module)
-                .HasMaxLength(100)
-                .IsRequired();
-
-            entity.Property(x => x.Description)
-                .HasMaxLength(500)
-                .IsRequired();
-
-            entity.Property(x => x.IpAddress)
-                .HasMaxLength(50);
+            entity.Property(x => x.UserName).HasMaxLength(120).IsRequired();
+            entity.Property(x => x.EntityName).HasMaxLength(60).IsRequired();
+            entity.Property(x => x.EntityId).HasMaxLength(40);
+            entity.Property(x => x.IpAddress).HasMaxLength(64);
+            entity.HasIndex(x => x.Timestamp);
+            entity.HasIndex(x => x.UserId);
+            entity.HasIndex(x => x.Action);
+            entity.HasIndex(x => x.EntityName);
         });
 
         modelBuilder.Entity<SystemSetting>(entity =>
         {
             entity.HasKey(x => x.Id);
-
-            entity.Property(x => x.Language)
-                .HasMaxLength(20)
-                .IsRequired();
-
-            entity.Property(x => x.Theme)
-                .HasMaxLength(20)
-                .IsRequired();
-
-            entity.Property(x => x.DefaultCurrencyCode)
-                .HasMaxLength(10)
-                .IsRequired();
-
-            entity.Property(x => x.TimeZoneId)
-                .HasMaxLength(100)
-                .IsRequired();
+            entity.Property(x => x.Language).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.Theme).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.DefaultCurrencyCode).HasMaxLength(10).IsRequired();
+            entity.Property(x => x.TimeZoneId).HasMaxLength(100).IsRequired();
         });
-
     }
 }

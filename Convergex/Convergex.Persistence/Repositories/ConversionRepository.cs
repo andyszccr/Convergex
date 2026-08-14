@@ -66,8 +66,45 @@ public class ConversionRepository : IConversionRepository
         DateTime? toUtc = null,
         CancellationToken cancellationToken = default)
     {
-        var query = _context.Conversions.AsNoTracking().AsQueryable();
+        var query = ApplyFilters(_context.Conversions.AsNoTracking().AsQueryable(), type, userName, fromUtc, toUtc);
 
+        return await query
+            .OrderByDescending(c => c.CreatedAt)
+            .ToListAsync(cancellationToken);
+    }
+
+    public async Task<(IReadOnlyList<Conversion> Items, int Total)> GetHistoryPagedAsync(
+        ConversionType? type = null,
+        string? userName = null,
+        DateTime? fromUtc = null,
+        DateTime? toUtc = null,
+        int page = 1,
+        int pageSize = 10,
+        CancellationToken cancellationToken = default)
+    {
+        page = Math.Max(1, page);
+        pageSize = Math.Clamp(pageSize, 1, 100);
+
+        var query = ApplyFilters(_context.Conversions.AsNoTracking().AsQueryable(), type, userName, fromUtc, toUtc);
+
+        var total = await query.CountAsync(cancellationToken);
+
+        var items = await query
+            .OrderByDescending(c => c.CreatedAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync(cancellationToken);
+
+        return (items, total);
+    }
+
+    private static IQueryable<Conversion> ApplyFilters(
+        IQueryable<Conversion> query,
+        ConversionType? type,
+        string? userName,
+        DateTime? fromUtc,
+        DateTime? toUtc)
+    {
         if (type.HasValue)
         {
             query = query.Where(c => c.Type == type.Value);
@@ -85,12 +122,10 @@ public class ConversionRepository : IConversionRepository
 
         if (toUtc.HasValue)
         {
-            query = query.Where(c => c.CreatedAt <= toUtc.Value);
+            query = query.Where(c => c.CreatedAt < toUtc.Value);
         }
 
-        return await query
-            .OrderByDescending(c => c.CreatedAt)
-            .ToListAsync(cancellationToken);
+        return query;
     }
 
     public async Task AddAsync(Conversion conversion, CancellationToken cancellationToken = default)

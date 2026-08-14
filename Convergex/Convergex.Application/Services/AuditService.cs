@@ -1,69 +1,99 @@
-using Convergex.Application.DTOs.Audits;
+using Convergex.Application.DTOs.Audit;
 using Convergex.Application.Interfaces;
 using Convergex.Domain.Entities;
+using Convergex.Domain.Enums;
+using Microsoft.Extensions.Logging;
 
 namespace Convergex.Application.Services;
 
 public class AuditService : IAuditService
 {
-    private readonly IAuditRepository _auditRepository;
+    private readonly IAuditLogRepository _auditLogRepository;
+    private readonly ICurrentUserContext _currentUserContext;
+    private readonly ILogger<AuditService> _logger;
 
-    public AuditService(IAuditRepository auditRepository)
+    public AuditService(
+        IAuditLogRepository auditLogRepository,
+        ICurrentUserContext currentUserContext,
+        ILogger<AuditService> logger)
     {
-        _auditRepository = auditRepository;
+        _auditLogRepository = auditLogRepository;
+        _currentUserContext = currentUserContext;
+        _logger = logger;
     }
 
-    public async Task LogAsync(
-        string userName,
-        string action,
-        string module,
-        string description,
-        string? ipAddress = null,
+    public async Task LogAsync(AuditLogEntryDto entry, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            await _auditLogRepository.AddAsync(new AuditLog
+            {
+                UserId = entry.UserId ?? _currentUserContext.UserId,
+                UserName = entry.UserName ?? _currentUserContext.UserName ?? "Sistema",
+                Action = entry.Action,
+                EntityName = entry.EntityName,
+                EntityId = entry.EntityId,
+                Detail = entry.Detail,
+                OldValues = entry.OldValues,
+                NewValues = entry.NewValues,
+                IpAddress = entry.IpAddress ?? _currentUserContext.IpAddress,
+                Timestamp = DateTime.UtcNow,
+                Status = entry.Status
+            }, cancellationToken);
+
+            await _auditLogRepository.SaveChangesAsync(cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            // La auditoría nunca debe interrumpir la operación principal: se registra el fallo y se continúa.
+            _logger.LogWarning(ex, "No se pudo registrar el evento de auditoría {Action} sobre {EntityName}.", entry.Action, entry.EntityName);
+        }
+    }
+
+    public async Task<PagedAuditLogsDto> GetPagedAsync(
+        string? keyword,
+        AuditAction? action,
+        string? entityName,
+        DateTime? fromUtc,
+        DateTime? toUtc,
+        int page,
+        int pageSize,
         CancellationToken cancellationToken = default)
     {
-        var auditLog = new AuditLog
-        {
-            UserName = userName,
-            Action = action,
-            Module = module,
-            Description = description,
-            IpAddress = ipAddress,
+        page = page < 1 ? 1 : page;
+        pageSize = pageSize < 1 ? 15 : pageSize;
 
-            // Siempre guardamos UTC en la BD
-            CreatedAt = DateTime.UtcNow
+        var (items, totalCount) = await _auditLogRepository.GetPagedAsync(
+            keyword, action, entityName, fromUtc, toUtc, page, pageSize, cancellationToken);
+
+        return new PagedAuditLogsDto
+        {
+            Items = items.Select(Map).ToList(),
+            TotalCount = totalCount,
+            Page = page,
+            PageSize = pageSize
         };
-
-        await _auditRepository.AddAsync(
-            auditLog,
-            cancellationToken);
-
-        await _auditRepository.SaveChangesAsync(
-            cancellationToken);
     }
 
-    public async Task<IReadOnlyList<AuditLogDto>> GetAsync(
-        string? userName = null,
-        string? module = null,
-        DateTime? fromUtc = null,
-        DateTime? toUtc = null,
-        CancellationToken cancellationToken = default)
+    public async Task<AuditLogDto?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
     {
-        var items = await _auditRepository.GetAsync(
-            userName,
-            module,
-            fromUtc,
-            toUtc,
-            cancellationToken);
-
-        return items.Select(x => new AuditLogDto
-        {
-            Id = x.Id,
-            UserName = x.UserName,
-            Action = x.Action,
-            Module = x.Module,
-            Description = x.Description,
-            IpAddress = x.IpAddress,
-            CreatedAt = x.CreatedAt
-        }).ToList();
+        var item = await _auditLogRepository.GetByIdAsync(id, cancellationToken);
+        return item is null ? null : Map(item);
     }
+
+    private static AuditLogDto Map(AuditLog log) => new()
+    {
+        Id = log.Id,
+        UserId = log.UserId,
+        UserName = log.UserName,
+        Action = log.Action,
+        EntityName = log.EntityName,
+        EntityId = log.EntityId,
+        Detail = log.Detail,
+        OldValues = log.OldValues,
+        NewValues = log.NewValues,
+        IpAddress = log.IpAddress,
+        Timestamp = log.Timestamp,
+        Status = log.Status
+    };
 }

@@ -1,0 +1,25 @@
+@{
+    var activeTab = ViewData["ActiveTab"] as string ?? string.Empty;
+}
+<ul class="nav nav-pills mb-3">
+    <li class="nav-item">
+        <a class="nav-link @(activeTab == "conversions" ? "active" : "")" asp-action="Conversions">
+            <i class="bi bi-arrow-left-right"></i> Conversiones
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(activeTab == "rates" ? "active" : "")" asp-action="Rates">
+            <i class="bi bi-graph-up"></i> Tasas de cambio
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(activeTab == "audit" ? "active" : "")" asp-action="Audit">
+            <i class="bi bi-shield-check"></i> Auditoría
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(activeTab == "users" ? "active" : "")" asp-action="Users">
+            <i class="bi bi-people"></i> Usuarios y actividad
+        </a>
+    </li>
+</ul>

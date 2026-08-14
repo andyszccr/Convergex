@@ -1,5 +1,7 @@
+using Convergex.Application.DTOs.Audit;
 using Convergex.Application.DTOs.Settings;
 using Convergex.Application.Interfaces;
+using Convergex.Domain.Enums;
 using Convergex.Web.ViewModels.Settings;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -71,18 +73,15 @@ public class SettingsController : Controller
             },
             cancellationToken);
 
-        await _auditService.LogAsync(
-            userName: User.Identity?.Name ?? "Usuario desconocido",
-            action: "Configuración actualizada",
-            module: "Configuración",
-            description:
-                $"Idioma: {model.Language}, " +
-                $"Tema: {model.Theme}, " +
-                $"Moneda: {model.DefaultCurrencyCode}, " +
-                $"Zona horaria: {model.TimeZoneId}.",
-            ipAddress:
-                HttpContext.Connection.RemoteIpAddress?.ToString(),
-            cancellationToken: cancellationToken);
+        await _auditService.LogAsync(new AuditLogEntryDto
+        {
+            Action = AuditAction.Update,
+            EntityName = "Settings",
+            Detail = $"Idioma: {model.Language}, Tema: {model.Theme}, Moneda: {model.DefaultCurrencyCode}, Zona horaria: {model.TimeZoneId}.",
+            Status = AuditStatus.Success,
+            UserName = User.Identity?.Name,
+            IpAddress = HttpContext.Connection.RemoteIpAddress?.ToString()
+        }, cancellationToken);
 
         TempData["Success"] =
             "Configuración actualizada correctamente.";

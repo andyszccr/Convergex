@@ -42,7 +42,7 @@ public class UsersController : Controller
             return View(await BuildFormAsync(model, cancellationToken));
         }
 
-        var result = await _userService.CreateAsync(new SystemSettingDto
+        var result = await _userService.CreateAsync(new CreateUserDto
         {
             FullName = model.FullName,
             Email = model.Email,

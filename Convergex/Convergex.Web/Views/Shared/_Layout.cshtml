@@ -8,28 +8,25 @@
     var action = ViewContext.RouteData.Values["action"]?.ToString() ?? string.Empty;
     var isDashboard = string.Equals(controller, "Dashboard", StringComparison.OrdinalIgnoreCase);
     var isConversion = string.Equals(controller, "CurrencyConversion", StringComparison.OrdinalIgnoreCase);
+    var isUnitConversion = string.Equals(controller, "UnitConversion", StringComparison.OrdinalIgnoreCase);
     var isCurrencies = string.Equals(controller, "Currencies", StringComparison.OrdinalIgnoreCase);
+    var isUnits = string.Equals(controller, "Units", StringComparison.OrdinalIgnoreCase);
     var isHistory = string.Equals(controller, "History", StringComparison.OrdinalIgnoreCase);
     var isRates = string.Equals(controller, "ExchangeRates", StringComparison.OrdinalIgnoreCase);
     var isUsers = string.Equals(controller, "Users", StringComparison.OrdinalIgnoreCase);
+    var isAudit = string.Equals(controller, "Audit", StringComparison.OrdinalIgnoreCase)
+        || (string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase)
+            && string.Equals(action, "Audit", StringComparison.OrdinalIgnoreCase));
+    var isReports = string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase);
     var isProfile = string.Equals(controller, "Account", StringComparison.OrdinalIgnoreCase)
         && string.Equals(action, "Profile", StringComparison.OrdinalIgnoreCase);
-    var isReports =
-    string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase)
-    && string.Equals(action, "Index", StringComparison.OrdinalIgnoreCase);
+    var isSettings = string.Equals(controller, "Settings", StringComparison.OrdinalIgnoreCase);
     var fullName = User.Identity?.Name ?? "Usuario";
-    var isAudit = string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase)
-    && string.Equals(action, "Audit", StringComparison.OrdinalIgnoreCase);
     var roleName = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? "Usuario";
     var initials = string.Concat(
         fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries)
             .Take(2)
             .Select(p => char.ToUpperInvariant(p[0])));
-    var isSettings =
-    string.Equals(
-        controller,
-        "Settings",
-        StringComparison.OrdinalIgnoreCase);
 }
 <!DOCTYPE html>
 <html lang="es">
@@ -59,12 +56,15 @@
                     <i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
                 </a>
                 <a class="sidebar-link @(isConversion ? "active" : "")" asp-controller="CurrencyConversion" asp-action="Index">
-                    <i class="bi bi-arrow-left-right"></i><span>Conversión</span>
+                    <i class="bi bi-arrow-left-right"></i><span>Conv. monedas</span>
+                </a>
+                <a class="sidebar-link @(isUnitConversion ? "active" : "")" asp-controller="UnitConversion" asp-action="Index">
+                    <i class="bi bi-sliders"></i><span>Conv. unidades</span>
                 </a>
                 <a class="sidebar-link @(isCurrencies ? "active" : "")" asp-controller="Currencies" asp-action="Index">
                     <i class="bi bi-currency-exchange"></i><span>Monedas</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Index">
+                <a class="sidebar-link @(isUnits ? "active" : "")" asp-controller="Units" asp-action="Index">
                     <i class="bi bi-rulers"></i><span>Unidades</span>
                 </a>
                 <a class="sidebar-link @(isHistory ? "active" : "")" asp-controller="History" asp-action="Index">
@@ -73,14 +73,14 @@
                 <a class="sidebar-link @(isRates ? "active" : "")" asp-controller="ExchangeRates" asp-action="Index">
                     <i class="bi bi-graph-up"></i><span>Tasas de cambio</span>
                 </a>
-                <a class="sidebar-link @(isReports ? "active" : "")" asp-controller="Reports" asp-action="Index">
-                    <i class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span>
-                </a>
-                <a class="sidebar-link @(isAudit ? "active" : "")" asp-controller="Reports" asp-action="Audit">
-                    <i class="bi bi-shield-check"></i><span>Auditoría</span>
-                </a>
                 @if (User.IsInRole("Administrador"))
                 {
+                    <a class="sidebar-link @(isReports ? "active" : "")" asp-controller="Reports" asp-action="Index">
+                        <i class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span>
+                    </a>
+                    <a class="sidebar-link @(isAudit ? "active" : "")" asp-controller="Audit" asp-action="Index">
+                        <i class="bi bi-shield-check"></i><span>Auditoría</span>
+                    </a>
                     <a class="sidebar-link @(isUsers ? "active" : "")" asp-controller="Users" asp-action="Index">
                         <i class="bi bi-people"></i><span>Usuarios</span>
                     </a>

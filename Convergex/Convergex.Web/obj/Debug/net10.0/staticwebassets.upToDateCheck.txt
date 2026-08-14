@@ -1,71 +1,73 @@
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\additional-methods.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.slim.min.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\css\login.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\js\site.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.slim.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\css\site.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.slim.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\LICENSE.txt
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\LICENSE.md
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.min.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\js\dashboard.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\js\login.js
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\favicon.ico
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\css\login.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\js\site.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\css\site.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\LICENSE.txt
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\LICENSE.md
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery\dist\jquery.min.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\js\dashboard.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\js\login.js
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\favicon.ico
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\Documentos\04 Universidad  & Cursos\01 Fidelitas\2026\02 Cuatri II -26\04 paradigmas de programacion\Convergex\Convergex\Convergex.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 wwwroot\css\login.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\convergex-logo.png
+wwwroot\images\login.png
 wwwroot\img\login-reference.png
 wwwroot\img\logo.png
 wwwroot\img\logo2.png

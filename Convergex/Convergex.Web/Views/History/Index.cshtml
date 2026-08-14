@@ -2,6 +2,14 @@
 @using Convergex.Application.Helpers
 @{
     ViewData["Title"] = "Historial de conversiones";
+    var filters = new Dictionary<string, string?>
+    {
+        ["type"] = Model.Type?.ToString() ?? string.Empty,
+        ["userName"] = Model.UserName,
+        ["fromDate"] = Model.FromDate?.ToString("yyyy-MM-dd"),
+        ["toDate"] = Model.ToDate?.ToString("yyyy-MM-dd")
+    };
+    var totalPages = Model.TotalPages;
 }
 
 <section class="module-page">
@@ -86,4 +94,41 @@
             </table>
         </div>
     </article>
+
+    @if (totalPages > 0)
+    {
+        <nav aria-label="Paginación del historial" class="d-flex flex-column align-items-center gap-2">
+            <ul class="pagination mb-0">
+                @if (Model.Page > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" asp-action="Index" asp-all-route-data="filters" asp-route-page="@(Model.Page - 1)">Anterior</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+                }
+                @for (var i = 1; i <= totalPages; i++)
+                {
+                    <li class="page-item @(i == Model.Page ? "active" : "")">
+                        <a class="page-link" asp-action="Index" asp-all-route-data="filters" asp-route-page="@i">@i</a>
+                    </li>
+                }
+                @if (Model.Page < totalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" asp-action="Index" asp-all-route-data="filters" asp-route-page="@(Model.Page + 1)">Siguiente</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled"><span class="page-link">Siguiente</span></li>
+                }
+            </ul>
+            <p class="mb-0 text-secondary small">
+                Página @Model.Page de @totalPages · @Model.TotalItems conversiones
+            </p>
+        </nav>
+    }
 </section>

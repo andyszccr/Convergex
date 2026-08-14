@@ -1,6 +1,6 @@
 namespace Convergex.Application.DTOs.Users;
 
-public class SystemSettingDto
+public class CreateUserDto
 {
     public string FullName { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;

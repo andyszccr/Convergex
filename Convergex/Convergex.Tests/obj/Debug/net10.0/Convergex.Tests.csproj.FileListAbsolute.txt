@@ -20,25 +20,25 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.deps.json
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.pdb
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.pdb
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.pdb
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.pdb
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.pdb
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.AssemblyReference.cache
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.GeneratedMSBuildEditorConfig.editorconfig
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfoInputs.cache
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfo.cs
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.CoreCompileInputs.cache
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.sourcelink.json
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Converge.FEE501D5.Up2Date
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
-E:\Ingenieria en Sistemas\8vo Cuatrimestre\Paradigmas de Programacion\Convergex\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.deps.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Tests.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Application.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Domain.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\bin\Debug\net10.0\Convergex.Persistence.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.AssemblyReference.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfoInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.AssemblyInfo.cs
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.csproj.CoreCompileInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.sourcelink.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Converge.FEE501D5.Up2Date
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\refint\Convergex.Tests.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\Convergex.Tests.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Tests\obj\Debug\net10.0\ref\Convergex.Tests.dll

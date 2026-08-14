@@ -1,4 +1,4 @@
-@model Convergex.Web.ViewModels.ExchangeRates.HistoryReportViewModel
+@model Convergex.Web.ViewModels.ExchangeRates.ExchangeRateFormViewModel
 @{
     ViewData["Title"] = "Editar tasa";
 }
@@ -7,7 +7,7 @@
     <div class="module-header">
         <div>
             <h1>Editar tasa de cambio</h1>
-            <p>Actualiza el valor de la paridad.</p>
+            <p>Publica una nueva tasa vigente para este par; la anterior pasará al historial.</p>
         </div>
     </div>
     <partial name="_ExchangeRateForm" model="Model" />
