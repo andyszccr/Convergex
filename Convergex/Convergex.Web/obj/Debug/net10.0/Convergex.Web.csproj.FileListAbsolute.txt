@@ -502,4 +502,5 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Web\bin\Debug\net10.0\runtimes\win-x86\native\QuestPdfSkia.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Web\bin\Debug\net10.0\runtimes\win-x86\native\qpdf.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\7i4l9npc7a-{0}-m24s2t8kk1-m24s2t8kk1.gz
-C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\b3gut6knie-{0}-0jcg48gucb-0jcg48gucb.gz
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\compressed\b3gut6knie-{0}-iufw4k5epp-iufw4k5epp.gz
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

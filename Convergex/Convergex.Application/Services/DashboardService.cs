@@ -10,15 +10,18 @@ public class DashboardService : IDashboardService
     private readonly IConversionRepository _conversionRepository;
     private readonly ICurrencyRepository _currencyRepository;
     private readonly IExchangeRateRepository _exchangeRateRepository;
+    private readonly IUnitRepository _unitRepository;
 
     public DashboardService(
         IConversionRepository conversionRepository,
         ICurrencyRepository currencyRepository,
-        IExchangeRateRepository exchangeRateRepository)
+        IExchangeRateRepository exchangeRateRepository,
+        IUnitRepository unitRepository)
     {
         _conversionRepository = conversionRepository;
         _currencyRepository = currencyRepository;
         _exchangeRateRepository = exchangeRateRepository;
+        _unitRepository = unitRepository;
     }
 
     public async Task<DashboardSummaryDto> GetSummaryAsync(CancellationToken cancellationToken = default)
@@ -31,6 +34,7 @@ public class DashboardService : IDashboardService
         var conversionsToday = await _conversionRepository.CountBetweenAsync(today, today.AddDays(1), cancellationToken);
         var conversionsYesterday = await _conversionRepository.CountBetweenAsync(yesterday, today, cancellationToken);
         var activeCurrencies = await _currencyRepository.CountActiveAsync(cancellationToken);
+        var activeUnits = await _unitRepository.CountActiveAsync(cancellationToken);
         var recent = await _conversionRepository.GetRecentAsync(5, cancellationToken);
         var dailyCounts = await _conversionRepository.GetDailyCountsAsync(chartStart, cancellationToken);
         var typeCounts = await _conversionRepository.GetCountsByTypeAsync(cancellationToken);
@@ -73,7 +77,7 @@ public class DashboardService : IDashboardService
             ConversionsToday = conversionsToday,
             ConversionsYesterday = conversionsYesterday,
             ActiveCurrencies = activeCurrencies,
-            ActiveUnits = 24,
+            ActiveUnits = activeUnits,
             TodayGrowthPercent = todayGrowth,
             LatestExchangeRate = latestRate is null
                 ? null

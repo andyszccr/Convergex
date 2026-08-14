@@ -746,6 +746,70 @@ a { text-decoration: none; color: inherit; }
   color: white;
 }
 
+.currency-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.currency-chip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  min-width: 9.5rem;
+  max-width: 12rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  background: #F8FAFC;
+  color: #334155;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.currency-chip strong {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.currency-chip span {
+  font-size: 0.85rem;
+  color: #2563EB;
+  font-weight: 600;
+}
+
+.currency-chip small {
+  font-size: 0.72rem;
+  color: #64748B;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.currency-chip:hover {
+  border-color: #2563EB;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
+
+body.theme-dark .currency-chip {
+  background: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+body.theme-dark .currency-chip span {
+  color: #60a5fa;
+}
+
+body.theme-dark .currency-chip small {
+  color: #9ca3af;
+}
+
 .table-actions {
   display: flex;
   gap: 0.4rem;
