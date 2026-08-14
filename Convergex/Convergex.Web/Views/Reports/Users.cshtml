@@ -1,0 +1,145 @@
+@model Convergex.Web.ViewModels.Reports.UsersActivityReportViewModel
+@{
+    ViewData["Title"] = "Reportes - Usuarios y actividad";
+    ViewData["ActiveTab"] = "users";
+    var f = Model.Filter;
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Centro de Reportes</h1>
+            <p>Consulta, previsualiza y exporta la información operativa y estratégica de Convergex.</p>
+        </div>
+        <div class="module-actions">
+            <a asp-action="Export" asp-route-report="users" asp-route-format="pdf"
+               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+               asp-route-roleId="@f.RoleId" asp-route-isActive="@f.IsActive"
+               class="btn btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> Exportar PDF</a>
+            <a asp-action="Export" asp-route-report="users" asp-route-format="excel"
+               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+               asp-route-roleId="@f.RoleId" asp-route-isActive="@f.IsActive"
+               class="btn btn-outline-success"><i class="bi bi-file-earmark-excel"></i> Exportar Excel</a>
+        </div>
+    </div>
+
+    <partial name="_ReportTabs" />
+
+    <div class="kpi-grid">
+        <article class="stat-card">
+            <div class="stat-icon bg-blue"><i class="bi bi-people"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Usuarios totales</span>
+                <strong class="stat-value">@Model.Report.TotalUsers.ToString("N0")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-green"><i class="bi bi-person-check"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Usuarios activos</span>
+                <strong class="stat-value">@Model.Report.ActiveUsers.ToString("N0")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-violet"><i class="bi bi-arrow-left-right"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Operaciones procesadas</span>
+                <strong class="stat-value">@Model.Report.TotalOperations.ToString("N0")</strong>
+            </div>
+        </article>
+    </div>
+
+    <article class="panel form-panel">
+        <form method="get" class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Rol</label>
+                <select name="roleId" class="form-select">
+                    <option value="">Todos</option>
+                    @foreach (var item in f.Roles)
+                    {
+                        <option value="@item.Value" selected="@(f.RoleId?.ToString() == item.Value)">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Estado</label>
+                <select name="isActive" class="form-select">
+                    <option value="" selected="@(f.IsActive is null)">Todos</option>
+                    <option value="true" selected="@(f.IsActive == true)">Activo</option>
+                    <option value="false" selected="@(f.IsActive == false)">Inactivo</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Actividad desde</label>
+                <input type="date" name="fromDate" value="@(f.FromDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Hasta</label>
+                <input type="date" name="toDate" value="@(f.ToDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary-cx w-100">Filtrar</button>
+            </div>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Último acceso</th>
+                        <th>Operaciones</th>
+                        <th>Monto total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if (!Model.Report.Items.Any())
+                {
+                    <tr><td colspan="7" class="empty-cell">No hay usuarios para los filtros seleccionados.</td></tr>
+                }
+                else
+                {
+                    foreach (var item in Model.Report.Items)
+                    {
+                        <tr>
+                            <td>@item.FullName</td>
+                            <td>@item.Email</td>
+                            <td><span class="pill pill-blue">@item.RoleName</span></td>
+                            <td>
+                                <span class="pill @(item.IsActive ? "pill-green" : "pill-muted")">
+                                    @(item.IsActive ? "Activo" : "Inactivo")
+                                </span>
+                            </td>
+                            <td>@(item.LastLoginAt?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "—")</td>
+                            <td>@item.OperationsCount.ToString("N0")</td>
+                            <td>@item.TotalAmount.ToString("N2")</td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.TotalPages > 1)
+        {
+            <nav aria-label="Paginación de reporte" class="mt-3">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (var p = 1; p <= Model.TotalPages; p++)
+                    {
+                        <li class="page-item @(p == f.Page ? "active" : "")">
+                            <a class="page-link" asp-action="Users"
+                               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+                               asp-route-roleId="@f.RoleId" asp-route-isActive="@f.IsActive"
+                               asp-route-page="@p">@p</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </article>
+</section>

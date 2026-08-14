@@ -105,6 +105,19 @@ public class CurrencyService : ICurrencyService
         }
     }
 
+    public async Task<IReadOnlyList<CurrencySuggestionDto>> GetSuggestionsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        var existing = await _currencyRepository.GetAllAsync(cancellationToken);
+        var codes = existing
+            .Select(c => c.Code.ToUpperInvariant())
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+        return CurrencyCatalog.Common
+            .Where(c => !codes.Contains(c.Code))
+            .ToList();
+    }
+
     private static string? Validate(CurrencyFormDto dto)
     {
         if (string.IsNullOrWhiteSpace(dto.Code) || dto.Code.Trim().Length is < 3 or > 10)

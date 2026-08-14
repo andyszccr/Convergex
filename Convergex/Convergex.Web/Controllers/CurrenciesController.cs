@@ -19,19 +19,26 @@ public class CurrenciesController : Controller
     public async Task<IActionResult> Index(CancellationToken cancellationToken)
     {
         var items = await _currencyService.GetAllAsync(cancellationToken);
+        ViewBag.Suggestions = await _currencyService.GetSuggestionsAsync(cancellationToken);
+        ViewBag.CanManage = CanManageCurrencies();
         return View(items);
     }
 
-    [Authorize(Roles = "Administrador")]
-    public IActionResult Create() => View(new CurrencyFormViewModel());
+    [Authorize(Roles = "Administrador,Operador")]
+    public async Task<IActionResult> Create(CancellationToken cancellationToken)
+    {
+        ViewBag.Suggestions = await _currencyService.GetSuggestionsAsync(cancellationToken);
+        return View(new CurrencyFormViewModel());
+    }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador,Operador")]
     public async Task<IActionResult> Create(CurrencyFormViewModel model, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
+            ViewBag.Suggestions = await _currencyService.GetSuggestionsAsync(cancellationToken);
             return View(model);
         }
 
@@ -39,10 +46,40 @@ public class CurrenciesController : Controller
         if (!result.Success)
         {
             ModelState.AddModelError(string.Empty, result.Message);
+            ViewBag.Suggestions = await _currencyService.GetSuggestionsAsync(cancellationToken);
             return View(model);
         }
 
         TempData["Success"] = result.Message;
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Authorize(Roles = "Administrador,Operador")]
+    public async Task<IActionResult> QuickAdd(string code, CancellationToken cancellationToken)
+    {
+        var suggestion = CurrencyCatalog.Common.FirstOrDefault(c =>
+            string.Equals(c.Code, code, StringComparison.OrdinalIgnoreCase));
+
+        if (suggestion is null)
+        {
+            TempData["Error"] = "La moneda sugerida no es válida.";
+            return RedirectToAction(nameof(Index));
+        }
+
+        var result = await _currencyService.CreateAsync(new CurrencyFormDto
+        {
+            Code = suggestion.Code,
+            Name = suggestion.Name,
+            Symbol = suggestion.Symbol,
+            IsActive = true
+        }, cancellationToken);
+
+        TempData[result.Success ? "Success" : "Error"] = result.Success
+            ? $"Moneda {suggestion.Code} agregada."
+            : result.Message;
+
         return RedirectToAction(nameof(Index));
     }
 
@@ -99,6 +136,9 @@ public class CurrenciesController : Controller
         TempData[result.Success ? "Success" : "Error"] = result.Message;
         return RedirectToAction(nameof(Index));
     }
+
+    private bool CanManageCurrencies()
+        => User.IsInRole("Administrador") || User.IsInRole("Operador");
 
     private static CurrencyFormDto ToDto(CurrencyFormViewModel model) => new()
     {

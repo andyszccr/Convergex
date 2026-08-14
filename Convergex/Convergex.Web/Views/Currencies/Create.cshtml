@@ -1,16 +1,55 @@
 @model Convergex.Web.ViewModels.Currencies.CurrencyFormViewModel
+@using Convergex.Application.DTOs.Currencies
 @{
     ViewData["Title"] = "Nueva moneda";
+    var suggestions = ViewBag.Suggestions as IReadOnlyList<CurrencySuggestionDto> ?? [];
 }
 
 <section class="module-page">
     <div class="module-header">
         <div>
             <h1>Nueva moneda</h1>
-            <p>Registra una moneda en el catálogo.</p>
+            <p>Registra una moneda personalizada o elige una sugerida.</p>
         </div>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver al catálogo</a>
     </div>
+
+    @if (suggestions.Count > 0)
+    {
+        <article class="panel mb-3">
+            <h2 style="font-size: 1.05rem; margin-bottom: 0.75rem;">Sugerencias rápidas</h2>
+            <div class="currency-chip-row">
+                @foreach (var item in suggestions.Take(12))
+                {
+                    <button type="button"
+                            class="currency-chip currency-chip-fill"
+                            data-code="@item.Code"
+                            data-name="@item.Name"
+                            data-symbol="@item.Symbol">
+                        <strong>@item.Code</strong>
+                        <span>@item.Symbol</span>
+                        <small>@item.Name</small>
+                    </button>
+                }
+            </div>
+        </article>
+    }
+
     <partial name="_CurrencyForm" model="Model" />
 </section>
 
-@section Scripts { <partial name="_ValidationScriptsPartial" /> }
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.querySelectorAll(".currency-chip-fill").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const code = document.getElementById("Code");
+                const name = document.getElementById("Name");
+                const symbol = document.getElementById("Symbol");
+                if (code) code.value = btn.dataset.code || "";
+                if (name) name.value = btn.dataset.name || "";
+                if (symbol) symbol.value = btn.dataset.symbol || "";
+            });
+        });
+    </script>
+}

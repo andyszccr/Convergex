@@ -1,23 +1,54 @@
 @model IReadOnlyList<Convergex.Application.DTOs.Currencies.CurrencyDto>
+@using Convergex.Application.DTOs.Currencies
 @{
     ViewData["Title"] = "Monedas";
     var isAdmin = User.IsInRole("Administrador");
+    var canManage = ViewBag.CanManage as bool? ?? isAdmin;
+    var suggestions = ViewBag.Suggestions as IReadOnlyList<CurrencySuggestionDto> ?? [];
 }
 
 <section class="module-page">
     <div class="module-header">
         <div>
             <h1>Monedas</h1>
-            <p>Catálogo de monedas del sistema.</p>
+            <p>Catálogo de monedas del sistema. Agrega las que necesites para convertir.</p>
         </div>
-        @if (isAdmin)
+        @if (canManage)
         {
-            <a asp-action="Create" class="btn btn-primary-cx">Nueva moneda</a>
+            <a asp-action="Create" class="btn btn-primary-cx">
+                <i class="bi bi-plus-lg"></i> Nueva moneda
+            </a>
         }
     </div>
 
     @if (TempData["Success"] is string success) { <div class="alert alert-success">@success</div> }
     @if (TempData["Error"] is string error) { <div class="alert alert-danger">@error</div> }
+
+    @if (canManage && suggestions.Count > 0)
+    {
+        <article class="panel mb-3">
+            <div class="module-header" style="margin-bottom: 0.75rem;">
+                <div>
+                    <h2 style="font-size: 1.05rem; margin: 0;">Agregar monedas comunes</h2>
+                    <p style="margin: 0.25rem 0 0;">Un clic para incorporarlas al catálogo.</p>
+                </div>
+            </div>
+            <div class="currency-chip-row">
+                @foreach (var item in suggestions)
+                {
+                    <form asp-action="QuickAdd" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="code" value="@item.Code" />
+                        <button type="submit" class="currency-chip" title="@item.Name">
+                            <strong>@item.Code</strong>
+                            <span>@item.Symbol</span>
+                            <small>@item.Name</small>
+                        </button>
+                    </form>
+                }
+            </div>
+        </article>
+    }
 
     <article class="panel">
         <div class="table-responsive">
@@ -32,6 +63,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                @if (Model.Count == 0)
+                {
+                    <tr>
+                        <td colspan="@(isAdmin ? 5 : 4)" class="text-muted">
+                            Aún no hay monedas. @(canManage ? "Usa el botón Nueva moneda o las sugerencias de arriba." : "Solicita a un administrador que las agregue.")
+                        </td>
+                    </tr>
+                }
                 @foreach (var item in Model)
                 {
                     <tr>

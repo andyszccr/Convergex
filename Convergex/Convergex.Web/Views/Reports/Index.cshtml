@@ -1,0 +1,255 @@
+﻿@model Convergex.Web.ViewModels.Reports.HistoryReportViewModel
+@using Convergex.Application.Helpers
+@{
+    ViewData["Title"] = "Reportes";
+}
+
+<section class="module-page">
+
+    <div class="module-header">
+        <div>
+            <h1>Reportes</h1>
+            <p>Consulta y análisis del historial de conversiones del sistema.</p>
+        </div>
+    </div>
+
+    <article class="panel form-panel">
+
+        <h5 class="mb-3">Filtros del reporte</h5>
+
+        <form method="get" class="row g-3">
+
+            <div class="col-md-3">
+                <label class="form-label">Tipo</label>
+
+                <select name="type"
+                        asp-for="Type"
+                        class="form-select">
+
+                    <option value="">Todos</option>
+                    <option value="Currency">Moneda</option>
+                    <option value="Unit">Unidad</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Usuario</label>
+
+                <input type="text"
+                       name="userName"
+                       value="@Model.UserName"
+                       class="form-control"
+                       placeholder="Nombre de usuario" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Desde</label>
+
+                <input type="date"
+                       name="fromDate"
+                       value="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+                       class="form-control" />
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Hasta</label>
+
+                <input type="date"
+                       name="toDate"
+                       value="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+                       class="form-control" />
+            </div>
+
+            <div class="col-12">
+
+                <button type="submit"
+                        class="btn btn-primary-cx">
+                    Generar reporte
+                </button>
+
+                <a asp-controller="Reports"
+                   asp-action="Index"
+                   class="btn btn-outline-secondary">
+                    Limpiar
+                </a>
+
+            </div>
+
+        </form>
+
+    </article>
+
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-4">
+            <article class="panel h-100">
+                <small class="text-muted">
+                    Registros encontrados
+                </small>
+
+                <h3 class="mt-2 mb-0">
+                    @Model.TotalRecords
+                </h3>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="panel h-100">
+                <small class="text-muted">
+                    Monto total procesado
+                </small>
+
+                <h3 class="mt-2 mb-0">
+                    @Model.TotalAmount.ToString("N2")
+                </h3>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="panel h-100">
+                <small class="text-muted">
+                    Resultado acumulado
+                </small>
+
+                <h3 class="mt-2 mb-0">
+                    @Model.TotalResult.ToString("N2")
+                </h3>
+            </article>
+        </div>
+
+    </div>
+
+    <article class="panel">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <div>
+                <h5 class="mb-1">
+                    Historial de conversiones
+                </h5>
+
+                <small class="text-muted">
+                    @Model.TotalRecords registros encontrados
+                </small>
+            </div>
+
+            <div class="d-flex gap-2">
+
+                <a asp-controller="Reports"
+                   asp-action="ExportHistoryPdf"
+                   asp-route-type="@Model.Type"
+                   asp-route-userName="@Model.UserName"
+                   asp-route-fromDate="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+                   asp-route-toDate="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+                   class="btn btn-outline-secondary">
+
+                    <i class="bi bi-file-earmark-pdf me-1"></i>
+                    Exportar PDF
+
+                </a>
+
+                <a asp-controller="Reports"
+                   asp-action="ExportHistoryExcel"
+                   asp-route-type="@Model.Type"
+                   asp-route-userName="@Model.UserName"
+                   asp-route-fromDate="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+                   asp-route-toDate="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+                   class="btn btn-outline-secondary">
+
+                    <i class="bi bi-file-earmark-excel me-1"></i>
+                    Exportar Excel
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>De</th>
+                        <th>A</th>
+                        <th>Monto</th>
+                        <th>Resultado</th>
+                        <th>Tasa</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @if (!Model.Items.Any())
+                    {
+                        <tr>
+                            <td colspan="8"
+                                class="empty-cell">
+                                No hay registros para los filtros seleccionados.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var item in Model.Items)
+                        {
+                            <tr>
+
+                                <td>
+                                    @TimeZoneHelper.ToLocal(item.CreatedAt, Model.TimeZoneId).ToString("dd/MM/yyyy HH:mm")
+                                </td>
+
+                                <td>
+
+                                    <span class="pill @(item.Type == "Currency" ? "pill-blue" : "pill-green")">
+
+                                        @(item.Type == "Currency"
+                                                                        ? "Moneda"
+                                                                        : "Unidad")
+
+                            </span>
+
+                                </td>
+
+                                <td>
+                                    @item.FromCode
+                                </td>
+
+                                <td>
+                                    @item.ToCode
+                                </td>
+
+                                <td>
+                                    @item.Amount.ToString("N2")
+                                </td>
+
+                                <td>
+                                    @item.Result.ToString("N4")
+                                </td>
+
+                                <td>
+                                    @item.RateApplied.ToString("N6")
+                                </td>
+
+                                <td>
+                                    @(item.UserName ?? "—")
+                                </td>
+
+                            </tr>
+                                        }
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </article>
+
+</section>

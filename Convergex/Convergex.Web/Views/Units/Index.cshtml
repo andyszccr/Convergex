@@ -1,0 +1,130 @@
+@model Convergex.Web.ViewModels.Units.UnitIndexViewModel
+@using Convergex.Domain.Enums
+@{
+    ViewData["Title"] = "Unidades";
+    var isAdmin = User.IsInRole("Administrador");
+
+    string CategoryPill(UnitCategory category) => category switch
+    {
+        UnitCategory.Peso => "pill-orange",
+        UnitCategory.Longitud => "pill-violet",
+        _ => "pill-teal"
+    };
+
+    string RoundingLabel(RoundingMode mode) => mode == RoundingMode.Truncate ? "Truncado" : "Redondeo half-up";
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Unidades</h1>
+            <p>Catálogo de unidades de medida y precisión utilizadas en las operaciones.</p>
+        </div>
+        <div class="d-flex gap-2">
+            <a asp-controller="UnitConversion" asp-action="Index" class="btn btn-outline-secondary">Convertir unidades</a>
+            @if (isAdmin)
+            {
+                <a asp-action="Create" class="btn btn-primary-cx"><i class="bi bi-plus-lg"></i> Nueva unidad</a>
+            }
+        </div>
+    </div>
+
+    @if (TempData["Success"] is string success) { <div class="alert alert-success">@success</div> }
+    @if (TempData["Error"] is string error) { <div class="alert alert-danger">@error</div> }
+
+    <article class="panel form-panel">
+        <form method="get" class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Categoría</label>
+                <select name="category" class="form-select" asp-for="Category">
+                    <option value="">Todas</option>
+                    <option value="Peso">Peso</option>
+                    <option value="Volumen">Volumen</option>
+                    <option value="Longitud">Longitud</option>
+                </select>
+            </div>
+            <div class="col-md-5">
+                <label class="form-label">Buscar</label>
+                <input name="search" value="@Model.Search" class="form-control" placeholder="Nombre o símbolo..." />
+            </div>
+            <div class="col-md-3 d-flex align-items-end gap-2">
+                <button type="submit" class="btn btn-primary-cx">Filtrar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Limpiar</a>
+            </div>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Símbolo</th>
+                        <th>Categoría</th>
+                        <th>Factor de conversión</th>
+                        <th>Precisión</th>
+                        <th>Redondeo</th>
+                        <th>Estado</th>
+                        @if (isAdmin) { <th></th> }
+                    </tr>
+                </thead>
+                <tbody>
+                @if (!Model.Result.Items.Any())
+                {
+                    <tr><td colspan="9" class="empty-cell">No hay unidades para los filtros seleccionados.</td></tr>
+                }
+                else
+                {
+                    foreach (var item in Model.Result.Items)
+                    {
+                        <tr>
+                            <td>@item.Code</td>
+                            <td>@item.Name</td>
+                            <td>@item.Symbol</td>
+                            <td><span class="pill @CategoryPill(item.Category)">@item.Category</span></td>
+                            <td>@item.FormattedConversionFactor</td>
+                            <td>@item.DecimalPrecision decimales</td>
+                            <td>@RoundingLabel(item.RoundingMode)</td>
+                            <td>
+                                <span class="pill @(item.IsActive ? "pill-green" : "pill-muted")">
+                                    @(item.IsActive ? "Activa" : "Inactiva")
+                                </span>
+                            </td>
+                            @if (isAdmin)
+                            {
+                                <td class="table-actions">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline"
+                                          onsubmit="return confirm('¿Eliminar esta unidad?');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                    </form>
+                                </td>
+                            }
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.Result.TotalPages > 1)
+        {
+            <nav aria-label="Paginación de unidades" class="mt-3">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (var p = 1; p <= Model.Result.TotalPages; p++)
+                    {
+                        <li class="page-item @(p == Model.Result.Page ? "active" : "")">
+                            <a class="page-link" asp-action="Index"
+                               asp-route-category="@Model.Category"
+                               asp-route-search="@Model.Search"
+                               asp-route-page="@p">@p</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </article>
+</section>

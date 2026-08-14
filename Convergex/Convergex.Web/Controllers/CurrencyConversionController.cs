@@ -12,21 +12,34 @@ public class CurrencyConversionController : Controller
 {
     private readonly ICurrencyConversionService _conversionService;
     private readonly ICurrencyService _currencyService;
-    private readonly IExchangeRateService _exchangeRateService;
+    private readonly ISystemSettingService _settingService;
 
     public CurrencyConversionController(
         ICurrencyConversionService conversionService,
         ICurrencyService currencyService,
-        IExchangeRateService exchangeRateService)
+        ISystemSettingService settingService)
     {
         _conversionService = conversionService;
         _currencyService = currencyService;
-        _exchangeRateService = exchangeRateService;
+        _settingService = settingService;
     }
 
     [HttpGet]
     public async Task<IActionResult> Index(CancellationToken cancellationToken)
-        => View(await BuildAsync(new CurrencyConversionViewModel(), cancellationToken));
+    {
+        var model = new CurrencyConversionViewModel();
+        var settings = await _settingService.GetAsync(cancellationToken);
+        var currencies = await _currencyService.GetActiveAsync(cancellationToken);
+        var defaultCurrency = currencies.FirstOrDefault(x =>
+            string.Equals(x.Code, settings.DefaultCurrencyCode, StringComparison.OrdinalIgnoreCase));
+
+        if (defaultCurrency is not null)
+        {
+            model.FromCurrencyId = defaultCurrency.Id;
+        }
+
+        return View(await BuildAsync(model, cancellationToken));
+    }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -69,18 +82,15 @@ public class CurrencyConversionController : Controller
 
         if (model.FromCurrencyId > 0 && model.ToCurrencyId > 0 && model.FromCurrencyId != model.ToCurrencyId)
         {
-            var direct = await _exchangeRateService.GetByPairAsync(model.FromCurrencyId, model.ToCurrencyId, cancellationToken);
-            if (direct is not null)
+            var quote = await _conversionService.GetRateQuoteAsync(model.FromCurrencyId, model.ToCurrencyId, cancellationToken);
+            if (quote is not null)
             {
-                model.CurrentRate = direct.Rate;
-            }
-            else
-            {
-                var inverse = await _exchangeRateService.GetByPairAsync(model.ToCurrencyId, model.FromCurrencyId, cancellationToken);
-                if (inverse is not null && inverse.Rate != 0)
-                {
-                    model.CurrentRate = Math.Round(1m / inverse.Rate, 8);
-                }
+                model.CurrentRate = quote.Rate;
+                model.HasExternalRate = quote.HasExternalRate;
+                model.ExternalCompraRate = quote.ExternalCompraRate;
+                model.ExternalVentaRate = quote.ExternalVentaRate;
+                model.ExternalRateDate = quote.ExternalRateDate;
+                ViewData["RateSource"] = quote.Source;
             }
         }
 

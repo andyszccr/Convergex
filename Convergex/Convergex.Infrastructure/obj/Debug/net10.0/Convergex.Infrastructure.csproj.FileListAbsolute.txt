@@ -18,3 +18,81 @@ C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Co
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
 C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.deps.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.AssemblyReference.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfoInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfo.cs
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.sourcelink.json
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Converge.078D2622.Up2Date
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Black.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Bold.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Italic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Light.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Medium.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Regular.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Thin.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\OFL.txt
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Black.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Bold.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Italic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Light.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Medium.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Regular.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Thin.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\OFL.txt
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.deps.json
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Application.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Persistence.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\Convergex.Domain.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.sourcelink.json
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Converge.078D2622.Up2Date
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
+C:\Users\User\Documents\GitHub\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
