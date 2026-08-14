@@ -8,6 +8,10 @@ public interface IAuthService
         LoginRequestDto request,
         CancellationToken cancellationToken = default);
 
+    Task<(bool Success, string Message, AuthenticatedUserDto? User)> RegisterAsync(
+        RegisterRequestDto request,
+        CancellationToken cancellationToken = default);
+
     Task<(bool Success, string Message)> RequestPasswordResetAsync(
         string email,
         CancellationToken cancellationToken = default);

@@ -38,3 +38,22 @@ C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Con
 C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\refint\Convergex.Infrastructure.dll
 C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\Convergex.Infrastructure.pdb
 C:\Paradigmas\Convergex\Convergex\Convergex.Infrastructure\obj\Debug\net10.0\ref\Convergex.Infrastructure.dll
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Black.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Bold.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Italic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Light.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Medium.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Regular.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-Thin.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\andre\OneDrive\Documentos\06 Universidad\Paradigmas de programación\Convergex\Convergex\Convergex.Infrastructure\bin\Debug\net10.0\LatoFont\OFL.txt

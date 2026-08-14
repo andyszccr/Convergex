@@ -256,8 +256,68 @@ public class AccountController : Controller
     [AllowAnonymous]
     public IActionResult Register()
     {
-        TempData["Info"] = "El registro público estará disponible próximamente. Solicita acceso a un administrador.";
-        return RedirectToAction(nameof(Login));
+        if (User.Identity?.IsAuthenticated == true)
+        {
+            return RedirectToAction("Index", "Dashboard");
+        }
+
+        return View(new RegisterViewModel());
+    }
+
+    [HttpPost]
+    [AllowAnonymous]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Register(RegisterViewModel model, CancellationToken cancellationToken)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        var result = await _authService.RegisterAsync(new RegisterRequestDto
+        {
+            FullName = model.FullName,
+            Email = model.Email,
+            Password = model.Password
+        }, cancellationToken);
+
+        if (!result.Success || result.User is null)
+        {
+            ModelState.AddModelError(string.Empty, result.Message);
+            return View(model);
+        }
+
+        await _auditService.LogAsync(new AuditLogEntryDto
+        {
+            Action = AuditAction.Create,
+            EntityName = "User",
+            EntityId = result.User.Id.ToString(),
+            Detail = $"Registro público de cuenta: {result.User.Email}",
+            Status = AuditStatus.Success,
+            UserId = result.User.Id,
+            UserName = result.User.FullName
+        }, cancellationToken);
+
+        var claims = new List<Claim>
+        {
+            new(ClaimTypes.NameIdentifier, result.User.Id.ToString()),
+            new(ClaimTypes.Name, result.User.FullName),
+            new(ClaimTypes.Email, result.User.Email),
+            new(ClaimTypes.Role, result.User.RoleName)
+        };
+
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        await HttpContext.SignInAsync(
+            CookieAuthenticationDefaults.AuthenticationScheme,
+            new ClaimsPrincipal(identity),
+            new AuthenticationProperties
+            {
+                IsPersistent = false,
+                ExpiresUtc = DateTimeOffset.UtcNow.AddHours(8)
+            });
+
+        TempData["Success"] = "Cuenta creada. ¡Bienvenido a Convergex!";
+        return RedirectToAction("Index", "Dashboard");
     }
 
     private int GetUserId()

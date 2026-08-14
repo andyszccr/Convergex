@@ -50,6 +50,59 @@ public class AuthService : IAuthService
         return Map(user);
     }
 
+    public async Task<(bool Success, string Message, AuthenticatedUserDto? User)> RegisterAsync(
+        RegisterRequestDto request,
+        CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(request.FullName)
+            || string.IsNullOrWhiteSpace(request.Email)
+            || string.IsNullOrWhiteSpace(request.Password))
+        {
+            return (false, "Nombre, correo y contraseña son obligatorios.", null);
+        }
+
+        if (request.Password.Length < 6)
+        {
+            return (false, "La contraseña debe tener al menos 6 caracteres.", null);
+        }
+
+        var email = request.Email.Trim().ToLowerInvariant();
+        if (await _userRepository.EmailExistsAsync(email, null, cancellationToken))
+        {
+            return (false, "Ya existe una cuenta con ese correo.", null);
+        }
+
+        var roles = await _userRepository.GetRolesAsync(cancellationToken);
+        var operatorRole = roles.FirstOrDefault(r =>
+            string.Equals(r.Name, "Operador", StringComparison.OrdinalIgnoreCase));
+
+        if (operatorRole is null)
+        {
+            return (false, "No se pudo asignar un rol a la cuenta. Contacta a un administrador.", null);
+        }
+
+        var user = new User
+        {
+            FullName = request.FullName.Trim(),
+            Email = email,
+            RoleId = operatorRole.Id,
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow
+        };
+        user.PasswordHash = _passwordHasher.HashPassword(user, request.Password);
+
+        await _userRepository.AddAsync(user, cancellationToken);
+        await _userRepository.SaveChangesAsync(cancellationToken);
+
+        var created = await _userRepository.GetByIdAsync(user.Id, cancellationToken);
+        if (created is null)
+        {
+            return (false, "La cuenta se creó, pero no se pudo cargar el perfil.", null);
+        }
+
+        return (true, "Cuenta creada correctamente.", Map(created));
+    }
+
     public async Task<(bool Success, string Message)> RequestPasswordResetAsync(
         string email,
         CancellationToken cancellationToken = default)

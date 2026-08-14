@@ -1,332 +1,299 @@
-# <img src="docs/logo.png" width="45"> Convergex
+# Convergex
 
 > **Conversor Inteligente de Monedas y Unidades**
 
 ![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge)
 ![ASP.NET MVC](https://img.shields.io/badge/ASP.NET-Core_MVC-5C2D91?style=for-the-badge)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge)
 ![EF Core](https://img.shields.io/badge/Entity_Framework_Core-68217A?style=for-the-badge)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge)
+![Serilog](https://img.shields.io/badge/Serilog-Logs-4B8BBE?style=for-the-badge)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge)
 
 ---
 
-# 📖 Descripción
+## Descripción
 
-**Convergex** es una aplicación web desarrollada en **ASP.NET Core MVC** que permite realizar conversiones de **monedas** y **unidades de medida** de forma rápida, precisa y segura.
+**Convergex** es una aplicación web en **ASP.NET Core MVC (.NET 10)** para convertir **monedas** y **unidades de medida** de forma rápida, precisa y segura.
 
-El sistema está diseñado para apoyar plataformas de comercio electrónico, empresas y usuarios que necesitan convertir valores monetarios y unidades físicas, manteniendo un historial completo de las operaciones realizadas y un registro de auditoría para garantizar la trazabilidad.
+Incluye historial de operaciones, auditoría, reportes PDF/Excel, sincronización de tasas por API, configuración del sistema y un dashboard con indicadores.
 
-El proyecto fue desarrollado siguiendo principios de **Clean Architecture**, **SOLID** y buenas prácticas de desarrollo de software para facilitar su mantenimiento, escalabilidad y evolución.
-
----
-
-# 🎯 Objetivo
-
-Desarrollar un motor inteligente de conversión que permita:
-
-- 💱 Conversión de monedas
-- 📏 Conversión de unidades
-- 📜 Historial de conversiones
-- 📝 Auditoría de operaciones
-- 📊 Dashboard con estadísticas
-- 📈 Reportes
-- 🔒 Gestión de usuarios
+El proyecto sigue **Clean Architecture**, **SOLID**, Repository Pattern y Dependency Injection, e integra varios **paradigmas de programación** (ver sección dedicada más abajo).
 
 ---
 
-# ✨ Características
+## Estado del proyecto (v1.0)
 
-- Conversión de monedas en tiempo real
-- Conversión de unidades físicas
-- Historial de conversiones
-- Gestión de tasas de cambio
-- Dashboard interactivo
-- Reportes PDF y Excel
-- Gestión de usuarios
-- Auditoría
-- Arquitectura escalable
-- Código basado en SOLID
+| Área | Estado |
+|------|--------|
+| Dashboard | Completado |
+| Autenticación / Usuarios / Roles | Completado |
+| Conversión de monedas | Completado |
+| Conversión de unidades | Completado |
+| Historial (filtros + paginación) | Completado |
+| CRUD Monedas / Unidades / Tasas | Completado |
+| API externa de tasas + sync | Completado |
+| Auditoría | Completado |
+| Reportes PDF / Excel | Completado |
+| Configuración (tema, idioma, TZ, moneda) | Completado |
+| Serilog + middleware de excepciones | Completado |
+| CI/CD + suite xUnit | Pendiente |
+
+Detalle de tickets: [`Documentación/issues.md`](Documentación/issues.md)  
+Extras v2.0: [`Documentación/README-Issues-v2.0.md`](Documentación/README-Issues-v2.0.md)
 
 ---
 
-# 🏗 Arquitectura
+## Objetivo
 
-El proyecto sigue una arquitectura limpia (**Clean Architecture**) separando las responsabilidades en diferentes capas.
+- Conversión de monedas con tasas locales y externas
+- Conversión de unidades (longitud, peso, volumen)
+- Historial y auditoría
+- Dashboard con estadísticas
+- Reportes exportables
+- Gestión de usuarios y roles
+
+---
+
+## Arquitectura
 
 ```
-
 Presentation (MVC)
-│
-├── Controllers
-├── Views
-├── ViewModels
-│
+│  Controllers · Views · ViewModels
 ▼
 Application
-│
-├── DTOs
-├── Services
-├── Interfaces
-├── Validators
-│
+│  DTOs · Services · Interfaces
 ▼
 Domain
-│
-├── Entities
-├── Interfaces
-├── Enums
-├── Value Objects
-│
+│  Entities · Enums
 ▼
 Infrastructure
-│
-├── Entity Framework Core
-├── SQLite
-├── SQL Server
-├── APIs
-├── Repositories
-│
+│  APIs externas · Report generators · DI
 ▼
 Persistence
-│
-└── DbContext
+   DbContext · Repositories · Migrations · Seed
+```
 
+### Proyectos
+
+```
+Convergex/
+├── Convergex.Web              → ASP.NET Core MVC
+├── Convergex.Application      → Casos de uso
+├── Convergex.Domain           → Entidades
+├── Convergex.Infrastructure   → EF wiring, APIs, reportes
+├── Convergex.Persistence      → DbContext, repositorios, migraciones
+└── Convergex.Tests            → Unit testing (por completar)
 ```
 
 ---
 
-# 💻 Tecnologías
+## Tecnologías
 
 | Tecnología | Uso |
-|------------|------------------------------|
-| ASP.NET Core MVC | Aplicación Web |
+|------------|-----|
+| ASP.NET Core MVC | Aplicación web |
 | .NET 10 | Framework |
-| Entity Framework Core | ORM |
-| SQLite | Base de datos desarrollo |
-| SQL Server | Base de datos producción |
-| Bootstrap 5 | Interfaz |
-| AutoMapper | Mapeo de objetos |
-| FluentValidation | Validaciones |
+| Entity Framework Core | ORM + migraciones |
+| SQLite | Base de datos (desarrollo) |
+| Bootstrap 5 | UI |
+| Cookie Authentication | Sesiones |
 | Serilog | Logs |
-| xUnit | Pruebas |
-| GitHub Actions | CI/CD |
+| QuestPDF / ClosedXML | Reportes PDF / Excel |
+| HttpClient | API de tasas de cambio |
+| xUnit | Pruebas (pendiente ampliar) |
+| GitHub Actions | CI/CD (pendiente) |
 
 ---
 
-# 📦 Módulos
+## Módulos implementados
 
-## 🏠 Dashboard
-
-Visualización general del sistema mediante indicadores, gráficos y estadísticas.
-
----
-
-## 👤 Usuarios
-
-- Login
-- Logout
-- CRUD Usuarios
-- Roles
-- Perfil
-
----
-
-## 💱 Conversión de Monedas
-
-- Conversión entre monedas
-- Tasas de cambio
-- Registro de conversiones
+| Módulo | Descripción |
+|--------|-------------|
+| Dashboard | KPIs, gráficos, actividad reciente |
+| Usuarios | Login, registro, logout, perfil, roles, CRUD |
+| Conv. monedas | Origen/destino, tasa, historial |
+| Conv. unidades | Longitud, peso, volumen |
+| Monedas | Catálogo CRUD + activo/inactivo |
+| Unidades | Catálogo CRUD por categoría |
+| Tasas | CRUD, sync API, historial de tasas |
+| Historial | Filtros por tipo/usuario/fecha + paginación |
+| Auditoría | Registro y consulta de eventos |
+| Reportes | Conversiones, tasas, auditoría, usuarios (PDF/Excel) |
+| Configuración | Idioma, tema, moneda default, zona horaria |
+| Logs | Serilog + middleware global de excepciones |
 
 ---
 
-## 📏 Conversión de Unidades
+## Cómo ejecutar
 
-- Longitud
-- Peso
-- Volumen
-
----
-
-## 📜 Historial
-
-Consulta todas las conversiones realizadas.
-
----
-
-## 🌎 Monedas
-
-Administración del catálogo de monedas.
-
----
-
-## 📐 Unidades
-
-Administración de unidades físicas.
-
----
-
-## 💲 Tasas de Cambio
-
-Gestión y actualización de tasas.
-
----
-
-## 📝 Auditoría
-
-Registro de eventos del sistema.
-
----
-
-## 📊 Reportes
-
-Generación de reportes en PDF y Excel.
-
----
-
-## ⚙ Configuración
-
-Configuraciones generales del sistema.
-
----
-
-# 📂 Estructura del Proyecto
-
+```bash
+cd Convergex
+dotnet restore
+dotnet run --project Convergex.Web
 ```
 
-Convergex.sln
+Abre la URL que muestre la consola (por ejemplo `https://localhost:7xxx`).
 
-│
+Puedes **crear una cuenta nueva** desde *Regístrate aquí* (rol Operador) o usar las credenciales demo:
 
-├── Convergex.Web
+### Credenciales demo
 
-├── Convergex.Application
+| Rol | Correo | Contraseña |
+|-----|--------|------------|
+| Administrador | `admin@convergex.com` | `Admin123!` |
+| Operador | `operador@convergex.com` | `Operador123!` |
 
-├── Convergex.Domain
+> Si la base SQLite no existe, se crea/migra y se siembra al arrancar.
 
-├── Convergex.Infrastructure
+---
 
-├── Convergex.Persistence
-
-└── Convergex.Tests
+## Flujo del sistema
 
 ```
+Usuario → MVC Controller → Application Service → Repository → SQLite → Vista MVC
+```
+
+Las tasas externas se obtienen vía `HttpClient` en Infrastructure y se sincronizan desde el módulo de Tasas.
 
 ---
 
-# 🎨 Paleta de Colores
+## Paleta de colores
 
-La identidad visual de **Convergex** está inspirada en aplicaciones empresariales modernas, transmitiendo confianza, precisión e innovación.
-
-| Elemento | Color | Hex |
-|----------|---------|---------|
-| 🔵 Azul Principal | ![#2563EB](https://via.placeholder.com/15/2563EB/000000?text=+) | `#2563EB` |
-| 🔷 Azul Oscuro | ![#1E3A8A](https://via.placeholder.com/15/1E3A8A/000000?text=+) | `#1E3A8A` |
-| 🟢 Verde Éxito | ![#10B981](https://via.placeholder.com/15/10B981/000000?text=+) | `#10B981` |
-| ⚪ Blanco | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) | `#FFFFFF` |
-| ⚪ Gris Fondo | ![#F8FAFC](https://via.placeholder.com/15/F8FAFC/000000?text=+) | `#F8FAFC` |
-| ⚫ Gris Bordes | ![#CBD5E1](https://via.placeholder.com/15/CBD5E1/000000?text=+) | `#CBD5E1` |
-| ⚫ Texto Principal | ![#334155](https://via.placeholder.com/15/334155/000000?text=+) | `#334155` |
-| ⚫ Texto Secundario | ![#64748B](https://via.placeholder.com/15/64748B/000000?text=+) | `#64748B` |
-| 🔴 Error | ![#EF4444](https://via.placeholder.com/15/EF4444/000000?text=+) | `#EF4444` |
-| 🟠 Advertencia | ![#F59E0B](https://via.placeholder.com/15/F59E0B/000000?text=+) | `#F59E0B` |
-
----
-
-# 🎨 Gradiente Principal
+| Elemento | Hex |
+|----------|-----|
+| Azul principal | `#2563EB` |
+| Azul oscuro | `#1E3A8A` / `#0B1F3A` (sidebar) |
+| Verde éxito | `#10B981` |
+| Fondo | `#F1F5F9` / `#F8FAFC` |
+| Texto | `#334155` |
+| Texto secundario | `#64748B` |
+| Error | `#EF4444` |
+| Advertencia | `#F59E0B` |
 
 ```css
-background: linear-gradient(
-135deg,
-#2563EB,
-#1E3A8A
-);
+background: linear-gradient(135deg, #2563EB, #1E3A8A);
 ```
 
----
-
-# 📋 Principios de Desarrollo
-
-El proyecto fue desarrollado aplicando:
-
-- ✅ Clean Architecture
-- ✅ SOLID
-- ✅ Repository Pattern
-- ✅ Unit of Work
-- ✅ Dependency Injection
-- ✅ DTO Pattern
-- ✅ Service Layer
-- ✅ CI/CD
-- ✅ GitFlow
+Logo: `Imagenes/Logo.png` · Login: `Imagenes/logo2.png`
 
 ---
 
-# 🚀 Roadmap
+## Principios de diseño
 
-## Sprint 1
-
-- Arquitectura
-- Login
-- Usuarios
-- Dashboard
-- SQLite
-
-## Sprint 2
-
-- Conversión de Monedas
-- Monedas
-- Tasas de Cambio
-
-## Sprint 3
-
-- Conversión de Unidades
-- Historial
-- Auditoría
-
-## Sprint 4
-
-- Reportes
-- Configuración
-- Testing
-- CI/CD
+- Clean Architecture
+- SOLID
+- Repository Pattern
+- Dependency Injection
+- DTO + Service Layer
+- Auditoría de cambios
+- Logging estructurado
 
 ---
 
-# 🔄 Flujo del Sistema
+## Análisis de paradigmas de programación
 
-```
+Como analista se revisó el código fuente (capas **Domain**, **Application**, **Infrastructure**, **Persistence** y **Web**) e identificaron los siguientes paradigmas, además del orientado a objetos.
 
-Usuario
+### 1. Programación funcional
 
-↓
+- **LINQ**: uso intensivo de `Select`, `Where`, `GroupBy`, `Sum`, `Average`, `OrderBy`, `ToDictionary` en repositorios y servicios (p. ej. `ConversionRepository`, `ReportService`).
+- **Tuplas**: retorno de múltiples valores con tuplas nombradas, p. ej. `(bool Success, string Message, CurrencyConversionResultDto? Result)` en `CurrencyConversionService` y `UnitConversionService`.
+- **Switch expressions**: `switch` como expresión (no sentencia), p. ej. en `AuditSaveChangesInterceptor` y `ReportService`.
+- **Métodos estáticos puros**: `TimeZoneHelper` y `ReportCell` (factory estático) sin estado mutable.
+- **Inmutabilidad parcial**: `IReadOnlyList<T>`, `IReadOnlyDictionary<TKey, TValue>` y colecciones de solo lectura.
 
-MVC Controller
+### 2. Programación declarativa
 
-↓
+- **Atributos**: `[Authorize]`, `[HttpGet]`, `[HttpPost]`, `[ValidateAntiForgeryToken]` en controladores.
+- **Configuración de servicios**: `AddScoped`, `AddHttpClient`, `AddAuthentication`, `AddAuthorization` en `Program.cs` y `DependencyInjection.cs`.
+- **Fluent API de EF Core**: entidades y relaciones configuradas de forma declarativa.
 
-Application Service
+### 3. Programación orientada a aspectos (AOP)
 
-↓
+- **Interceptores**: `AuditSaveChangesInterceptor` (hereda de `SaveChangesInterceptor`) audita automáticamente al guardar sin invadir la lógica de negocio.
+- **Middleware**: `GlobalExceptionMiddleware` centraliza excepciones y logging en el pipeline HTTP.
+- **Autorización transversal**: `[Authorize]` aplica seguridad de forma transversal.
 
-Repository
+### 4. Programación asíncrona y concurrente
 
-↓
+- **async/await**: flujo de datos asíncrono (`Task`, `ValueTask`, `CancellationToken`).
+- **Servicios en segundo plano**: `ExchangeRateSyncBackgroundService` (`BackgroundService` + `PeriodicTimer`).
+- **Paralelismo**: `Task.WhenAll` y operaciones concurrentes en repositorios donde aplica.
 
-SQLite
+### 5. Programación por contratos (interfaces)
 
-↓
+- **Abstracción**: 20+ interfaces (`ICurrencyRepository`, `ICurrencyConversionService`, `IReportService`, `IExcelReportGenerator`, `IPdfReportGenerator`, etc.).
+- **Inyección de dependencias**: constructor injection en servicios, controladores y repositorios; el contenedor DI resuelve las dependencias.
 
-Resultado
+### 6. Programación genérica
 
-↓
+- Tipos genéricos: `IQueryable<T>`, `IReadOnlyList<T>`, `IReadOnlyDictionary<TKey, TValue>`, `Dictionary<Type, string[]>`, `List<T>`.
+- Métodos genéricos de EF Core: `Set<T>()`, consultas tipadas en repositorios.
 
-Vista MVC
+### 7. Programación por capas / Clean Architecture
 
-```
+- **Separación**: Domain (entidades), Application (casos de uso), Infrastructure (servicios externos), Persistence (datos), Web (presentación).
+- **Dependencias invertidas**: las capas internas no dependen de las externas.
+
+### 8. Programación reactiva / basada en eventos
+
+- Interceptores que reaccionan al ciclo de vida de EF Core (`SavingChangesAsync` / `SavedChangesAsync`).
+- Auditoría como reacción a cambios de estado de entidades.
+
+### 9. Programación orientada a objetos (paradigma base)
+
+- Clases, herencia (`BackgroundService`, `SaveChangesInterceptor`, `Controller`), encapsulación, polimorfismo y composición.
+
+### Patrones de diseño identificados
+
+| Patrón | Evidencia |
+|--------|-----------|
+| Repository | `ConversionRepository`, `CurrencyRepository`, etc. |
+| Service Layer | `CurrencyConversionService`, `ReportService`, etc. |
+| Strategy | `IExcelReportGenerator` / `ClosedXmlReportGenerator` y `IPdfReportGenerator` / `QuestPdfReportGenerator` |
+| Observer | `AuditSaveChangesInterceptor` observa cambios de entidades |
+| Factory | `ReportCell.Text()`, `ReportCell.Number()`, `ReportCell.DateAndTime()` |
+| Facade | Servicios de aplicación con operaciones de alto nivel |
+| Dependency Injection | Patrón central en toda la arquitectura |
+
+### Resumen ejecutivo
+
+| Paradigma | Evidencia |
+|-----------|-----------|
+| Orientado a objetos | Clases, herencia, interfaces, encapsulación |
+| Funcional | LINQ, tuplas, switch expressions, métodos puros |
+| Declarativo | Atributos, configuración de servicios, EF Core |
+| Orientado a aspectos | Interceptores, middleware, `[Authorize]` |
+| Asíncrono / concurrente | async/await, `BackgroundService`, `PeriodicTimer` |
+| Por contratos | 20+ interfaces, DI |
+| Genérico | Tipos genéricos en repositorios y servicios |
+| Por capas | Clean Architecture (5 proyectos) |
+| Reactivo / eventos | Interceptores de EF Core |
+
+El proyecto es **predominantemente orientado a objetos**, con fuerte influencia de **programación funcional** (LINQ, tuplas, inmutabilidad) y **orientada a aspectos** (interceptores y middleware), sobre una **arquitectura limpia por capas** con inyección de dependencias.
 
 ---
 
-# 👥 Equipo
+## Roadmap
+
+### Hecho (Sprints 1–4)
+
+- Arquitectura, auth, dashboard
+- Monedas, tasas, conversión monetaria
+- Unidades y conversión física
+- Historial, auditoría, reportes, configuración, API, logs
+
+### Siguiente (v2.0)
+
+1. CI/CD con GitHub Actions + suite xUnit
+2. Pulido UI / dark mode completo
+3. Extras: favoritos, alertas de tasa, OAuth
+
+Ver plan detallado en [`Documentación/README-Issues-v2.0.md`](Documentación/README-Issues-v2.0.md).
+
+---
+
+## Equipo
 
 - Scrum Master / Analista
 - Backend Developer
@@ -335,18 +302,18 @@ Vista MVC
 
 ---
 
-# 📄 Licencia
+## Licencia
 
-Proyecto desarrollado con fines académicos para el curso de **Paradigmas de Programación** de la **Universidad Fidélitas**.
+Proyecto académico — **Paradigmas de Programación**, Universidad Fidélitas.
 
 ---
 
 <div align="center">
 
-### 🚀 Convergex
+### Convergex
 
-**Conversor Inteligente de Monedas y Unidades**
+**Conversor inteligente de monedas y unidades**
 
-Desarrollado con ❤️ utilizando ASP.NET Core MVC, Clean Architecture y SOLID.
+ASP.NET Core MVC · Clean Architecture · Multi-paradigma · SOLID
 
 </div>

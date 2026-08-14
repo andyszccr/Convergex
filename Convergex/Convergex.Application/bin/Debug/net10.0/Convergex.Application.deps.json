@@ -9,9 +9,11 @@
       "Convergex.Application/1.0.0": {
         "dependencies": {
           "Convergex.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.10",
           "Microsoft.Extensions.Http": "10.0.10",
-          "Microsoft.Extensions.Identity.Core": "10.0.10"
+          "Microsoft.Extensions.Identity.Core": "10.0.10",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.10"
         },
         "runtime": {
           "Convergex.Application.dll": {}
