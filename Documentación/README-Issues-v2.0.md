@@ -2,47 +2,51 @@
 
 Documento de planificación para la **versión 2.0** del Product Backlog.
 
-Complementa `issues.md` (v1.0) y sirve para decidir qué implementar como **extras** o siguientes sprints.
+Complementa [`issues.md`](./issues.md) (v1.0) y sirve para decidir qué implementar como **extras** o siguientes sprints.
 
 ---
 
-## 1. Estado actual (v1.0 entregada)
+## 1. Estado actual (revisión agosto 2026)
 
-| Módulo | Estado | Notas |
-|--------|--------|--------|
+| Módulo v1.0 | Estado | Notas |
+|-------------|--------|--------|
 | 1. Dashboard | Completado | KPIs, gráficos, actividad, layout |
 | 2. Autenticación y Usuarios | Completado | Login, logout, perfil, roles, CRUD, recuperar clave |
-| 3. Conversión de Monedas | Completado (funcional) | Conversión, monedas, tasas, historial básico, validaciones |
+| 3. Conversión de Monedas | Completado | Conversión + historial |
+| 4. Conversión de Unidades | Completado | Longitud, peso, volumen |
+| 5. Historial | Completado | Filtros + paginación |
+| 6. Gestión de Monedas | Completado | CRUD + activo/inactivo |
+| 7. Gestión de Unidades | Completado | CRUD + categorías |
+| 8. Tasas de Cambio | Completado | CRUD + sync API + historial de tasas |
+| 9. Auditoría | Completado | Logs de eventos + consulta |
+| 10. Reportes | Completado | PDF / Excel (historial, auditoría, usuarios, tasas) |
+| 11. Configuración | Completado | Idioma, tema, moneda default, zona horaria |
+| 12. Integración API | Completado | Cliente HTTP + sync + caché |
+| 13. Logs | Completado | Serilog + middleware de excepciones |
+| 14. CI/CD | Pendiente | Falta GitHub Actions y suite xUnit |
 
-Ya cubierto parcialmente por el Módulo 3 (aunque en el backlog v1.0 aparezcan aparte):
-
-- Gestión de monedas (CRUD + activo/inactivo)
-- Tasas de cambio (CRUD + consulta de par, tasa inversa)
-- Historial básico (listado + filtros por tipo, usuario y fechas)
+**Conclusión:** el backlog core de v1.0 está ~93% completo. Lo pendiente fuerte es **CI/CD + tests automatizados**.
 
 ---
 
-## 2. Módulos del backlog v1.0 aún pendientes
+## 2. Qué queda del backlog v1.0
 
-### Prioridad alta (core del producto)
+### Prioridad inmediata
 
-| # | Módulo | Por qué conviene |
-|---|--------|------------------|
-| 4 | Conversión de Unidades | Completa el valor de monedas + unidades |
-| 7 | Gestión de Unidades | Catálogo necesario para el módulo 4 |
-| 5 | Historial avanzado | Paginación, detalle y búsqueda más completa |
-| 8 | Gestión de Tasas (ampliada) | Historial de tasas + actualización automática |
-| 12 | Integración API | Tasas en tiempo real |
+| # | Ítem | Por qué |
+|---|------|---------|
+| 14 | GitHub Actions (build + test) | Automatiza calidad en cada push |
+| 14 | Suite xUnit real | Evidencia académica y regresión |
+| 14 | Publicar artefactos | Entregable de despliegue |
 
-### Prioridad media (calidad y trazabilidad)
+### Mejoras menores sobre módulos ya hechos
 
-| # | Módulo | Por qué conviene |
-|---|--------|------------------|
-| 9 | Auditoría | Trazabilidad académica / empresarial |
-| 13 | Logs (Serilog) | Diagnóstico y buenas prácticas |
-| 10 | Reportes PDF/Excel | Entregable muy visible para demos |
-| 11 | Configuración | Tema, idioma, moneda default, zona horaria |
-| 14 | CI/CD + Testing | Automatización y evidencia de calidad |
+| Ítem | Descripción | Esfuerzo |
+|------|-------------|----------|
+| Detalle de conversión | Vista `History/Details/{id}` | Bajo |
+| Detalle de auditoría UI | Vista dedicada más rica (ya hay action Details) | Bajo |
+| Alertas de tasa | Notificar variación % | Medio |
+| Actualización programada de tasas | Background service / cron | Medio |
 
 ---
 
@@ -57,111 +61,98 @@ Ya cubierto parcialmente por el Módulo 3 (aunque en el backlog v1.0 aparezcan a
 | Comparador de tasas | Ver varias monedas contra una base | Medio |
 | Alertas de tasa | Aviso si USD/CRC sube o baja X% | Medio |
 | Conversión múltiple | Un monto → varias monedas destino | Medio |
-| Modo offline / última tasa conocida | Usar caché si falla la API | Medio |
-| Favoritos / recientes en UI | Últimas 5 conversiones del usuario | Bajo |
+| Modo offline / última tasa conocida | Usar caché si falla la API | Bajo (parcialmente cubierto) |
 | Exportar historial CSV | Descarga rápida sin PDF | Bajo |
 
-### 3.2 Extras de unidades (ampliación del Módulo 4)
+### 3.2 Extras de unidades
 
 | Extra | Descripción | Esfuerzo |
 |-------|-------------|----------|
 | Más categorías | Temperatura, tiempo, área, velocidad | Medio |
-| Factores editables | Admin puede ajustar factores de conversión | Medio |
-| Unidades personalizadas | El usuario define unidades propias | Alto |
+| Unidades personalizadas por usuario | Definir unidades propias | Alto |
 
-### 3.3 Extras de seguridad y usuarios
+### 3.3 Extras de seguridad
 
 | Extra | Descripción | Esfuerzo |
 |-------|-------------|----------|
-| Login Google / Microsoft real | OAuth (hoy solo UI deshabilitada) | Alto |
+| Login Google / Microsoft real | OAuth (UI existe, falta wiring) | Alto |
 | Bloqueo por intentos fallidos | Anti fuerza bruta | Bajo |
-| 2FA simple (email/código) | Capa extra de seguridad | Alto |
-| Sesiones activas | Ver/cerrar sesiones | Medio |
-| Políticas de contraseña | Complejidad, expiración | Bajo |
-| Auditoría de accesos | Quién entró y cuándo | Bajo |
+| 2FA simple | Código por email | Alto |
+| Políticas de contraseña | Complejidad / expiración | Bajo |
 
 ### 3.4 Extras técnicos / DevOps
 
 | Extra | Descripción | Esfuerzo |
 |-------|-------------|----------|
-| Migraciones EF Core | Reemplazar EnsureCreated | Medio |
-| SQL Server en producción | Connection string por entorno | Medio |
-| Health checks | Endpoint /health para monitoreo | Bajo |
-| Swagger / Minimal API interna | API propia de Convergex | Medio |
-| Docker Compose | App + SQL Server listos | Medio |
-| Tests xUnit reales | Auth, conversión, tasas | Medio |
-| Seed demo rico | Datos realistas para presentaciones | Bajo |
+| GitHub Actions CI | Build + test en cada PR | Medio |
+| Suite xUnit | Auth, conversión, tasas, auditoría | Medio |
+| SQL Server producción | Connection string por entorno | Medio |
+| Health checks | Endpoint `/health` | Bajo |
+| Docker Compose | App + SQL Server | Medio |
+| Swagger / Minimal API | API pública de Convergex | Medio |
 
-### 3.5 Extras de UX / diseño
+### 3.5 Extras de UX
 
 | Extra | Descripción | Esfuerzo |
 |-------|-------------|----------|
-| Diseño final Conversión/Monedas/Tasas | Funcional primero, UI después | Medio |
-| Dark mode | Ligado a Configuración | Medio |
-| Toasts / notificaciones | En vez de solo TempData | Bajo |
-| Empty states ilustrados | Pantallas vacías más claras | Bajo |
+| Pulido UI módulos funcionales | Homogeneizar diseño monedas/unidades/reportes | Medio |
+| Dark mode aplicado global | Ya hay setting de tema; completar CSS | Medio |
+| Toasts | Notificaciones no bloqueantes | Bajo |
 | Onboarding primer uso | Tour corto al primer login | Medio |
 
 ---
 
 ## 4. Propuesta de Issues v2.0 (checklist)
 
-### Epic A — Unidades (recomendado siguiente)
+### Epic A — CI/CD y calidad (recomendado siguiente)
 
-- [ ] CRUD Unidades (Longitud, Peso, Volumen)
-- [ ] Conversión por categoría
-- [ ] Guardar en historial (ConversionType.Unit)
-- [ ] Validaciones y mensajes
-- [ ] (Extra) Temperatura / Tiempo
+- [ ] Configurar GitHub Actions
+- [ ] Job de build
+- [ ] Ejecutar tests en CI
+- [ ] Publicar artefactos
+- [ ] Suite xUnit (Auth, Conversión monedas, Unidades, Tasas)
 
-### Epic B — Historial y reportes
+### Epic B — Pulido de historial y auditoría
 
-- [ ] Paginación del historial
-- [ ] Detalle de conversión
-- [ ] Exportar CSV
-- [ ] Reporte PDF
-- [ ] Reporte Excel
+- [ ] Vista detalle de conversión
+- [ ] Mejorar detalle de auditoría
+- [ ] Export CSV del historial
 
-### Epic C — Tasas inteligentes
+### Epic C — Tasas inteligentes (ampliación)
 
-- [ ] Historial de tasas (cambios en el tiempo)
-- [ ] Cliente HTTP + API externa
-- [ ] Job / botón Actualizar tasas
-- [ ] Caché de tasas
-- [ ] (Extra) Alertas de variación
+- [ ] Alertas de variación
+- [ ] Actualización programada (hosted service)
+- [ ] Comparador multi-moneda
 
-### Epic D — Auditoría y logs
+### Epic D — Seguridad avanzada
 
-- [ ] Entidad AuditLog + registro de eventos
-- [ ] Pantalla de consulta/filtros
-- [ ] Serilog (archivo + consola)
-- [ ] Middleware de excepciones
+- [ ] Bloqueo por intentos fallidos
+- [ ] OAuth Google / Microsoft
+- [ ] Políticas de contraseña
 
-### Epic E — Plataforma
-
-- [ ] Configuración general (tema, idioma, moneda default)
-- [ ] Migraciones EF + SQL Server
-- [ ] GitHub Actions (build + test)
-- [ ] Suite xUnit mínima
-- [ ] (Extra) Docker
-
-### Epic F — Extras rápidos (wins de demo)
+### Epic E — Extensiones de producto
 
 - [ ] Widget convertidor en Dashboard
 - [ ] Pares favoritos
-- [ ] Bloqueo por intentos de login
-- [ ] Toasts de éxito/error
-- [ ] Diseño UI de Conversión / Monedas / Tasas
+- [ ] Categorías extra de unidades (temperatura, tiempo)
+- [ ] Dark mode completo
+
+### Epic F — Plataforma
+
+- [ ] Health checks
+- [ ] Docker Compose
+- [ ] SQL Server en producción documentado
+- [ ] Minimal API / Swagger
 
 ---
 
 ## 5. Roadmap sugerido v2.0
 
 ```text
-Sprint 5  →  Unidades (CRUD + conversión) + pulido historial
-Sprint 6  →  API tasas + caché + historial de tasas
-Sprint 7  →  Auditoría + Serilog + reportes CSV/PDF
-Sprint 8  →  Configuración + CI/CD + tests + extras de demo
+Sprint 5  →  CI/CD + xUnit (cerrar Módulo 14)
+Sprint 6  →  Pulido UI + detalle historial/auditoría + CSV
+Sprint 7  →  Alertas de tasa + hosted sync + favoritos
+Sprint 8  →  OAuth / seguridad + Docker + health checks
 ```
 
 ---
@@ -178,11 +169,11 @@ Implementa primero un extra si cumple al menos 2 de estos puntos:
 
 ### Top 5 recomendados ahora
 
-1. Conversión de Unidades
-2. Diseño UI del módulo de monedas/conversión
-3. API externa de tasas + caché
-4. Auditoría de acciones
-5. Reportes PDF/Excel o export CSV
+1. GitHub Actions + tests xUnit (cerrar v1.0)
+2. Vista detalle de historial
+3. Widget convertidor en Dashboard
+4. Alertas de variación de tasa
+5. Dark mode completo / pulido UI
 
 ---
 
@@ -191,7 +182,7 @@ Implementa primero un extra si cumple al menos 2 de estos puntos:
 1. Elige un Epic (A–F)
 2. Crea GitHub Issues a partir de los checklists
 3. Mueve a Project Board: Backlog → Ready → In Progress → Done
-4. Cuando un módulo v2.0 se complete, márcalo aquí y sincroniza con `issues.md`
+4. Cuando un ítem v2.0 se complete, márcalo aquí y sincroniza con `issues.md`
 
 ---
 
@@ -199,8 +190,9 @@ Implementa primero un extra si cumple al menos 2 de estos puntos:
 
 | Documento | Uso |
 |-----------|-----|
-| `issues.md` | Backlog original / estado v1.0 |
-| `README-Issues-v2.0.md` | Extras + priorización de lo que sigue |
+| [`issues.md`](./issues.md) | Backlog original / estado v1.0 |
+| **`README-Issues-v2.0.md`** | Extras + priorización de lo que sigue |
+| [`../README.md`](../README.md) | Visión general del proyecto |
 
 ---
 

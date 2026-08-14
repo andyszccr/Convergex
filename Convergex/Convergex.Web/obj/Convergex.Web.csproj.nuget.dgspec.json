@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj": {}
   },
   "projects": {
-    "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
         "projectName": "Convergex.Application",
-        "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
               }
             }
           }
@@ -48,17 +50,30 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[10.0.10, )"
             },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
             "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[10.0.10, )"
             }
@@ -79,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\10.0.110/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -357,20 +372,20 @@
         }
       }
     },
-    "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
         "projectName": "Convergex.Domain",
-        "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -379,10 +394,12 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -397,10 +414,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -418,7 +436,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\10.0.110/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -696,20 +714,20 @@
         }
       }
     },
-    "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
         "projectName": "Convergex.Infrastructure",
-        "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -718,17 +736,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
               },
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
               }
             }
           }
@@ -743,12 +763,17 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[10.0.10, )"
@@ -760,6 +785,18 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[10.0.10, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.7.2, )"
             }
           },
           "imports": [
@@ -778,7 +815,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\10.0.110/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1056,20 +1093,20 @@
         }
       }
     },
-    "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
         "projectName": "Convergex.Persistence",
-        "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1078,17 +1115,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
               },
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Domain\\Convergex.Domain.csproj"
               }
             }
           }
@@ -1103,10 +1142,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Sqlite": {
@@ -1134,7 +1174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\10.0.110/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1412,20 +1452,20 @@
         }
       }
     },
-    "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
         "projectName": "Convergex.Web",
-        "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Web\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Web\\Convergex.Web.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1434,20 +1474,22 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Application\\Convergex.Application.csproj"
               },
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Infrastructure\\Convergex.Infrastructure.csproj"
               },
-              "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
-                "projectPath": "C:\\Paradigmas\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Convergex\\Convergex\\Convergex.Persistence\\Convergex.Persistence.csproj"
               }
             }
           }
@@ -1462,12 +1504,17 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.3.11, )"
@@ -1477,6 +1524,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.10, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.7.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -1498,7 +1557,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\10.0.110/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

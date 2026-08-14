@@ -10,15 +10,18 @@ public class DashboardService : IDashboardService
     private readonly IConversionRepository _conversionRepository;
     private readonly ICurrencyRepository _currencyRepository;
     private readonly IExchangeRateRepository _exchangeRateRepository;
+    private readonly IUnitRepository _unitRepository;
 
     public DashboardService(
         IConversionRepository conversionRepository,
         ICurrencyRepository currencyRepository,
-        IExchangeRateRepository exchangeRateRepository)
+        IExchangeRateRepository exchangeRateRepository,
+        IUnitRepository unitRepository)
     {
         _conversionRepository = conversionRepository;
         _currencyRepository = currencyRepository;
         _exchangeRateRepository = exchangeRateRepository;
+        _unitRepository = unitRepository;
     }
 
     public async Task<DashboardSummaryDto> GetSummaryAsync(CancellationToken cancellationToken = default)
@@ -31,11 +34,12 @@ public class DashboardService : IDashboardService
         var conversionsToday = await _conversionRepository.CountBetweenAsync(today, today.AddDays(1), cancellationToken);
         var conversionsYesterday = await _conversionRepository.CountBetweenAsync(yesterday, today, cancellationToken);
         var activeCurrencies = await _currencyRepository.CountActiveAsync(cancellationToken);
+        var activeUnits = await _unitRepository.CountActiveAsync(cancellationToken);
         var recent = await _conversionRepository.GetRecentAsync(5, cancellationToken);
         var dailyCounts = await _conversionRepository.GetDailyCountsAsync(chartStart, cancellationToken);
         var typeCounts = await _conversionRepository.GetCountsByTypeAsync(cancellationToken);
-        var latestRate = await _exchangeRateRepository.GetLatestAsync(cancellationToken);
-        var topRates = await _exchangeRateRepository.GetTopAsync(4, cancellationToken);
+        var latestRate = await _exchangeRateRepository.GetLatestActiveAsync(cancellationToken);
+        var topRates = await _exchangeRateRepository.GetTopActiveAsync(4, cancellationToken);
 
         var culture = new CultureInfo("es-CR");
         var chartPoints = Enumerable.Range(0, 7)
@@ -61,15 +65,11 @@ public class DashboardService : IDashboardService
             ? (conversionsToday > 0 ? 100m : 0m)
             : Math.Round((conversionsToday - conversionsYesterday) * 100m / conversionsYesterday, 1);
 
-        var variations = new[] { 0.45m, -0.18m, 0.72m, -0.31m };
-        var mappedRates = topRates.Select((rate, index) => new ExchangeRateSummaryDto
+        var mappedRates = new List<ExchangeRateSummaryDto>(topRates.Count);
+        foreach (var rate in topRates)
         {
-            BaseCode = rate.BaseCurrency.Code,
-            TargetCode = rate.TargetCurrency.Code,
-            Rate = rate.Rate,
-            VariationPercent = variations[index % variations.Length],
-            UpdatedAt = rate.UpdatedAt
-        }).ToList();
+            mappedRates.Add(await BuildSummaryAsync(rate, cancellationToken));
+        }
 
         return new DashboardSummaryDto
         {
@@ -77,18 +77,11 @@ public class DashboardService : IDashboardService
             ConversionsToday = conversionsToday,
             ConversionsYesterday = conversionsYesterday,
             ActiveCurrencies = activeCurrencies,
-            ActiveUnits = 24,
+            ActiveUnits = activeUnits,
             TodayGrowthPercent = todayGrowth,
             LatestExchangeRate = latestRate is null
                 ? null
-                : new ExchangeRateSummaryDto
-                {
-                    BaseCode = latestRate.BaseCurrency.Code,
-                    TargetCode = latestRate.TargetCurrency.Code,
-                    Rate = latestRate.Rate,
-                    VariationPercent = mappedRates.FirstOrDefault()?.VariationPercent ?? 0.45m,
-                    UpdatedAt = latestRate.UpdatedAt
-                },
+                : await BuildSummaryAsync(latestRate, cancellationToken),
             ChartPoints = chartPoints,
             TypeShares =
             [
@@ -117,6 +110,32 @@ public class DashboardService : IDashboardService
                 CreatedAt = c.CreatedAt
             }).ToList(),
             TopRates = mappedRates
+        };
+    }
+
+    private async Task<ExchangeRateSummaryDto> BuildSummaryAsync(Domain.Entities.ExchangeRate rate, CancellationToken cancellationToken)
+    {
+        var previous = await _exchangeRateRepository.GetPreviousAsync(
+            rate.BaseCurrencyId, rate.TargetCurrencyId, rate.EffectiveAt, rate.Id, cancellationToken);
+
+        var currentMid = (rate.BuyRate + rate.SellRate) / 2;
+        var variation = 0m;
+        if (previous is not null)
+        {
+            var previousMid = (previous.BuyRate + previous.SellRate) / 2;
+            if (previousMid != 0)
+            {
+                variation = Math.Round((currentMid - previousMid) * 100m / previousMid, 2);
+            }
+        }
+
+        return new ExchangeRateSummaryDto
+        {
+            BaseCode = rate.BaseCurrency.Code,
+            TargetCode = rate.TargetCurrency.Code,
+            Rate = Math.Round(currentMid, 4),
+            VariationPercent = variation,
+            UpdatedAt = rate.EffectiveAt
         };
     }
 }

@@ -9,6 +9,7 @@ public class ConversionHistoryFilterViewModel
     public string? UserName { get; set; }
     public DateTime? FromDate { get; set; }
     public DateTime? ToDate { get; set; }
+    public string TimeZoneId { get; set; } = "Central America Standard Time";
     public int Page { get; set; } = 1;
     public int PageSize { get; set; } = 10;
     public int TotalItems { get; set; }

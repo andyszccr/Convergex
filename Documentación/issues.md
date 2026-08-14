@@ -15,6 +15,31 @@ Proyecto desarrollado con:
 - GitHub Actions (CI/CD)
 - xUnit
 - Bootstrap 5
+- Serilog
+- QuestPDF / ClosedXML (reportes)
+
+---
+
+## 📊 Resumen de avance
+
+| Módulo | Estado |
+|--------|--------|
+| 1. Dashboard | Completado |
+| 2. Autenticación y Usuarios | Completado |
+| 3. Conversión de Monedas | Completado |
+| 4. Conversión de Unidades | Completado |
+| 5. Historial de Conversiones | Completado |
+| 6. Gestión de Monedas | Completado |
+| 7. Gestión de Unidades | Completado |
+| 8. Gestión de Tasas de Cambio | Completado |
+| 9. Auditoría | Completado |
+| 10. Reportes | Completado |
+| 11. Configuración | Completado |
+| 12. Integración API | Completado |
+| 13. Logs | Completado |
+| 14. CI/CD | Pendiente |
+
+Ver extras y siguientes ideas en [`README-Issues-v2.0.md`](./README-Issues-v2.0.md).
 
 ---
 
@@ -33,8 +58,6 @@ Mostrar información general del sistema mediante indicadores y gráficos.
 - Última tasa de cambio
 - Accesos rápidos
 
-
-
 ### Issues
 
 - [x] Crear Dashboard
@@ -46,11 +69,7 @@ Mostrar información general del sistema mediante indicadores y gráficos.
 
 ---
 
-
-
 # 📌 Módulo 2 - Autenticación y Usuarios
-
-
 
 ## Objetivo
 
@@ -64,16 +83,12 @@ Gestionar el acceso al sistema.
 - Roles
 - Cambio de contraseña
 
-
-
 ### CRUD Usuarios
 
 - Crear usuario
 - Editar usuario
 - Eliminar usuario
 - Consultar usuarios
-
-
 
 ### Issues
 
@@ -86,11 +101,7 @@ Gestionar el acceso al sistema.
 
 ---
 
-
-
 # 📌 Módulo 3 - Conversión de Monedas
-
-
 
 ## Objetivo
 
@@ -104,8 +115,6 @@ Permitir convertir valores entre distintas monedas utilizando tasas de cambio.
 - Ejecutar conversión
 - Guardar historial
 
-
-
 ### Issues
 
 - [x] CRUD Monedas
@@ -117,11 +126,7 @@ Permitir convertir valores entre distintas monedas utilizando tasas de cambio.
 
 ---
 
-
-
 # 📌 Módulo 4 - Conversión de Unidades
-
-
 
 ## Objetivo
 
@@ -133,23 +138,17 @@ Realizar conversiones entre distintas unidades de medida.
 - Peso
 - Volumen
 
-
-
 ### Issues
 
-- [ ] CRUD Unidades
-- [ ] Conversión Longitud
-- [ ] Conversión Peso
-- [ ] Conversión Volumen
-- [ ] Historial
+- [x] CRUD Unidades
+- [x] Conversión Longitud
+- [x] Conversión Peso
+- [x] Conversión Volumen
+- [x] Historial
 
 ---
 
-
-
 # 📌 Módulo 5 - Historial de Conversiones
-
-
 
 ## Objetivo
 
@@ -162,23 +161,17 @@ Consultar todas las conversiones realizadas.
 - Filtros
 - Detalle
 
-
-
 ### Issues
 
-- [ ] Tabla Historial
-- [ ] Buscar por usuario
-- [ ] Buscar por fecha
-- [ ] Buscar por tipo
-- [ ] Paginación
+- [x] Tabla Historial
+- [x] Buscar por usuario
+- [x] Buscar por fecha
+- [x] Buscar por tipo
+- [x] Paginación
 
 ---
 
-
-
 # 📌 Módulo 6 - Gestión de Monedas
-
-
 
 ## Objetivo
 
@@ -192,22 +185,16 @@ Administrar el catálogo de monedas.
 - Activar
 - Desactivar
 
-
-
 ### Issues
 
-- [ ] CRUD Monedas
-- [ ] Validaciones
-- [ ] Catálogo
-- [ ] Estado Activo
+- [x] CRUD Monedas
+- [x] Validaciones
+- [x] Catálogo
+- [x] Estado Activo
 
 ---
 
-
-
 # 📌 Módulo 7 - Gestión de Unidades
-
-
 
 ## Objetivo
 
@@ -219,21 +206,15 @@ Administrar las unidades de medida.
 - Peso
 - Volumen
 
-
-
 ### Issues
 
-- [ ] CRUD Unidades
-- [ ] Categorías
-- [ ] Validaciones
+- [x] CRUD Unidades
+- [x] Categorías
+- [x] Validaciones
 
 ---
 
-
-
 # 📌 Módulo 8 - Gestión de Tasas de Cambio
-
-
 
 ## Objetivo
 
@@ -245,22 +226,16 @@ Administrar las tasas de cambio del sistema.
 - Actualización automática
 - Historial de tasas
 
-
-
 ### Issues
 
-- [ ] CRUD Tasas
-- [ ] Actualizar tasas
-- [ ] Historial
-- [ ] Integración API
+- [x] CRUD Tasas
+- [x] Actualizar tasas
+- [x] Historial
+- [x] Integración API
 
 ---
 
-
-
 # 📌 Módulo 9 - Auditoría
-
-
 
 ## Objetivo
 
@@ -275,22 +250,16 @@ Registrar todas las acciones importantes realizadas dentro del sistema.
 - Edición
 - Creación
 
-
-
 ### Issues
 
-- [ ] Registrar eventos
-- [ ] Tabla Auditoría
-- [ ] Consulta Auditoría
-- [ ] Buscar eventos
+- [x] Registrar eventos
+- [x] Tabla Auditoría
+- [x] Consulta Auditoría
+- [x] Buscar eventos
 
 ---
 
-
-
 # 📌 Módulo 10 - Reportes
-
-
 
 ## Objetivo
 
@@ -303,29 +272,21 @@ Generar reportes del sistema.
 - Conversiones
 - Usuarios
 
-
-
 ### Exportaciones
 
 - PDF
 - Excel
 
-
-
 ### Issues
 
-- [ ] Reporte Historial
-- [ ] Reporte Auditoría
-- [ ] Exportar PDF
-- [ ] Exportar Excel
+- [x] Reporte Historial
+- [x] Reporte Auditoría
+- [x] Exportar PDF
+- [x] Exportar Excel
 
 ---
 
-
-
 # 📌 Módulo 11 - Configuración
-
-
 
 ## Objetivo
 
@@ -338,22 +299,16 @@ Configurar parámetros generales del sistema.
 - Moneda por defecto
 - Zona horaria
 
-
-
 ### Issues
 
-- [ ] Configuración General
-- [ ] Idioma
-- [ ] Tema
-- [ ] Zona Horaria
+- [x] Configuración General
+- [x] Idioma
+- [x] Tema
+- [x] Zona Horaria
 
 ---
 
-
-
 # 📌 Módulo 12 - Integración API
-
-
 
 ## Objetivo
 
@@ -365,22 +320,16 @@ Consumir servicios externos para obtener tasas de cambio.
 - Caché
 - Manejo de errores
 
-
-
 ### Issues
 
-- [ ] Cliente HTTP
-- [ ] Obtener tasas
-- [ ] Actualización automática
-- [ ] Caché
+- [x] Cliente HTTP
+- [x] Obtener tasas
+- [x] Actualización automática
+- [x] Caché
 
 ---
 
-
-
 # 📌 Módulo 13 - Logs
-
-
 
 ## Objetivo
 
@@ -392,21 +341,15 @@ Registrar errores y eventos técnicos del sistema.
 - Excepciones
 - Performance
 
-
-
 ### Issues
 
-- [ ] Configurar Serilog
-- [ ] Logs Globales
-- [ ] Middleware Excepciones
+- [x] Configurar Serilog
+- [x] Logs Globales
+- [x] Middleware Excepciones
 
 ---
 
-
-
 # 📌 Módulo 14 - CI/CD
-
-
 
 ## Objetivo
 
@@ -418,8 +361,6 @@ Automatizar compilación, pruebas y despliegue.
 - Unit Testing
 - Publicación
 
-
-
 ### Issues
 
 - [ ] Configurar GitHub Actions
@@ -429,13 +370,9 @@ Automatizar compilación, pruebas y despliegue.
 
 ---
 
-
-
 # 📅 Roadmap por Sprint
 
-
-
-## 🚀 Sprint 1
+## 🚀 Sprint 1 — Completado
 
 - Arquitectura Clean
 - Configuración del proyecto
@@ -446,9 +383,7 @@ Automatizar compilación, pruebas y despliegue.
 
 ---
 
-
-
-## 🚀 Sprint 2
+## 🚀 Sprint 2 — Completado
 
 - Conversión de Monedas
 - Gestión de Monedas
@@ -457,9 +392,7 @@ Automatizar compilación, pruebas y despliegue.
 
 ---
 
-
-
-## 🚀 Sprint 3
+## 🚀 Sprint 3 — Completado
 
 - Conversión de Unidades
 - Historial
@@ -468,20 +401,23 @@ Automatizar compilación, pruebas y despliegue.
 
 ---
 
+## 🚀 Sprint 4 — Completado (parcial)
 
-
-## 🚀 Sprint 4
-
-- Reportes
+- Reportes PDF / Excel
 - Configuración
-- CI/CD
-- Testing
-- Optimización
+- Testing (pendiente suite xUnit)
+- CI/CD (pendiente GitHub Actions)
 - Documentación
 
 ---
 
-
-
 # 🏗 Arquitectura
 
+```
+Convergex.Web            → ASP.NET Core MVC (Presentation)
+Convergex.Application    → Casos de uso / Services / DTOs
+Convergex.Domain         → Entidades / Enums
+Convergex.Infrastructure → APIs externas / DI / Report generators
+Convergex.Persistence    → DbContext / Repositories / Migrations
+Convergex.Tests          → Unit Testing (por completar)
+```

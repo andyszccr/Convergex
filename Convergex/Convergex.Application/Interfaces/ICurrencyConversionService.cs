@@ -9,6 +9,11 @@ public interface ICurrencyConversionService
         CurrencyConversionRequestDto request,
         CancellationToken cancellationToken = default);
 
+    Task<RateQuoteDto?> GetRateQuoteAsync(
+        int fromCurrencyId,
+        int toCurrencyId,
+        CancellationToken cancellationToken = default);
+
     Task<IReadOnlyList<ConversionHistoryItemDto>> GetHistoryAsync(
         ConversionType? type = null,
         string? userName = null,

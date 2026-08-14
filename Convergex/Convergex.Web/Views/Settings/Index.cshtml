@@ -1,0 +1,141 @@
+﻿@model Convergex.Web.ViewModels.Settings.SettingsViewModel
+
+@{
+    ViewData["Title"] = "Configuración";
+}
+
+<section class="module-page">
+
+    <div class="module-header">
+        <div>
+            <h1>Configuración</h1>
+            <p>Parámetros generales del sistema.</p>
+        </div>
+    </div>
+
+    @if (TempData["Success"] is not null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    <form method="post">
+
+        @Html.AntiForgeryToken()
+
+        <article class="panel form-panel">
+
+            <h5 class="mb-4">
+                Configuración general
+            </h5>
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Idioma
+                    </label>
+
+                    <select asp-for="Language"
+                            class="form-select">
+
+                        <option value="es">
+                            Español
+                        </option>
+
+                        <option value="en">
+                            Inglés
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Tema
+                    </label>
+
+                    <select asp-for="Theme"
+                            class="form-select">
+
+                        <option value="light">
+                            Claro
+                        </option>
+
+                        <option value="dark">
+                            Oscuro
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Moneda por defecto
+                    </label>
+
+                    <select asp-for="DefaultCurrencyCode"
+                            asp-items="Model.Currencies"
+                            class="form-select">
+                    </select>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        Zona horaria
+                    </label>
+
+                    <select asp-for="TimeZoneId"
+                            class="form-select">
+
+                        <option value="Central America Standard Time">
+                            Costa Rica
+                        </option>
+
+                        <option value="Eastern Standard Time">
+                            Este de Estados Unidos
+                        </option>
+
+                        <option value="Central Standard Time">
+                            Centro de Estados Unidos
+                        </option>
+
+                        <option value="Pacific Standard Time">
+                            Pacífico de Estados Unidos
+                        </option>
+
+                        <option value="UTC">
+                            UTC
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-12">
+
+                    <button type="submit"
+                            class="btn btn-primary-cx">
+
+                        <i class="bi bi-check-lg me-1"></i>
+                        Guardar configuración
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </form>
+
+</section>

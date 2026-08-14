@@ -5,8 +5,9 @@
     <form asp-action="@(Model.IsEdit ? "Edit" : "Create")" asp-route-id="@(Model.IsEdit ? Model.Id : null)" method="post" class="row g-3">
         <div class="col-md-4">
             <label asp-for="Code" class="form-label"></label>
-            <input asp-for="Code" class="form-control" />
+            <input asp-for="Code" class="form-control" placeholder="Ej. GBP" style="text-transform: uppercase;" />
             <span asp-validation-for="Code" class="text-danger"></span>
+            <small class="text-muted">Código ISO de 3 a 10 caracteres.</small>
         </div>
         <div class="col-md-5">
             <label asp-for="Name" class="form-label"></label>
