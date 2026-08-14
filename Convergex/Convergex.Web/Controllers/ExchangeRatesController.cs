@@ -15,11 +15,16 @@ public class ExchangeRatesController : Controller
 
     private readonly IExchangeRateService _exchangeRateService;
     private readonly ICurrencyService _currencyService;
+    private readonly ICurrencyConversionService _conversionService;
 
-    public ExchangeRatesController(IExchangeRateService exchangeRateService, ICurrencyService currencyService)
+    public ExchangeRatesController(
+        IExchangeRateService exchangeRateService,
+        ICurrencyService currencyService,
+        ICurrencyConversionService conversionService)
     {
         _exchangeRateService = exchangeRateService;
         _currencyService = currencyService;
+        _conversionService = conversionService;
     }
 
     public async Task<IActionResult> Index(CancellationToken cancellationToken)
@@ -36,20 +41,13 @@ public class ExchangeRatesController : Controller
             return Json(new { found = false, message = "Selecciona un par válido." });
         }
 
-        var direct = await _exchangeRateService.GetActiveByPairAsync(fromId, toId, cancellationToken);
-        if (direct is not null)
+        var quote = await _conversionService.GetRateQuoteAsync(fromId, toId, cancellationToken);
+        if (quote is null)
         {
-            return Json(new { found = true, rate = direct.BuyRate, pair = direct.Pair, source = "directa" });
+            return Json(new { found = false, message = "No hay tasa de cambio disponible para ese par." });
         }
 
-        var inverse = await _exchangeRateService.GetActiveByPairAsync(toId, fromId, cancellationToken);
-        if (inverse is not null && inverse.SellRate != 0)
-        {
-            var rate = Math.Round(1m / inverse.SellRate, 8);
-            return Json(new { found = true, rate, pair = $"{inverse.TargetCode}/{inverse.BaseCode}", source = "inversa" });
-        }
-
-        return Json(new { found = false, message = "No hay tasa activa para ese par." });
+        return Json(new { found = true, rate = quote.Rate, source = quote.Source });
     }
 
     [Authorize(Roles = "Administrador")]

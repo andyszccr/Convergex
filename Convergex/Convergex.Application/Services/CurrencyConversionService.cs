@@ -60,13 +60,13 @@ public class CurrencyConversionService : ICurrencyConversionService
             return (false, "Solo se pueden convertir monedas activas.", null);
         }
 
-        var rateInfo = await ResolveRateAsync(from.Id, to.Id, cancellationToken);
+        var rateInfo = await GetRateQuoteAsync(from.Id, to.Id, cancellationToken);
         if (rateInfo is null)
         {
             return (false, $"No hay tasa de cambio disponible para {from.Code}/{to.Code}.", null);
         }
 
-        var resultValue = Math.Round(request.Amount * rateInfo.Value, 6);
+        var resultValue = Math.Round(request.Amount * rateInfo.Rate, 6);
 
         var conversion = new Conversion
         {
@@ -74,7 +74,7 @@ public class CurrencyConversionService : ICurrencyConversionService
             FromCode = from.Code,
             ToCode = to.Code,
             Amount = request.Amount,
-            RateApplied = rateInfo.Value,
+            RateApplied = rateInfo.Rate,
             Result = resultValue,
             UserName = request.UserName,
             CreatedAt = DateTime.UtcNow
@@ -88,7 +88,7 @@ public class CurrencyConversionService : ICurrencyConversionService
             Action = AuditAction.Conversion,
             EntityName = "Conversion",
             EntityId = conversion.Id.ToString(),
-            Detail = $"Conversión {from.Code} → {to.Code}: {request.Amount:N2} → {resultValue:N4} (tasa {rateInfo.Value:N6})",
+            Detail = $"Conversión {from.Code} → {to.Code}: {request.Amount:N2} → {resultValue:N4} (tasa {rateInfo.Rate:N6})",
             NewValues = JsonSerializer.Serialize(new
             {
                 conversion.FromCode,
@@ -108,7 +108,7 @@ public class CurrencyConversionService : ICurrencyConversionService
             FromCode = from.Code,
             ToCode = to.Code,
             Amount = request.Amount,
-            Rate = rateInfo.Value,
+            Rate = rateInfo.Rate,
             Result = resultValue,
             CreatedAt = conversion.CreatedAt
         });
@@ -163,36 +163,36 @@ public class CurrencyConversionService : ICurrencyConversionService
         return (items, result.Total);
     }
 
-    private async Task<decimal?> ResolveRateAsync(int fromId, int toId, CancellationToken cancellationToken)
+    public async Task<RateQuoteDto?> GetRateQuoteAsync(int fromCurrencyId, int toCurrencyId, CancellationToken cancellationToken = default)
     {
-        var direct = await _exchangeRateRepository.GetActiveByPairAsync(fromId, toId, cancellationToken);
+        var direct = await _exchangeRateRepository.GetActiveByPairAsync(fromCurrencyId, toCurrencyId, cancellationToken);
         if (direct is not null)
         {
-            _logger.LogInformation("Tasa encontrada en BD: {From}/{To} = {Rate}", fromId, toId, direct.BuyRate);
-            return direct.BuyRate;
+            _logger.LogInformation("Tasa encontrada en BD: {From}/{To} = {Rate}", fromCurrencyId, toCurrencyId, direct.BuyRate);
+            return new RateQuoteDto { Rate = direct.BuyRate, Source = "Base de datos" };
         }
 
-        var inverse = await _exchangeRateRepository.GetActiveByPairAsync(toId, fromId, cancellationToken);
+        var inverse = await _exchangeRateRepository.GetActiveByPairAsync(toCurrencyId, fromCurrencyId, cancellationToken);
         if (inverse is not null && inverse.SellRate != 0)
         {
             var rate = Math.Round(1m / inverse.SellRate, 8);
-            _logger.LogInformation("Tasa inversa encontrada en BD: {From}/{To} = {Rate}", fromId, toId, rate);
-            return rate;
+            _logger.LogInformation("Tasa inversa encontrada en BD: {From}/{To} = {Rate}", fromCurrencyId, toCurrencyId, rate);
+            return new RateQuoteDto { Rate = rate, Source = "Base de datos (inversa)" };
         }
 
-        _logger.LogInformation("Consultando API externa para {From}/{To}", fromId, toId);
-        var externalRate = await GetExternalRateAsync(fromId, toId, cancellationToken);
-        if (externalRate.HasValue)
+        _logger.LogInformation("Consultando API externa para {From}/{To}", fromCurrencyId, toCurrencyId);
+        var externalQuote = await GetExternalRateQuoteAsync(fromCurrencyId, toCurrencyId, cancellationToken);
+        if (externalQuote is not null)
         {
-            _logger.LogInformation("Tasa obtenida de API externa: {From}/{To} = {Rate}", fromId, toId, externalRate.Value);
-            return externalRate.Value;
+            _logger.LogInformation("Tasa obtenida de API externa: {From}/{To} = {Rate}", fromCurrencyId, toCurrencyId, externalQuote.Rate);
+            return externalQuote;
         }
 
-        _logger.LogWarning("No se encontró tasa para {From}/{To}", fromId, toId);
+        _logger.LogWarning("No se encontró tasa para {From}/{To}", fromCurrencyId, toCurrencyId);
         return null;
     }
 
-    private async Task<decimal?> GetExternalRateAsync(int fromId, int toId, CancellationToken cancellationToken)
+    private async Task<RateQuoteDto?> GetExternalRateQuoteAsync(int fromId, int toId, CancellationToken cancellationToken)
     {
         try
         {
@@ -209,7 +209,15 @@ public class CurrencyConversionService : ICurrencyConversionService
                 var data = await _externalExchangeRateService.GetTdcRateAsync(cancellationToken);
                 if (data is not null)
                 {
-                    return Math.Round(data.Venta, 6);
+                    return new RateQuoteDto
+                    {
+                        Rate = Math.Round(data.Venta, 6),
+                        Source = "API Externa (TDC)",
+                        HasExternalRate = true,
+                        ExternalCompraRate = data.Compra,
+                        ExternalVentaRate = data.Venta,
+                        ExternalRateDate = data.VentaDate
+                    };
                 }
             }
             else if (from.Code == "CRC" && to.Code == "USD")
@@ -217,7 +225,15 @@ public class CurrencyConversionService : ICurrencyConversionService
                 var data = await _externalExchangeRateService.GetTdcRateAsync(cancellationToken);
                 if (data is not null)
                 {
-                    return Math.Round(1m / data.Compra, 6);
+                    return new RateQuoteDto
+                    {
+                        Rate = Math.Round(1m / data.Compra, 6),
+                        Source = "API Externa (TDC)",
+                        HasExternalRate = true,
+                        ExternalCompraRate = data.Compra,
+                        ExternalVentaRate = data.Venta,
+                        ExternalRateDate = data.VentaDate
+                    };
                 }
             }
 

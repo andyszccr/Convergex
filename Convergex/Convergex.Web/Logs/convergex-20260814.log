@@ -279,3 +279,1282 @@
 2026-08-14 14:15:57.476 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.0218 ms
 2026-08-14 14:15:57.486 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 2.9964 ms
 2026-08-14 14:15:57.476 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 3.0023 ms
+2026-08-14 15:25:48.895 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 15:25:50.463 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:25:50.468 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:25:50.762 -06:00 [INF] Received HTTP response headers after 290.7471ms - 200
+2026-08-14 15:25:50.765 -06:00 [INF] End processing HTTP request after 305.9824ms - 200
+2026-08-14 15:25:50.835 -06:00 [INF] Sincronización automática de tasas de cambio completada: 3 tasa(s) publicadas.
+2026-08-14 15:25:51.087 -06:00 [INF] HTTP GET / respondió 302 en 65.4282 ms
+2026-08-14 15:25:51.213 -06:00 [INF] HTTP GET /Account/Login respondió 200 en 111.9687 ms
+2026-08-14 15:25:51.339 -06:00 [INF] HTTP GET /js/login.js respondió 200 en 107.6489 ms
+2026-08-14 15:25:51.379 -06:00 [INF] HTTP GET /css/login.css respondió 200 en 148.7229 ms
+2026-08-14 15:25:51.380 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 148.9640 ms
+2026-08-14 15:25:51.379 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 147.8347 ms
+2026-08-14 15:25:51.379 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 112.6849 ms
+2026-08-14 15:25:51.379 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 113.3875 ms
+2026-08-14 15:25:51.379 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 148.4041 ms
+2026-08-14 15:25:51.381 -06:00 [INF] HTTP GET /images/convergex-logo.png respondió 200 en 150.2044 ms
+2026-08-14 15:25:51.402 -06:00 [INF] HTTP GET /images/login.png respondió 200 en 12.1905 ms
+2026-08-14 15:26:01.618 -06:00 [INF] HTTP POST /Account/Login respondió 302 en 111.8181 ms
+2026-08-14 15:26:01.730 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 15:26:01.759 -06:00 [INF] HTTP GET / respondió 200 en 135.5028 ms
+2026-08-14 15:26:01.775 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 1.0463 ms
+2026-08-14 15:26:01.777 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 2.9102 ms
+2026-08-14 15:26:01.810 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 36.0477 ms
+2026-08-14 15:26:01.777 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 3.5072 ms
+2026-08-14 15:26:01.777 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 2.8900 ms
+2026-08-14 15:26:01.777 -06:00 [INF] HTTP GET /img/logo.png respondió 200 en 3.7503 ms
+2026-08-14 15:26:01.810 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 36.2798 ms
+2026-08-14 15:26:01.810 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 35.9554 ms
+2026-08-14 15:26:04.087 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:26:04.090 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:26:04.119 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 40.1394 ms
+2026-08-14 15:26:04.139 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.7485 ms
+2026-08-14 15:26:04.139 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.7251 ms
+2026-08-14 15:26:04.139 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3673 ms
+2026-08-14 15:26:04.139 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.2557 ms
+2026-08-14 15:26:04.140 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.2708 ms
+2026-08-14 15:26:04.140 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.5099 ms
+2026-08-14 15:26:04.140 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.5471 ms
+2026-08-14 15:26:04.142 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 3.7163 ms
+2026-08-14 15:26:04.144 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 5.4413 ms
+2026-08-14 15:26:07.485 -06:00 [INF] HTTP GET /Currencies respondió 200 en 65.6938 ms
+2026-08-14 15:26:07.501 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5927 ms
+2026-08-14 15:26:07.502 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5978 ms
+2026-08-14 15:26:07.502 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8837 ms
+2026-08-14 15:26:07.502 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5102 ms
+2026-08-14 15:26:07.502 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.8326 ms
+2026-08-14 15:26:07.502 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2304 ms
+2026-08-14 15:26:07.503 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9496 ms
+2026-08-14 15:26:08.045 -06:00 [INF] HTTP GET /Units respondió 200 en 38.1471 ms
+2026-08-14 15:26:08.065 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.3062 ms
+2026-08-14 15:26:08.065 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7523 ms
+2026-08-14 15:26:08.065 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.7809 ms
+2026-08-14 15:26:08.065 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8866 ms
+2026-08-14 15:26:08.066 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.9121 ms
+2026-08-14 15:26:08.066 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9167 ms
+2026-08-14 15:26:08.066 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.6454 ms
+2026-08-14 15:26:10.483 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:26:10.508 -06:00 [INF] HTTP GET /History respondió 200 en 31.4240 ms
+2026-08-14 15:26:10.527 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2608 ms
+2026-08-14 15:26:10.528 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5380 ms
+2026-08-14 15:26:10.527 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.7138 ms
+2026-08-14 15:26:10.534 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.9187 ms
+2026-08-14 15:26:10.534 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 8.2600 ms
+2026-08-14 15:26:10.535 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 7.6552 ms
+2026-08-14 15:26:10.535 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 7.7730 ms
+2026-08-14 15:26:11.950 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 28.9308 ms
+2026-08-14 15:26:11.968 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1697 ms
+2026-08-14 15:26:11.969 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.2459 ms
+2026-08-14 15:26:11.969 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 1.2695 ms
+2026-08-14 15:26:11.969 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.7782 ms
+2026-08-14 15:26:11.969 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3249 ms
+2026-08-14 15:26:11.970 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.0571 ms
+2026-08-14 15:26:11.970 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.6242 ms
+2026-08-14 15:26:15.730 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:26:15.731 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:26:15.803 -06:00 [INF] Received HTTP response headers after 69.9799ms - 200
+2026-08-14 15:26:15.804 -06:00 [INF] End processing HTTP request after 74.2704ms - 200
+2026-08-14 15:26:15.822 -06:00 [INF] HTTP POST /ExchangeRates/SyncNow respondió 302 en 101.6862 ms
+2026-08-14 15:26:15.830 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 3.5382 ms
+2026-08-14 15:26:15.848 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1909 ms
+2026-08-14 15:26:15.849 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9814 ms
+2026-08-14 15:26:15.849 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9543 ms
+2026-08-14 15:26:15.849 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4735 ms
+2026-08-14 15:26:15.849 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4040 ms
+2026-08-14 15:26:15.848 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5851 ms
+2026-08-14 15:26:15.849 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6899 ms
+2026-08-14 15:26:34.006 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:26:34.008 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:26:34.078 -06:00 [INF] Received HTTP response headers after 69.3368ms - 200
+2026-08-14 15:26:34.079 -06:00 [INF] End processing HTTP request after 73.2249ms - 200
+2026-08-14 15:26:34.093 -06:00 [INF] HTTP POST /ExchangeRates/SyncNow respondió 302 en 90.1895 ms
+2026-08-14 15:26:34.100 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 3.5312 ms
+2026-08-14 15:26:34.118 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2167 ms
+2026-08-14 15:26:34.119 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6616 ms
+2026-08-14 15:26:34.119 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5776 ms
+2026-08-14 15:26:34.119 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.0378 ms
+2026-08-14 15:26:34.119 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.8158 ms
+2026-08-14 15:26:34.119 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.6789 ms
+2026-08-14 15:26:34.119 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.1314 ms
+2026-08-14 15:26:42.078 -06:00 [INF] HTTP GET /Reports respondió 302 en 2.5814 ms
+2026-08-14 15:26:42.123 -06:00 [INF] HTTP GET /Reports/Conversions respondió 200 en 40.8303 ms
+2026-08-14 15:26:42.140 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5811 ms
+2026-08-14 15:26:42.140 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1777 ms
+2026-08-14 15:26:42.140 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6807 ms
+2026-08-14 15:26:42.141 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5952 ms
+2026-08-14 15:26:42.141 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5287 ms
+2026-08-14 15:26:42.141 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.0363 ms
+2026-08-14 15:26:42.141 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.1609 ms
+2026-08-14 15:26:45.842 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 3.1887 ms
+2026-08-14 15:26:45.860 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1330 ms
+2026-08-14 15:26:45.860 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2409 ms
+2026-08-14 15:26:45.861 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.3440 ms
+2026-08-14 15:26:45.861 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3503 ms
+2026-08-14 15:26:45.861 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.1401 ms
+2026-08-14 15:26:45.861 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5759 ms
+2026-08-14 15:26:45.860 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4655 ms
+2026-08-14 15:31:08.502 -06:00 [INF] HTTP GET /Settings respondió 200 en 20.0433 ms
+2026-08-14 15:31:08.541 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.3245 ms
+2026-08-14 15:31:08.544 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5815 ms
+2026-08-14 15:31:08.545 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.9433 ms
+2026-08-14 15:31:08.583 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 36.7092 ms
+2026-08-14 15:31:08.547 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.2493 ms
+2026-08-14 15:31:08.583 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 37.5012 ms
+2026-08-14 15:31:08.583 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 35.2453 ms
+2026-08-14 15:31:11.486 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 27.6540 ms
+2026-08-14 15:31:11.503 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1401 ms
+2026-08-14 15:31:11.505 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.1671 ms
+2026-08-14 15:31:11.503 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6183 ms
+2026-08-14 15:31:11.506 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 2.3938 ms
+2026-08-14 15:31:11.503 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6184 ms
+2026-08-14 15:31:11.506 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 2.2062 ms
+2026-08-14 15:31:11.505 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.6724 ms
+2026-08-14 15:31:11.505 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.4760 ms
+2026-08-14 15:31:11.506 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 3.1196 ms
+2026-08-14 15:31:12.096 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:31:12.097 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:31:12.100 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 5.2788 ms
+2026-08-14 15:31:12.117 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4148 ms
+2026-08-14 15:31:12.118 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.0120 ms
+2026-08-14 15:31:12.140 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 21.7901 ms
+2026-08-14 15:31:12.119 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.1724 ms
+2026-08-14 15:31:12.118 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5619 ms
+2026-08-14 15:31:12.118 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1847 ms
+2026-08-14 15:31:12.117 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5159 ms
+2026-08-14 15:31:12.118 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4860 ms
+2026-08-14 15:31:12.140 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 21.9032 ms
+2026-08-14 15:31:29.995 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 12.1185 ms
+2026-08-14 15:31:39.497 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.9282 ms
+2026-08-14 15:31:39.517 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1540 ms
+2026-08-14 15:31:39.517 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7319 ms
+2026-08-14 15:31:39.517 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5147 ms
+2026-08-14 15:31:39.543 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.7019 ms
+2026-08-14 15:31:39.543 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 26.6512 ms
+2026-08-14 15:31:39.541 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 25.6234 ms
+2026-08-14 15:31:39.576 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 35.4129 ms
+2026-08-14 15:31:43.972 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:31:43.973 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:31:43.977 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 5.6113 ms
+2026-08-14 15:31:43.995 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4770 ms
+2026-08-14 15:31:43.996 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3254 ms
+2026-08-14 15:31:43.995 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.0979 ms
+2026-08-14 15:31:44.002 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 7.3932 ms
+2026-08-14 15:31:44.002 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 6.9469 ms
+2026-08-14 15:31:44.002 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 6.9110 ms
+2026-08-14 15:31:44.002 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 6.5302 ms
+2026-08-14 15:31:44.002 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 6.5866 ms
+2026-08-14 15:31:44.002 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 6.6960 ms
+2026-08-14 15:31:47.187 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.7672 ms
+2026-08-14 15:31:54.964 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:31:54.965 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:31:54.974 -06:00 [INF] Tasa inversa encontrada en BD: 2/3 = 0.00177651
+2026-08-14 15:31:54.984 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 26.5831 ms
+2026-08-14 15:31:55.003 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1861 ms
+2026-08-14 15:31:55.003 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.7312 ms
+2026-08-14 15:31:55.034 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 31.5321 ms
+2026-08-14 15:31:55.003 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.9894 ms
+2026-08-14 15:31:55.003 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3047 ms
+2026-08-14 15:31:55.003 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6522 ms
+2026-08-14 15:31:55.003 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4717 ms
+2026-08-14 15:31:55.034 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 30.9212 ms
+2026-08-14 15:31:55.034 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 31.3064 ms
+2026-08-14 15:32:05.329 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:32:05.330 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:32:05.332 -06:00 [INF] Tasa inversa encontrada en BD: 2/3 = 0.00177651
+2026-08-14 15:32:05.339 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 10.8442 ms
+2026-08-14 15:32:05.358 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3390 ms
+2026-08-14 15:32:05.359 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4832 ms
+2026-08-14 15:32:05.359 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5427 ms
+2026-08-14 15:32:05.359 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3542 ms
+2026-08-14 15:32:05.359 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.9728 ms
+2026-08-14 15:32:05.358 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1795 ms
+2026-08-14 15:32:05.384 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 25.3050 ms
+2026-08-14 15:32:05.384 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 25.5364 ms
+2026-08-14 15:32:05.384 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 25.6356 ms
+2026-08-14 15:32:11.040 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 3.3286 ms
+2026-08-14 15:32:11.059 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4093 ms
+2026-08-14 15:32:11.059 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2352 ms
+2026-08-14 15:32:11.059 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1680 ms
+2026-08-14 15:32:11.059 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3407 ms
+2026-08-14 15:32:11.060 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.4775 ms
+2026-08-14 15:32:11.060 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.0441 ms
+2026-08-14 15:32:11.060 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.6609 ms
+2026-08-14 15:32:39.806 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:32:39.807 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:32:39.810 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 3.9579 ms
+2026-08-14 15:32:39.829 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4855 ms
+2026-08-14 15:32:39.863 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 33.1500 ms
+2026-08-14 15:32:39.829 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2283 ms
+2026-08-14 15:32:39.864 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 34.5973 ms
+2026-08-14 15:32:39.865 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 35.0953 ms
+2026-08-14 15:32:39.894 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 31.8007 ms
+2026-08-14 15:32:39.863 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 34.3329 ms
+2026-08-14 15:32:39.864 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 34.9696 ms
+2026-08-14 15:32:39.894 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 64.6634 ms
+2026-08-14 15:32:43.497 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.5595 ms
+2026-08-14 15:32:51.442 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:32:51.443 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:32:51.444 -06:00 [INF] Tasa inversa encontrada en BD: 2/3 = 0.00177651
+2026-08-14 15:32:51.451 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 10.3529 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1479 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7558 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2856 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.0452 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4217 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3179 ms
+2026-08-14 15:32:51.469 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.6510 ms
+2026-08-14 15:32:51.494 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 25.7007 ms
+2026-08-14 15:32:51.494 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 25.2748 ms
+2026-08-14 15:33:08.973 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.4217 ms
+2026-08-14 15:33:09.619 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:09.620 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:09.622 -06:00 [INF] Tasa encontrada en BD: 3/2 = 552.3
+2026-08-14 15:33:09.628 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 9.4635 ms
+2026-08-14 15:33:09.645 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 0.8897 ms
+2026-08-14 15:33:09.646 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4051 ms
+2026-08-14 15:33:09.647 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.3980 ms
+2026-08-14 15:33:09.647 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.5882 ms
+2026-08-14 15:33:09.647 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3979 ms
+2026-08-14 15:33:09.647 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6025 ms
+2026-08-14 15:33:09.647 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1690 ms
+2026-08-14 15:33:09.647 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7109 ms
+2026-08-14 15:33:09.646 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4825 ms
+2026-08-14 15:33:21.683 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.4438 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5022 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 0.8766 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1810 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6899 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3141 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5668 ms
+2026-08-14 15:33:21.704 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7754 ms
+2026-08-14 15:33:27.753 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:27.754 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:27.756 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 3.2025 ms
+2026-08-14 15:33:27.776 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4116 ms
+2026-08-14 15:33:27.777 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4466 ms
+2026-08-14 15:33:27.777 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2399 ms
+2026-08-14 15:33:27.787 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 9.9658 ms
+2026-08-14 15:33:27.787 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 10.2837 ms
+2026-08-14 15:33:27.787 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 10.0219 ms
+2026-08-14 15:33:27.776 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5917 ms
+2026-08-14 15:33:27.776 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5010 ms
+2026-08-14 15:33:27.787 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 10.1729 ms
+2026-08-14 15:33:33.643 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.2040 ms
+2026-08-14 15:33:33.661 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3105 ms
+2026-08-14 15:33:33.662 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1542 ms
+2026-08-14 15:33:33.662 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5552 ms
+2026-08-14 15:33:33.661 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4552 ms
+2026-08-14 15:33:33.662 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3099 ms
+2026-08-14 15:33:33.662 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1661 ms
+2026-08-14 15:33:33.662 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6432 ms
+2026-08-14 15:33:43.587 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 3.3683 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4583 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6108 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1490 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.3791 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7956 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.3940 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3377 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5423 ms
+2026-08-14 15:33:43.607 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1239 ms
+2026-08-14 15:33:44.122 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:44.123 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:44.125 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 2.9364 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1475 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6189 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.5557 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8767 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.5524 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6779 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5135 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5189 ms
+2026-08-14 15:33:44.146 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3013 ms
+2026-08-14 15:33:47.970 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.3106 ms
+2026-08-14 15:33:52.499 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:52.500 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:33:52.502 -06:00 [INF] Tasa inversa encontrada en BD: 2/1 = 0.00218940
+2026-08-14 15:33:52.508 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 9.4294 ms
+2026-08-14 15:33:52.527 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3585 ms
+2026-08-14 15:33:52.528 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.7368 ms
+2026-08-14 15:33:52.528 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2933 ms
+2026-08-14 15:33:52.527 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4776 ms
+2026-08-14 15:33:52.529 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.4641 ms
+2026-08-14 15:33:52.529 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.3677 ms
+2026-08-14 15:33:52.528 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.8964 ms
+2026-08-14 15:33:52.529 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3893 ms
+2026-08-14 15:33:52.527 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1776 ms
+2026-08-14 15:34:08.657 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.5632 ms
+2026-08-14 15:34:10.809 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:34:10.810 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:34:10.811 -06:00 [INF] Tasa encontrada en BD: 1/2 = 447.701908
+2026-08-14 15:34:10.818 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 9.8812 ms
+2026-08-14 15:34:10.839 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1997 ms
+2026-08-14 15:34:10.839 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7136 ms
+2026-08-14 15:34:10.839 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5870 ms
+2026-08-14 15:34:10.840 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4512 ms
+2026-08-14 15:34:10.841 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.7049 ms
+2026-08-14 15:34:10.841 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.9054 ms
+2026-08-14 15:34:10.842 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.4474 ms
+2026-08-14 15:34:10.842 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 2.4440 ms
+2026-08-14 15:34:10.842 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 2.6000 ms
+2026-08-14 15:34:18.395 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.3659 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5248 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6026 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2609 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1715 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0936 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5573 ms
+2026-08-14 15:34:18.413 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4659 ms
+2026-08-14 15:34:22.755 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 4.0911 ms
+2026-08-14 15:34:22.775 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3298 ms
+2026-08-14 15:34:22.776 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4122 ms
+2026-08-14 15:34:22.776 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5251 ms
+2026-08-14 15:34:22.779 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1711 ms
+2026-08-14 15:34:22.779 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6119 ms
+2026-08-14 15:34:22.779 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.5173 ms
+2026-08-14 15:34:22.779 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5245 ms
+2026-08-14 15:34:22.779 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8202 ms
+2026-08-14 15:34:22.779 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.7913 ms
+2026-08-14 15:34:23.134 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:34:23.134 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:34:23.137 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 3.6023 ms
+2026-08-14 15:34:23.157 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1567 ms
+2026-08-14 15:34:23.159 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.7984 ms
+2026-08-14 15:34:23.157 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6374 ms
+2026-08-14 15:34:23.159 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.6939 ms
+2026-08-14 15:34:23.158 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5932 ms
+2026-08-14 15:34:23.159 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.4577 ms
+2026-08-14 15:34:23.159 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.1875 ms
+2026-08-14 15:34:23.157 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6043 ms
+2026-08-14 15:34:23.159 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.7433 ms
+2026-08-14 15:34:26.237 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.2871 ms
+2026-08-14 15:34:34.647 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:34:34.647 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:34:34.650 -06:00 [INF] Tasa inversa encontrada en BD: 2/1 = 0.00218940
+2026-08-14 15:34:34.656 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 10.0583 ms
+2026-08-14 15:34:34.675 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.2955 ms
+2026-08-14 15:34:34.676 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3482 ms
+2026-08-14 15:34:34.676 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.5643 ms
+2026-08-14 15:34:34.675 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1704 ms
+2026-08-14 15:34:34.676 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.5186 ms
+2026-08-14 15:34:34.675 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.3739 ms
+2026-08-14 15:34:34.676 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 0.9021 ms
+2026-08-14 15:34:34.676 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6653 ms
+2026-08-14 15:34:34.676 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5324 ms
+2026-08-14 15:35:06.039 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.5139 ms
+2026-08-14 15:35:06.080 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5992 ms
+2026-08-14 15:35:06.082 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.4073 ms
+2026-08-14 15:35:06.082 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5691 ms
+2026-08-14 15:35:06.084 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 2.1248 ms
+2026-08-14 15:35:06.122 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 39.7743 ms
+2026-08-14 15:35:06.122 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.6856 ms
+2026-08-14 15:35:06.124 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 39.0246 ms
+2026-08-14 15:35:24.056 -06:00 [INF] HTTP GET /Units respondió 200 en 2.3598 ms
+2026-08-14 15:35:24.077 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1242 ms
+2026-08-14 15:35:24.077 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3605 ms
+2026-08-14 15:35:24.113 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 35.3751 ms
+2026-08-14 15:35:24.112 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 35.2374 ms
+2026-08-14 15:35:24.078 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1514 ms
+2026-08-14 15:35:24.077 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7578 ms
+2026-08-14 15:35:24.077 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4552 ms
+2026-08-14 15:35:25.968 -06:00 [INF] HTTP GET /Currencies respondió 200 en 1.8357 ms
+2026-08-14 15:35:25.987 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1364 ms
+2026-08-14 15:35:25.987 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3936 ms
+2026-08-14 15:35:25.988 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5089 ms
+2026-08-14 15:35:25.988 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6266 ms
+2026-08-14 15:35:25.988 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7963 ms
+2026-08-14 15:35:25.989 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.3276 ms
+2026-08-14 15:35:25.989 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.3198 ms
+2026-08-14 15:35:28.561 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 15.6220 ms
+2026-08-14 15:35:28.566 -06:00 [INF] HTTP GET /Currencies respondió 200 en 2.0233 ms
+2026-08-14 15:35:28.585 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5068 ms
+2026-08-14 15:35:28.586 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 0.9960 ms
+2026-08-14 15:35:28.585 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2285 ms
+2026-08-14 15:35:28.586 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6852 ms
+2026-08-14 15:35:28.586 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4100 ms
+2026-08-14 15:35:28.586 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6050 ms
+2026-08-14 15:35:28.585 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3466 ms
+2026-08-14 15:35:33.076 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 6.7044 ms
+2026-08-14 15:35:33.081 -06:00 [INF] HTTP GET /Currencies respondió 200 en 1.5261 ms
+2026-08-14 15:35:33.100 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3014 ms
+2026-08-14 15:35:33.100 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2080 ms
+2026-08-14 15:35:33.100 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2332 ms
+2026-08-14 15:35:33.100 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4425 ms
+2026-08-14 15:35:33.105 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 5.9251 ms
+2026-08-14 15:35:33.105 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 5.4754 ms
+2026-08-14 15:35:33.105 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 5.5729 ms
+2026-08-14 15:35:34.381 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 5.4705 ms
+2026-08-14 15:35:34.387 -06:00 [INF] HTTP GET /Currencies respondió 200 en 1.6495 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5310 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3768 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3660 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6787 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1264 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6031 ms
+2026-08-14 15:35:34.405 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0490 ms
+2026-08-14 15:35:35.508 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 6.0965 ms
+2026-08-14 15:35:35.513 -06:00 [INF] HTTP GET /Currencies respondió 200 en 1.5376 ms
+2026-08-14 15:35:35.533 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.2582 ms
+2026-08-14 15:35:35.533 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4713 ms
+2026-08-14 15:35:35.533 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 0.8742 ms
+2026-08-14 15:35:35.533 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3473 ms
+2026-08-14 15:35:35.534 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6518 ms
+2026-08-14 15:35:35.533 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1550 ms
+2026-08-14 15:35:35.534 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5521 ms
+2026-08-14 15:35:37.573 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.8646 ms
+2026-08-14 15:35:37.594 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1683 ms
+2026-08-14 15:35:37.595 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2725 ms
+2026-08-14 15:35:37.594 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3123 ms
+2026-08-14 15:35:37.594 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3204 ms
+2026-08-14 15:35:37.595 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.9717 ms
+2026-08-14 15:35:37.595 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.1538 ms
+2026-08-14 15:35:37.595 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2342 ms
+2026-08-14 15:35:38.944 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:35:38.945 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:35:39.164 -06:00 [INF] Received HTTP response headers after 218.4859ms - 200
+2026-08-14 15:35:39.165 -06:00 [INF] End processing HTTP request after 220.7528ms - 200
+2026-08-14 15:35:39.193 -06:00 [INF] HTTP POST /ExchangeRates/SyncNow respondió 302 en 250.2291 ms
+2026-08-14 15:35:39.199 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 2.2855 ms
+2026-08-14 15:35:39.217 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1591 ms
+2026-08-14 15:35:39.218 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5929 ms
+2026-08-14 15:35:39.218 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5162 ms
+2026-08-14 15:35:39.218 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3348 ms
+2026-08-14 15:35:39.218 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7512 ms
+2026-08-14 15:35:39.218 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5122 ms
+2026-08-14 15:35:39.219 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.6425 ms
+2026-08-14 15:35:59.636 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:35:59.636 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:35:59.639 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 3.5173 ms
+2026-08-14 15:35:59.660 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5216 ms
+2026-08-14 15:35:59.661 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.9380 ms
+2026-08-14 15:35:59.688 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 25.0991 ms
+2026-08-14 15:35:59.660 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1412 ms
+2026-08-14 15:35:59.687 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 27.0598 ms
+2026-08-14 15:35:59.663 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.4829 ms
+2026-08-14 15:35:59.687 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 26.7367 ms
+2026-08-14 15:35:59.688 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 27.5653 ms
+2026-08-14 15:35:59.688 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 26.8329 ms
+2026-08-14 15:36:10.054 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.5590 ms
+2026-08-14 15:36:14.633 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:36:14.634 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:36:14.635 -06:00 [INF] Tasa inversa encontrada en BD: 2/1 = 0.00218940
+2026-08-14 15:36:14.641 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 8.3485 ms
+2026-08-14 15:36:14.661 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6154 ms
+2026-08-14 15:36:14.661 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2347 ms
+2026-08-14 15:36:14.662 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.7159 ms
+2026-08-14 15:36:14.662 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5074 ms
+2026-08-14 15:36:14.661 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2237 ms
+2026-08-14 15:36:14.662 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9672 ms
+2026-08-14 15:36:14.662 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.2438 ms
+2026-08-14 15:36:14.661 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4207 ms
+2026-08-14 15:36:14.662 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.7667 ms
+2026-08-14 15:36:23.807 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 1.5915 ms
+2026-08-14 15:36:32.234 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:36:32.235 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:36:32.236 -06:00 [INF] Tasa encontrada en BD: 1/2 = 447.701908
+2026-08-14 15:36:32.242 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 8.6330 ms
+2026-08-14 15:36:32.262 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4603 ms
+2026-08-14 15:36:32.263 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.6683 ms
+2026-08-14 15:36:32.262 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.6578 ms
+2026-08-14 15:36:32.263 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9054 ms
+2026-08-14 15:36:32.262 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4758 ms
+2026-08-14 15:36:32.262 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5709 ms
+2026-08-14 15:36:32.262 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2874 ms
+2026-08-14 15:36:32.263 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.7068 ms
+2026-08-14 15:36:32.264 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 2.1155 ms
+2026-08-14 15:39:02.836 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 15:39:03.790 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:39:03.794 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:39:04.172 -06:00 [INF] Received HTTP response headers after 375.9038ms - 200
+2026-08-14 15:39:04.174 -06:00 [INF] End processing HTTP request after 391.4267ms - 200
+2026-08-14 15:39:04.508 -06:00 [INF] Sincronización automática de tasas de cambio completada: 7 tasa(s) publicadas.
+2026-08-14 15:39:04.643 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 15:39:04.693 -06:00 [INF] HTTP GET / respondió 200 en 286.1708 ms
+2026-08-14 15:39:04.906 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 162.8677 ms
+2026-08-14 15:39:04.911 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 200.4589 ms
+2026-08-14 15:39:04.911 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 200.3253 ms
+2026-08-14 15:39:04.911 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 167.2155 ms
+2026-08-14 15:39:04.916 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 205.4850 ms
+2026-08-14 15:39:04.916 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 205.6266 ms
+2026-08-14 15:39:04.916 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 205.6233 ms
+2026-08-14 15:39:04.916 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 206.1832 ms
+2026-08-14 15:39:09.896 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:39:09.899 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:39:09.958 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 75.1990 ms
+2026-08-14 15:39:09.974 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 1.1080 ms
+2026-08-14 15:39:09.974 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.3638 ms
+2026-08-14 15:39:09.974 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.2524 ms
+2026-08-14 15:39:09.974 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.0848 ms
+2026-08-14 15:39:09.975 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.9512 ms
+2026-08-14 15:39:09.976 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 2.9785 ms
+2026-08-14 15:39:09.977 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 4.2286 ms
+2026-08-14 15:39:10.006 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 32.5724 ms
+2026-08-14 15:39:10.011 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 37.5442 ms
+2026-08-14 15:40:29.219 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 15:40:30.192 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:40:30.196 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:40:30.495 -06:00 [INF] Received HTTP response headers after 296.446ms - 200
+2026-08-14 15:40:30.498 -06:00 [INF] End processing HTTP request after 311.2537ms - 200
+2026-08-14 15:40:30.811 -06:00 [INF] Sincronización automática de tasas de cambio completada: 7 tasa(s) publicadas.
+2026-08-14 15:40:31.374 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 15:40:31.438 -06:00 [INF] HTTP GET / respondió 200 en 325.3300 ms
+2026-08-14 15:40:31.592 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 143.7625 ms
+2026-08-14 15:40:31.599 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 151.2142 ms
+2026-08-14 15:40:31.599 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 147.7917 ms
+2026-08-14 15:40:31.599 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 149.3289 ms
+2026-08-14 15:40:31.604 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 155.3494 ms
+2026-08-14 15:40:31.604 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 155.2440 ms
+2026-08-14 15:40:31.604 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 155.1439 ms
+2026-08-14 15:40:31.604 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 155.3160 ms
+2026-08-14 15:40:34.518 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 44.6546 ms
+2026-08-14 15:40:34.537 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.9232 ms
+2026-08-14 15:40:34.537 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.9323 ms
+2026-08-14 15:40:34.538 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.9032 ms
+2026-08-14 15:40:34.566 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 2.6631 ms
+2026-08-14 15:40:34.571 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 35.5079 ms
+2026-08-14 15:40:34.572 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 35.6394 ms
+2026-08-14 15:40:34.572 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 34.5986 ms
+2026-08-14 15:41:56.611 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:41:56.615 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:41:56.665 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 62.1197 ms
+2026-08-14 15:41:56.695 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 1.5876 ms
+2026-08-14 15:41:56.695 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.4092 ms
+2026-08-14 15:41:56.788 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 63.5864 ms
+2026-08-14 15:41:56.788 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 94.5565 ms
+2026-08-14 15:41:56.788 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 63.4029 ms
+2026-08-14 15:41:56.788 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 61.2761 ms
+2026-08-14 15:41:56.788 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 61.1089 ms
+2026-08-14 15:41:56.727 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 2.6701 ms
+2026-08-14 15:41:56.757 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 64.1276 ms
+2026-08-14 15:51:52.014 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 15:51:52.960 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:51:52.964 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:51:53.246 -06:00 [INF] Received HTTP response headers after 279.4565ms - 200
+2026-08-14 15:51:53.249 -06:00 [INF] End processing HTTP request after 296.2916ms - 200
+2026-08-14 15:51:53.610 -06:00 [INF] Sincronización automática de tasas de cambio completada: 7 tasa(s) publicadas.
+2026-08-14 15:51:53.698 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 15:51:53.758 -06:00 [INF] HTTP GET / respondió 200 en 316.0009 ms
+2026-08-14 15:51:53.842 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 42.8163 ms
+2026-08-14 15:51:53.848 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 48.5981 ms
+2026-08-14 15:51:53.848 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 48.4263 ms
+2026-08-14 15:51:53.848 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 49.1489 ms
+2026-08-14 15:51:53.852 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 53.0150 ms
+2026-08-14 15:51:53.852 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 53.0154 ms
+2026-08-14 15:51:53.852 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 53.0103 ms
+2026-08-14 15:51:53.854 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 55.4269 ms
+2026-08-14 15:51:58.688 -06:00 [INF] HTTP POST /Account/Logout respondió 302 en 28.9695 ms
+2026-08-14 15:51:58.739 -06:00 [INF] HTTP GET /Account/Login respondió 200 en 45.5599 ms
+2026-08-14 15:51:58.759 -06:00 [INF] HTTP GET /images/convergex-logo.png respondió 304 en 0.5226 ms
+2026-08-14 15:51:58.760 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.5678 ms
+2026-08-14 15:51:58.760 -06:00 [INF] HTTP GET /css/login.css respondió 200 en 2.1582 ms
+2026-08-14 15:51:58.760 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.6347 ms
+2026-08-14 15:51:58.760 -06:00 [INF] HTTP GET /js/login.js respondió 200 en 2.0248 ms
+2026-08-14 15:51:58.785 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 27.3693 ms
+2026-08-14 15:51:58.785 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 27.0808 ms
+2026-08-14 15:51:58.793 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 34.7660 ms
+2026-08-14 15:51:58.801 -06:00 [INF] HTTP GET /images/login.png respondió 304 en 1.2835 ms
+2026-08-14 15:52:08.785 -06:00 [INF] HTTP POST /Account/Login respondió 302 en 118.8293 ms
+2026-08-14 15:52:08.798 -06:00 [INF] HTTP GET / respondió 200 en 8.1968 ms
+2026-08-14 15:52:08.815 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.7484 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.0828 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 0.5729 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3086 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.6182 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.6269 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.5781 ms
+2026-08-14 15:52:08.816 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.2194 ms
+2026-08-14 15:52:10.197 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 45.5332 ms
+2026-08-14 15:52:10.215 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1800 ms
+2026-08-14 15:52:10.216 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3532 ms
+2026-08-14 15:52:10.215 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8249 ms
+2026-08-14 15:52:10.215 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4801 ms
+2026-08-14 15:52:10.216 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2525 ms
+2026-08-14 15:52:10.215 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.7258 ms
+2026-08-14 15:52:10.217 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.1951 ms
+2026-08-14 15:52:10.220 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 4.6761 ms
+2026-08-14 15:52:10.221 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 5.9584 ms
+2026-08-14 15:52:11.256 -06:00 [INF] HTTP GET /Reports respondió 302 en 4.0835 ms
+2026-08-14 15:52:11.303 -06:00 [INF] HTTP GET /Reports/Conversions respondió 200 en 43.3634 ms
+2026-08-14 15:52:11.321 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2080 ms
+2026-08-14 15:52:11.321 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.9080 ms
+2026-08-14 15:52:11.321 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.8660 ms
+2026-08-14 15:52:11.321 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4181 ms
+2026-08-14 15:52:11.322 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.1969 ms
+2026-08-14 15:52:11.322 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2204 ms
+2026-08-14 15:52:11.322 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.6227 ms
+2026-08-14 15:52:11.765 -06:00 [INF] HTTP GET /Audit respondió 200 en 35.4956 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.3010 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4996 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6079 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9877 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.0316 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.0337 ms
+2026-08-14 15:52:11.783 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5035 ms
+2026-08-14 15:52:12.038 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:12.063 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 32.6883 ms
+2026-08-14 15:52:12.081 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1758 ms
+2026-08-14 15:52:12.081 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7806 ms
+2026-08-14 15:52:12.082 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9419 ms
+2026-08-14 15:52:12.081 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6919 ms
+2026-08-14 15:52:12.082 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8998 ms
+2026-08-14 15:52:12.081 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4205 ms
+2026-08-14 15:52:12.082 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5962 ms
+2026-08-14 15:52:14.169 -06:00 [INF] HTTP GET /Currencies respondió 200 en 48.9415 ms
+2026-08-14 15:52:14.186 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.5977 ms
+2026-08-14 15:52:14.188 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 3.0204 ms
+2026-08-14 15:52:14.188 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 2.3884 ms
+2026-08-14 15:52:14.189 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 3.1589 ms
+2026-08-14 15:52:14.189 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 3.2845 ms
+2026-08-14 15:52:14.189 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 3.7738 ms
+2026-08-14 15:52:14.189 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 3.5069 ms
+2026-08-14 15:52:16.347 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 19.8739 ms
+2026-08-14 15:52:16.354 -06:00 [INF] HTTP GET /Currencies respondió 200 en 3.2635 ms
+2026-08-14 15:52:16.372 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4025 ms
+2026-08-14 15:52:16.372 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2031 ms
+2026-08-14 15:52:16.372 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5400 ms
+2026-08-14 15:52:16.372 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6490 ms
+2026-08-14 15:52:16.373 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.0917 ms
+2026-08-14 15:52:16.373 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.4338 ms
+2026-08-14 15:52:16.373 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.5680 ms
+2026-08-14 15:52:17.868 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 7.5530 ms
+2026-08-14 15:52:17.876 -06:00 [INF] HTTP GET /Currencies respondió 200 en 3.1480 ms
+2026-08-14 15:52:17.892 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2101 ms
+2026-08-14 15:52:17.892 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6990 ms
+2026-08-14 15:52:17.892 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6086 ms
+2026-08-14 15:52:17.892 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.6855 ms
+2026-08-14 15:52:17.893 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5596 ms
+2026-08-14 15:52:17.893 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.1879 ms
+2026-08-14 15:52:17.893 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3226 ms
+2026-08-14 15:52:20.165 -06:00 [INF] HTTP POST /Currencies/QuickAdd respondió 302 en 5.4870 ms
+2026-08-14 15:52:20.172 -06:00 [INF] HTTP GET /Currencies respondió 200 en 2.6823 ms
+2026-08-14 15:52:20.190 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5924 ms
+2026-08-14 15:52:20.190 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4257 ms
+2026-08-14 15:52:20.190 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3534 ms
+2026-08-14 15:52:20.190 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6086 ms
+2026-08-14 15:52:20.190 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2480 ms
+2026-08-14 15:52:20.190 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9356 ms
+2026-08-14 15:52:20.191 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.0491 ms
+2026-08-14 15:52:21.410 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:21.414 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 6.6912 ms
+2026-08-14 15:52:21.432 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4120 ms
+2026-08-14 15:52:21.432 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3266 ms
+2026-08-14 15:52:21.433 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6840 ms
+2026-08-14 15:52:21.432 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1696 ms
+2026-08-14 15:52:21.433 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2473 ms
+2026-08-14 15:52:21.432 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5549 ms
+2026-08-14 15:52:21.433 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9057 ms
+2026-08-14 15:52:22.800 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:22.803 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:52:22.804 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 15:52:22.878 -06:00 [INF] Received HTTP response headers after 74.0502ms - 200
+2026-08-14 15:52:22.881 -06:00 [INF] End processing HTTP request after 79.0305ms - 200
+2026-08-14 15:52:22.929 -06:00 [INF] HTTP POST /ExchangeRates/SyncNow respondió 302 en 135.8516 ms
+2026-08-14 15:52:22.934 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:22.938 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 4.7959 ms
+2026-08-14 15:52:22.956 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2077 ms
+2026-08-14 15:52:22.957 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6748 ms
+2026-08-14 15:52:22.956 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4399 ms
+2026-08-14 15:52:22.956 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8647 ms
+2026-08-14 15:52:22.956 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.7875 ms
+2026-08-14 15:52:22.957 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.7121 ms
+2026-08-14 15:52:22.957 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.1408 ms
+2026-08-14 15:52:26.787 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:26.807 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 25.9512 ms
+2026-08-14 15:52:26.825 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1669 ms
+2026-08-14 15:52:26.826 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 1.0573 ms
+2026-08-14 15:52:26.827 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.9808 ms
+2026-08-14 15:52:26.826 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.2150 ms
+2026-08-14 15:52:26.826 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.7641 ms
+2026-08-14 15:52:26.827 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5697 ms
+2026-08-14 15:52:26.827 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.0320 ms
+2026-08-14 15:52:26.827 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.5544 ms
+2026-08-14 15:52:26.827 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.5134 ms
+2026-08-14 15:52:32.027 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:32.033 -06:00 [INF] Tasa inversa encontrada en BD: 2/1 = 0.00218940
+2026-08-14 15:52:32.040 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 19.4466 ms
+2026-08-14 15:52:43.748 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:43.758 -06:00 [INF] Tasa inversa encontrada en BD: 2/1 = 0.00218940
+2026-08-14 15:52:43.781 -06:00 [INF] Tasa inversa encontrada en BD: 2/1 = 0.00218940
+2026-08-14 15:52:43.784 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 42.9238 ms
+2026-08-14 15:52:43.802 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3808 ms
+2026-08-14 15:52:43.802 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1545 ms
+2026-08-14 15:52:43.803 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7727 ms
+2026-08-14 15:52:43.803 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5915 ms
+2026-08-14 15:52:43.803 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.6592 ms
+2026-08-14 15:52:43.803 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2798 ms
+2026-08-14 15:52:43.802 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5614 ms
+2026-08-14 15:52:43.803 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9000 ms
+2026-08-14 15:52:43.803 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.4573 ms
+2026-08-14 15:52:54.176 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:54.179 -06:00 [INF] Tasa inversa encontrada en BD: 9/1 = 0.69885207
+2026-08-14 15:52:54.180 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 4.2612 ms
+2026-08-14 15:52:57.062 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:52:57.064 -06:00 [INF] Tasa inversa encontrada en BD: 9/1 = 0.69885207
+2026-08-14 15:52:57.070 -06:00 [INF] Tasa inversa encontrada en BD: 9/1 = 0.69885207
+2026-08-14 15:52:57.073 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 11.5675 ms
+2026-08-14 15:52:57.090 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3141 ms
+2026-08-14 15:52:57.091 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1853 ms
+2026-08-14 15:52:57.091 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5529 ms
+2026-08-14 15:52:57.092 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.6740 ms
+2026-08-14 15:52:57.092 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.4773 ms
+2026-08-14 15:52:57.092 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.7264 ms
+2026-08-14 15:52:57.092 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.5814 ms
+2026-08-14 15:52:57.092 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.7872 ms
+2026-08-14 15:52:57.091 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3938 ms
+2026-08-14 15:53:10.784 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:53:10.786 -06:00 [INF] Consultando API externa para 9/2
+2026-08-14 15:53:10.788 -06:00 [WRN] No se encontró tasa para 9/2
+2026-08-14 15:53:10.790 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 6.1624 ms
+2026-08-14 15:53:16.598 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:53:16.601 -06:00 [INF] Consultando API externa para 9/2
+2026-08-14 15:53:16.602 -06:00 [WRN] No se encontró tasa para 9/2
+2026-08-14 15:53:16.603 -06:00 [INF] Consultando API externa para 9/2
+2026-08-14 15:53:16.604 -06:00 [WRN] No se encontró tasa para 9/2
+2026-08-14 15:53:16.607 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 9.5991 ms
+2026-08-14 15:53:16.625 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5290 ms
+2026-08-14 15:53:16.625 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5788 ms
+2026-08-14 15:53:16.625 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1559 ms
+2026-08-14 15:53:16.626 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7006 ms
+2026-08-14 15:53:16.625 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2490 ms
+2026-08-14 15:53:16.627 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.4416 ms
+2026-08-14 15:53:16.627 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.7357 ms
+2026-08-14 15:53:16.627 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.9132 ms
+2026-08-14 15:53:16.627 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.8804 ms
+2026-08-14 15:53:22.100 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:53:22.102 -06:00 [INF] Consultando API externa para 9/2
+2026-08-14 15:53:22.103 -06:00 [WRN] No se encontró tasa para 9/2
+2026-08-14 15:53:22.104 -06:00 [INF] Consultando API externa para 9/2
+2026-08-14 15:53:22.105 -06:00 [WRN] No se encontró tasa para 9/2
+2026-08-14 15:53:22.107 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 7.6486 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4375 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.7709 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3985 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6897 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2255 ms
+2026-08-14 15:53:22.126 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.0871 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.6565 ms
+2026-08-14 15:53:22.126 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9458 ms
+2026-08-14 15:53:22.125 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.7458 ms
+2026-08-14 15:53:27.453 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:53:27.455 -06:00 [INF] Tasa encontrada en BD: 1/2 = 447.701908
+2026-08-14 15:53:27.456 -06:00 [INF] HTTP GET /ExchangeRates/GetRate respondió 200 en 3.2565 ms
+2026-08-14 15:53:31.371 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:53:31.373 -06:00 [INF] Tasa encontrada en BD: 1/2 = 447.701908
+2026-08-14 15:53:31.378 -06:00 [INF] Tasa encontrada en BD: 1/2 = 447.701908
+2026-08-14 15:53:31.380 -06:00 [INF] HTTP POST /CurrencyConversion respondió 200 en 10.8314 ms
+2026-08-14 15:53:31.397 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4109 ms
+2026-08-14 15:53:31.398 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.3662 ms
+2026-08-14 15:53:31.398 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.3446 ms
+2026-08-14 15:53:31.398 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6190 ms
+2026-08-14 15:53:31.397 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6606 ms
+2026-08-14 15:53:31.397 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1518 ms
+2026-08-14 15:53:31.397 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2610 ms
+2026-08-14 15:53:31.398 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4675 ms
+2026-08-14 15:53:31.398 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.4898 ms
+2026-08-14 15:53:34.951 -06:00 [INF] HTTP GET /Currencies respondió 200 en 2.4839 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4742 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7129 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6890 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6262 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3435 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2072 ms
+2026-08-14 15:53:34.969 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4049 ms
+2026-08-14 15:53:35.509 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 2.3595 ms
+2026-08-14 15:53:35.528 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1714 ms
+2026-08-14 15:53:35.528 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5287 ms
+2026-08-14 15:53:35.528 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.7101 ms
+2026-08-14 15:53:35.528 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2601 ms
+2026-08-14 15:53:35.528 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3836 ms
+2026-08-14 15:53:35.529 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7893 ms
+2026-08-14 15:53:35.529 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 0.5924 ms
+2026-08-14 15:53:35.529 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.6383 ms
+2026-08-14 15:53:35.529 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2381 ms
+2026-08-14 15:53:36.531 -06:00 [INF] HTTP GET /Currencies respondió 200 en 3.0244 ms
+2026-08-14 15:53:36.548 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1203 ms
+2026-08-14 15:53:36.549 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5689 ms
+2026-08-14 15:53:36.549 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7083 ms
+2026-08-14 15:53:36.549 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5696 ms
+2026-08-14 15:53:36.549 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3548 ms
+2026-08-14 15:53:36.549 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5286 ms
+2026-08-14 15:53:36.549 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1437 ms
+2026-08-14 15:53:40.731 -06:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Currencies"
+WHERE "Id" = @p0
+RETURNING 1;
+2026-08-14 15:53:40.747 -06:00 [ERR] An exception occurred in the database while saving changes for context type 'Convergex.Persistence.Context.ConvergexDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-08-14 15:53:40.783 -06:00 [INF] HTTP POST /Currencies/Delete/11 respondió 302 en 71.0554 ms
+2026-08-14 15:53:40.789 -06:00 [INF] HTTP GET /Currencies respondió 200 en 2.4005 ms
+2026-08-14 15:53:40.806 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2008 ms
+2026-08-14 15:53:40.807 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.9434 ms
+2026-08-14 15:53:40.806 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2845 ms
+2026-08-14 15:53:40.807 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.8995 ms
+2026-08-14 15:53:40.806 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3708 ms
+2026-08-14 15:53:40.807 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.5949 ms
+2026-08-14 15:53:40.808 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.4747 ms
+2026-08-14 15:53:48.707 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:53:48.711 -06:00 [INF] HTTP GET /ExchangeRates respondió 200 en 4.3484 ms
+2026-08-14 15:53:48.729 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1428 ms
+2026-08-14 15:53:48.729 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4988 ms
+2026-08-14 15:53:48.729 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3838 ms
+2026-08-14 15:53:48.730 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.9220 ms
+2026-08-14 15:53:48.730 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.6093 ms
+2026-08-14 15:53:48.730 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.3005 ms
+2026-08-14 15:53:48.730 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3826 ms
+2026-08-14 15:54:20.379 -06:00 [WRN] External exchange rate API is configured with non-HTTPS URL: http://apis.gometa.org/tdc/tdc.json
+2026-08-14 15:54:20.382 -06:00 [INF] HTTP GET /CurrencyConversion respondió 200 en 3.4379 ms
+2026-08-14 15:54:20.400 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4593 ms
+2026-08-14 15:54:20.401 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.0531 ms
+2026-08-14 15:54:20.405 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 5.4581 ms
+2026-08-14 15:54:20.407 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 4.6455 ms
+2026-08-14 15:54:20.401 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1428 ms
+2026-08-14 15:54:20.403 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5748 ms
+2026-08-14 15:54:20.407 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 3.9733 ms
+2026-08-14 15:54:20.406 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 5.5926 ms
+2026-08-14 15:54:20.407 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 4.6778 ms
+2026-08-14 15:54:22.061 -06:00 [INF] HTTP GET / respondió 200 en 6.1277 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2000 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5158 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9601 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5386 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5774 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 0.4326 ms
+2026-08-14 15:54:22.080 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8155 ms
+2026-08-14 15:54:22.081 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.8417 ms
+2026-08-14 15:54:56.385 -06:00 [INF] HTTP GET /Account/Profile respondió 200 en 32.8863 ms
+2026-08-14 15:54:56.419 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4752 ms
+2026-08-14 15:54:56.421 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7515 ms
+2026-08-14 15:54:56.423 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.9320 ms
+2026-08-14 15:54:56.426 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 3.9945 ms
+2026-08-14 15:54:56.422 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5550 ms
+2026-08-14 15:54:56.425 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.8219 ms
+2026-08-14 15:54:56.452 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 30.5007 ms
+2026-08-14 15:54:56.452 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 27.9640 ms
+2026-08-14 15:54:56.482 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 57.9441 ms
+2026-08-14 15:54:58.202 -06:00 [INF] HTTP GET /Settings respondió 200 en 22.0562 ms
+2026-08-14 15:54:58.220 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4621 ms
+2026-08-14 15:54:58.220 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6343 ms
+2026-08-14 15:54:58.220 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5121 ms
+2026-08-14 15:54:58.221 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3444 ms
+2026-08-14 15:54:58.220 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2688 ms
+2026-08-14 15:54:58.221 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2417 ms
+2026-08-14 15:54:58.221 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.1581 ms
+2026-08-14 15:55:01.209 -06:00 [INF] HTTP POST /Settings respondió 302 en 20.9245 ms
+2026-08-14 15:55:01.215 -06:00 [INF] HTTP GET /Settings respondió 200 en 2.6144 ms
+2026-08-14 15:55:01.235 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3155 ms
+2026-08-14 15:55:01.235 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8811 ms
+2026-08-14 15:55:01.235 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3633 ms
+2026-08-14 15:55:01.236 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1529 ms
+2026-08-14 15:55:01.237 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5975 ms
+2026-08-14 15:55:01.237 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2508 ms
+2026-08-14 15:55:01.238 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7069 ms
+2026-08-14 15:55:03.705 -06:00 [INF] HTTP POST /Settings respondió 302 en 5.9709 ms
+2026-08-14 15:55:03.711 -06:00 [INF] HTTP GET /Settings respondió 200 en 2.4948 ms
+2026-08-14 15:55:03.728 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4085 ms
+2026-08-14 15:55:03.729 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.3123 ms
+2026-08-14 15:55:03.729 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4699 ms
+2026-08-14 15:55:03.729 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7145 ms
+2026-08-14 15:55:03.729 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5714 ms
+2026-08-14 15:55:03.729 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4265 ms
+2026-08-14 15:55:03.730 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.8005 ms
+2026-08-14 15:55:06.796 -06:00 [INF] HTTP GET /Units respondió 200 en 36.0187 ms
+2026-08-14 15:55:06.813 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1459 ms
+2026-08-14 15:55:06.814 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.1057 ms
+2026-08-14 15:55:06.814 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3404 ms
+2026-08-14 15:55:06.814 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9913 ms
+2026-08-14 15:55:06.814 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2856 ms
+2026-08-14 15:55:06.814 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4797 ms
+2026-08-14 15:55:06.814 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.1284 ms
+2026-08-14 15:55:12.523 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 4.1666 ms
+2026-08-14 15:55:12.544 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1605 ms
+2026-08-14 15:55:12.545 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5662 ms
+2026-08-14 15:55:12.544 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4292 ms
+2026-08-14 15:55:12.545 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.1582 ms
+2026-08-14 15:55:12.545 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.6574 ms
+2026-08-14 15:55:12.545 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.3295 ms
+2026-08-14 15:55:12.545 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2067 ms
+2026-08-14 15:55:12.547 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 2.6907 ms
+2026-08-14 15:55:12.547 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.9755 ms
+2026-08-14 15:55:14.693 -06:00 [INF] HTTP GET /UnitConversion respondió 200 en 4.4553 ms
+2026-08-14 15:55:14.712 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5419 ms
+2026-08-14 15:55:14.713 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1996 ms
+2026-08-14 15:55:14.712 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1511 ms
+2026-08-14 15:55:14.714 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3213 ms
+2026-08-14 15:55:14.713 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5217 ms
+2026-08-14 15:55:14.712 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5692 ms
+2026-08-14 15:55:14.714 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.4289 ms
+2026-08-14 15:55:14.714 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.3082 ms
+2026-08-14 15:55:14.714 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 1.4373 ms
+2026-08-14 15:55:22.111 -06:00 [INF] HTTP GET /UnitConversion/GetFactor respondió 200 en 21.0634 ms
+2026-08-14 15:55:29.096 -06:00 [INF] HTTP POST /UnitConversion respondió 200 en 19.5395 ms
+2026-08-14 15:55:29.114 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4205 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6399 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1213 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 0.4847 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4180 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1736 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 1.0417 ms
+2026-08-14 15:55:29.114 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6248 ms
+2026-08-14 15:55:29.115 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8512 ms
+2026-08-14 15:55:40.699 -06:00 [INF] HTTP GET / respondió 200 en 4.0820 ms
+2026-08-14 15:55:40.718 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4186 ms
+2026-08-14 15:55:40.719 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7367 ms
+2026-08-14 15:55:40.719 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.5127 ms
+2026-08-14 15:55:40.719 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 0.3918 ms
+2026-08-14 15:55:40.719 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5718 ms
+2026-08-14 15:55:40.718 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6929 ms
+2026-08-14 15:55:40.718 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1364 ms
+2026-08-14 15:55:40.718 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0413 ms
+2026-08-14 15:55:49.990 -06:00 [INF] HTTP GET /Home respondió 200 en 8.9759 ms
+2026-08-14 15:55:50.008 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3712 ms
+2026-08-14 15:55:50.009 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2233 ms
+2026-08-14 15:55:50.009 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4089 ms
+2026-08-14 15:55:50.009 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6424 ms
+2026-08-14 15:55:50.009 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1504 ms
+2026-08-14 15:55:50.009 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6351 ms
+2026-08-14 15:55:50.009 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8481 ms
+2026-08-14 15:55:52.537 -06:00 [INF] HTTP GET / respondió 200 en 4.5140 ms
+2026-08-14 15:55:54.643 -06:00 [INF] HTTP GET /Home respondió 200 en 1.5574 ms
+2026-08-14 15:55:54.662 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1374 ms
+2026-08-14 15:55:54.663 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4357 ms
+2026-08-14 15:55:54.662 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5260 ms
+2026-08-14 15:55:54.663 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4288 ms
+2026-08-14 15:55:54.663 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.8433 ms
+2026-08-14 15:55:54.664 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.2969 ms
+2026-08-14 15:55:54.664 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.2940 ms
+2026-08-14 15:55:57.699 -06:00 [INF] HTTP GET / respondió 200 en 3.4770 ms
+2026-08-14 15:55:59.439 -06:00 [INF] HTTP GET /Units respondió 200 en 2.5391 ms
+2026-08-14 15:55:59.459 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5905 ms
+2026-08-14 15:55:59.459 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4772 ms
+2026-08-14 15:55:59.459 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1802 ms
+2026-08-14 15:55:59.459 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0832 ms
+2026-08-14 15:55:59.459 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7595 ms
+2026-08-14 15:55:59.459 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3629 ms
+2026-08-14 15:55:59.460 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.9130 ms
+2026-08-14 15:56:00.493 -06:00 [INF] HTTP GET /Currencies respondió 200 en 2.3769 ms
+2026-08-14 15:56:00.511 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1289 ms
+2026-08-14 15:56:00.511 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.1901 ms
+2026-08-14 15:56:00.511 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6645 ms
+2026-08-14 15:56:00.512 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7199 ms
+2026-08-14 15:56:00.512 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5318 ms
+2026-08-14 15:56:00.512 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.6127 ms
+2026-08-14 15:56:00.513 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.3440 ms
+2026-08-14 15:56:01.196 -06:00 [INF] HTTP GET /Units respondió 200 en 4.6773 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1980 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4118 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6421 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4559 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0455 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5602 ms
+2026-08-14 15:56:01.217 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4476 ms
+2026-08-14 15:56:04.364 -06:00 [INF] HTTP GET /Units respondió 200 en 9.3421 ms
+2026-08-14 15:56:04.383 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1650 ms
+2026-08-14 15:56:04.383 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5228 ms
+2026-08-14 15:56:04.383 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5721 ms
+2026-08-14 15:56:04.383 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3476 ms
+2026-08-14 15:56:04.383 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3424 ms
+2026-08-14 15:56:04.383 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3628 ms
+2026-08-14 15:56:04.384 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.1392 ms
+2026-08-14 15:56:05.693 -06:00 [INF] HTTP GET /Units respondió 200 en 2.2370 ms
+2026-08-14 15:56:05.711 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1703 ms
+2026-08-14 15:56:05.711 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5843 ms
+2026-08-14 15:56:05.711 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6439 ms
+2026-08-14 15:56:05.711 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4173 ms
+2026-08-14 15:56:05.711 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5792 ms
+2026-08-14 15:56:05.712 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4810 ms
+2026-08-14 15:56:05.712 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.0397 ms
+2026-08-14 15:56:07.352 -06:00 [INF] HTTP GET /Units respondió 200 en 3.1759 ms
+2026-08-14 15:56:07.370 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5751 ms
+2026-08-14 15:56:07.370 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1968 ms
+2026-08-14 15:56:07.370 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3939 ms
+2026-08-14 15:56:07.371 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7712 ms
+2026-08-14 15:56:07.371 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5640 ms
+2026-08-14 15:56:07.370 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4764 ms
+2026-08-14 15:56:07.371 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1423 ms
+2026-08-14 15:56:08.801 -06:00 [INF] HTTP GET /Units respondió 200 en 2.3426 ms
+2026-08-14 15:56:08.819 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3692 ms
+2026-08-14 15:56:08.820 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6633 ms
+2026-08-14 15:56:08.819 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1636 ms
+2026-08-14 15:56:08.819 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5005 ms
+2026-08-14 15:56:08.820 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3842 ms
+2026-08-14 15:56:08.820 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0864 ms
+2026-08-14 15:56:08.820 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6400 ms
+2026-08-14 15:56:10.068 -06:00 [INF] HTTP GET /Units respondió 200 en 2.1647 ms
+2026-08-14 15:56:10.086 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4704 ms
+2026-08-14 15:56:10.087 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.5191 ms
+2026-08-14 15:56:10.087 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.4013 ms
+2026-08-14 15:56:10.087 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.9664 ms
+2026-08-14 15:56:10.087 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.6496 ms
+2026-08-14 15:56:10.088 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.7432 ms
+2026-08-14 15:56:10.088 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 2.2670 ms
+2026-08-14 15:56:10.781 -06:00 [INF] HTTP GET /Units respondió 200 en 2.4697 ms
+2026-08-14 15:56:10.801 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4860 ms
+2026-08-14 15:56:10.801 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3800 ms
+2026-08-14 15:56:10.801 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4650 ms
+2026-08-14 15:56:10.801 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1311 ms
+2026-08-14 15:56:10.802 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7916 ms
+2026-08-14 15:56:10.801 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1400 ms
+2026-08-14 15:56:10.802 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9391 ms
+2026-08-14 15:56:12.492 -06:00 [INF] HTTP GET /Units respondió 200 en 1.8397 ms
+2026-08-14 15:56:12.510 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.2855 ms
+2026-08-14 15:56:12.511 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8150 ms
+2026-08-14 15:56:12.510 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1669 ms
+2026-08-14 15:56:12.511 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4373 ms
+2026-08-14 15:56:12.511 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.9097 ms
+2026-08-14 15:56:12.511 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1346 ms
+2026-08-14 15:56:12.511 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 1.0241 ms
+2026-08-14 15:56:13.438 -06:00 [INF] HTTP GET / respondió 200 en 4.6885 ms
+2026-08-14 15:56:13.456 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4078 ms
+2026-08-14 15:56:13.457 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4480 ms
+2026-08-14 15:56:13.457 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1537 ms
+2026-08-14 15:56:13.457 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.8276 ms
+2026-08-14 15:56:13.457 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6263 ms
+2026-08-14 15:56:13.457 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 0.4219 ms
+2026-08-14 15:56:13.458 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.7734 ms
+2026-08-14 15:56:13.458 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.4270 ms
+2026-08-14 15:56:40.956 -06:00 [INF] HTTP GET /Home respondió 200 en 1.8131 ms
+2026-08-14 15:56:40.975 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3866 ms
+2026-08-14 15:56:41.006 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 30.6274 ms
+2026-08-14 15:56:41.038 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 31.4790 ms
+2026-08-14 15:56:41.038 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 62.8775 ms
+2026-08-14 15:56:41.036 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 61.0013 ms
+2026-08-14 15:56:41.037 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 30.1215 ms
+2026-08-14 15:56:41.038 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 61.9718 ms
+2026-08-14 15:56:41.898 -06:00 [INF] HTTP GET / respondió 200 en 3.3723 ms
+2026-08-14 15:56:42.795 -06:00 [INF] HTTP GET /Home respondió 200 en 1.3953 ms
+2026-08-14 15:56:42.815 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1322 ms
+2026-08-14 15:56:42.815 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5104 ms
+2026-08-14 15:56:42.816 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8703 ms
+2026-08-14 15:56:42.816 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.7524 ms
+2026-08-14 15:56:42.816 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1985 ms
+2026-08-14 15:56:42.815 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5885 ms
+2026-08-14 15:56:42.815 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3472 ms
+2026-08-14 15:56:43.325 -06:00 [INF] HTTP GET / respondió 200 en 2.6721 ms
+2026-08-14 15:56:43.963 -06:00 [INF] HTTP GET /Home respondió 200 en 1.3672 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1718 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.7834 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4106 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5542 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.6218 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1473 ms
+2026-08-14 15:56:43.982 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8673 ms
+2026-08-14 15:56:44.446 -06:00 [INF] HTTP GET / respondió 200 en 3.2608 ms
+2026-08-14 15:56:45.576 -06:00 [INF] HTTP GET /Home respondió 200 en 1.4141 ms
+2026-08-14 15:56:45.594 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4038 ms
+2026-08-14 15:56:45.595 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.4308 ms
+2026-08-14 15:56:45.595 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.7454 ms
+2026-08-14 15:56:45.594 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5763 ms
+2026-08-14 15:56:45.594 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1586 ms
+2026-08-14 15:56:45.595 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.0394 ms
+2026-08-14 15:56:45.596 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.2538 ms
+2026-08-14 15:56:45.979 -06:00 [INF] HTTP GET / respondió 200 en 3.2692 ms
+2026-08-14 15:56:46.816 -06:00 [INF] HTTP GET /Home respondió 200 en 1.4544 ms
+2026-08-14 15:56:46.835 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3399 ms
+2026-08-14 15:56:46.835 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1964 ms
+2026-08-14 15:56:46.836 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6308 ms
+2026-08-14 15:56:46.835 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0526 ms
+2026-08-14 15:56:46.836 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7099 ms
+2026-08-14 15:56:46.835 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4468 ms
+2026-08-14 15:56:46.835 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3881 ms
+2026-08-14 15:56:47.272 -06:00 [INF] HTTP GET / respondió 200 en 3.8967 ms
+2026-08-14 15:56:48.882 -06:00 [INF] HTTP GET /Audit respondió 200 en 3.0751 ms
+2026-08-14 15:56:48.900 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3110 ms
+2026-08-14 15:56:48.900 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4026 ms
+2026-08-14 15:56:48.901 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.5334 ms
+2026-08-14 15:56:48.901 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2013 ms
+2026-08-14 15:56:48.901 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4265 ms
+2026-08-14 15:56:48.901 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1002 ms
+2026-08-14 15:56:48.901 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7837 ms
+2026-08-14 15:56:55.013 -06:00 [INF] HTTP GET /Reports respondió 302 en 2.9052 ms
+2026-08-14 15:56:55.019 -06:00 [INF] HTTP GET /Reports/Conversions respondió 200 en 2.8571 ms
+2026-08-14 15:56:55.038 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3289 ms
+2026-08-14 15:56:55.039 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.5588 ms
+2026-08-14 15:56:55.039 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 1.4667 ms
+2026-08-14 15:56:55.039 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 1.0505 ms
+2026-08-14 15:56:55.038 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5147 ms
+2026-08-14 15:56:55.039 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.9228 ms
+2026-08-14 15:56:55.038 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1361 ms
+2026-08-14 15:56:56.731 -06:00 [INF] HTTP GET /Reports/Rates respondió 200 en 49.0724 ms
+2026-08-14 15:56:56.748 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3447 ms
+2026-08-14 15:56:56.748 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1689 ms
+2026-08-14 15:56:56.749 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.8039 ms
+2026-08-14 15:56:56.748 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3076 ms
+2026-08-14 15:56:56.748 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.1933 ms
+2026-08-14 15:56:56.749 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7873 ms
+2026-08-14 15:56:56.748 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4850 ms
+2026-08-14 15:57:01.291 -06:00 [INF] HTTP GET /Reports/Rates respondió 200 en 7.4309 ms
+2026-08-14 15:57:01.310 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1585 ms
+2026-08-14 15:57:01.311 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6081 ms
+2026-08-14 15:57:01.311 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5823 ms
+2026-08-14 15:57:01.310 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.2979 ms
+2026-08-14 15:57:01.311 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.4613 ms
+2026-08-14 15:57:01.311 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.3389 ms
+2026-08-14 15:57:01.311 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 1.0882 ms
+2026-08-14 15:57:03.195 -06:00 [INF] HTTP GET /Reports/Rates respondió 200 en 7.3067 ms
+2026-08-14 15:57:03.215 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3694 ms
+2026-08-14 15:57:03.215 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4489 ms
+2026-08-14 15:57:03.215 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3229 ms
+2026-08-14 15:57:03.215 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1588 ms
+2026-08-14 15:57:03.216 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.3040 ms
+2026-08-14 15:57:03.217 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.1941 ms
+2026-08-14 15:57:03.217 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 2.2973 ms
+2026-08-14 15:57:35.169 -06:00 [INF] HTTP GET / respondió 200 en 3.3476 ms
+2026-08-14 15:57:35.191 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3725 ms
+2026-08-14 15:57:35.193 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 1.1099 ms
+2026-08-14 15:57:35.220 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 28.9270 ms
+2026-08-14 15:57:35.219 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 24.1196 ms
+2026-08-14 15:57:35.192 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.6802 ms
+2026-08-14 15:57:35.218 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 23.4251 ms
+2026-08-14 15:57:35.220 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 28.2749 ms
+2026-08-14 15:57:35.222 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 28.4274 ms
+2026-08-14 15:57:41.315 -06:00 [INF] HTTP GET /Home respondió 200 en 1.5504 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4764 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.8012 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0698 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3964 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6445 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.2347 ms
+2026-08-14 15:57:41.335 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3527 ms
+2026-08-14 15:57:42.522 -06:00 [INF] HTTP GET / respondió 200 en 3.3061 ms
+2026-08-14 15:57:43.425 -06:00 [INF] HTTP GET /Home respondió 200 en 1.3006 ms
+2026-08-14 15:57:43.442 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1628 ms
+2026-08-14 15:57:43.443 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0821 ms
+2026-08-14 15:57:43.443 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.7259 ms
+2026-08-14 15:57:43.443 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3619 ms
+2026-08-14 15:57:43.443 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6980 ms
+2026-08-14 15:57:43.442 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5996 ms
+2026-08-14 15:57:43.442 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.4477 ms
+2026-08-14 15:57:44.105 -06:00 [INF] HTTP GET / respondió 200 en 4.0806 ms
+2026-08-14 15:57:44.926 -06:00 [INF] HTTP GET /Home respondió 200 en 1.4100 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.3748 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8584 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1467 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.2458 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.2658 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.5519 ms
+2026-08-14 15:57:44.944 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6407 ms
+2026-08-14 15:57:45.746 -06:00 [INF] HTTP GET / respondió 200 en 3.0829 ms
+2026-08-14 15:57:47.066 -06:00 [INF] HTTP GET / respondió 200 en 4.1354 ms
+2026-08-14 15:57:47.083 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1991 ms
+2026-08-14 15:57:47.085 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 2.1526 ms
+2026-08-14 15:57:47.085 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 2.1689 ms
+2026-08-14 15:57:47.083 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5150 ms
+2026-08-14 15:57:47.084 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.6304 ms
+2026-08-14 15:57:47.083 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.4935 ms
+2026-08-14 15:57:47.084 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 0.5758 ms
+2026-08-14 15:57:47.084 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6967 ms
+2026-08-14 15:57:51.804 -06:00 [INF] HTTP GET /Home respondió 200 en 1.5016 ms
+2026-08-14 15:57:51.822 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.5338 ms
+2026-08-14 15:57:51.823 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.8753 ms
+2026-08-14 15:57:51.823 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 0.6195 ms
+2026-08-14 15:57:51.823 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 0.3585 ms
+2026-08-14 15:57:51.823 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0268 ms
+2026-08-14 15:57:51.823 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1650 ms
+2026-08-14 15:57:51.823 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 0.6559 ms
+2026-08-14 15:57:52.746 -06:00 [INF] HTTP GET / respondió 200 en 8.4600 ms
+2026-08-14 15:57:53.777 -06:00 [INF] HTTP GET /Home respondió 200 en 1.1693 ms
+2026-08-14 15:57:53.795 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 0.2930 ms
+2026-08-14 15:57:53.795 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.1474 ms
+2026-08-14 15:57:53.796 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 1.0664 ms
+2026-08-14 15:57:53.795 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 0.5242 ms
+2026-08-14 15:57:53.799 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 4.0865 ms
+2026-08-14 15:57:53.800 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 4.2706 ms
+2026-08-14 15:57:53.800 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 4.4269 ms
+2026-08-14 15:57:54.870 -06:00 [INF] HTTP GET / respondió 200 en 2.3742 ms
+2026-08-14 16:04:40.824 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 16:04:41.791 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 16:04:41.795 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 16:04:42.066 -06:00 [INF] Received HTTP response headers after 268.3872ms - 200
+2026-08-14 16:04:42.069 -06:00 [INF] End processing HTTP request after 283.627ms - 200
+2026-08-14 16:04:42.328 -06:00 [INF] HTTP GET / respondió 302 en 71.8867 ms
+2026-08-14 16:04:42.408 -06:00 [INF] Sincronización automática de tasas de cambio completada: 10 tasa(s) publicadas.
+2026-08-14 16:04:42.444 -06:00 [INF] HTTP GET /Account/Login respondió 200 en 102.3351 ms
+2026-08-14 16:04:42.504 -06:00 [INF] HTTP GET /images/convergex-logo.png respondió 304 en 42.1472 ms
+2026-08-14 16:04:42.509 -06:00 [INF] HTTP GET /js/login.js respondió 200 en 46.6181 ms
+2026-08-14 16:04:42.516 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 53.6016 ms
+2026-08-14 16:04:42.516 -06:00 [INF] HTTP GET /css/login.css respondió 200 en 53.7109 ms
+2026-08-14 16:04:42.516 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js respondió 200 en 53.5386 ms
+2026-08-14 16:04:42.516 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 53.6050 ms
+2026-08-14 16:04:42.516 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js respondió 200 en 51.1255 ms
+2026-08-14 16:04:42.516 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 54.2189 ms
+2026-08-14 16:04:42.532 -06:00 [INF] HTTP GET /images/login.png respondió 304 en 0.9495 ms
+2026-08-14 16:04:52.669 -06:00 [INF] HTTP POST /Account/Login respondió 302 en 167.9498 ms
+2026-08-14 16:04:52.803 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 16:04:52.836 -06:00 [INF] HTTP GET / respondió 200 en 161.6171 ms
+2026-08-14 16:04:52.852 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 0.4767 ms
+2026-08-14 16:04:52.852 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 1.2138 ms
+2026-08-14 16:04:52.885 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 34.1983 ms
+2026-08-14 16:04:52.886 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 34.3703 ms
+2026-08-14 16:04:52.886 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 34.5040 ms
+2026-08-14 16:04:52.912 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 61.6879 ms
+2026-08-14 16:04:52.913 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 61.6663 ms
+2026-08-14 16:04:52.919 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 67.4688 ms
+2026-08-14 16:06:33.371 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 16:06:34.332 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 16:06:34.336 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 16:06:34.612 -06:00 [INF] Received HTTP response headers after 273.9784ms - 200
+2026-08-14 16:06:34.614 -06:00 [INF] End processing HTTP request after 287.876ms - 200
+2026-08-14 16:06:34.960 -06:00 [INF] Sincronización automática de tasas de cambio completada: 10 tasa(s) publicadas.
+2026-08-14 16:06:35.076 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 16:06:35.132 -06:00 [INF] HTTP GET / respondió 200 en 289.4803 ms
+2026-08-14 16:06:35.240 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 95.4953 ms
+2026-08-14 16:06:35.246 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 101.2262 ms
+2026-08-14 16:06:35.246 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 75.3564 ms
+2026-08-14 16:06:35.246 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 74.5294 ms
+2026-08-14 16:06:35.250 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 105.3594 ms
+2026-08-14 16:06:35.250 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 105.3609 ms
+2026-08-14 16:06:35.250 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 80.0110 ms
+2026-08-14 16:06:35.251 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 81.4671 ms
+2026-08-14 16:08:05.482 -06:00 [INF] Iniciando aplicación Convergex
+2026-08-14 16:08:06.479 -06:00 [INF] Start processing HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 16:08:06.484 -06:00 [INF] Sending HTTP request GET https://open.er-api.com/v6/latest/USD
+2026-08-14 16:08:06.759 -06:00 [INF] Received HTTP response headers after 272.2969ms - 200
+2026-08-14 16:08:06.761 -06:00 [INF] End processing HTTP request after 286.8091ms - 200
+2026-08-14 16:08:07.134 -06:00 [INF] Sincronización automática de tasas de cambio completada: 10 tasa(s) publicadas.
+2026-08-14 16:08:07.162 -06:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-08-14 16:08:07.219 -06:00 [INF] HTTP GET / respondió 200 en 296.0513 ms
+2026-08-14 16:08:07.453 -06:00 [INF] HTTP GET /img/logo.png respondió 304 en 229.1092 ms
+2026-08-14 16:08:07.459 -06:00 [INF] HTTP GET /Convergex.Web.styles.css respondió 200 en 235.1050 ms
+2026-08-14 16:08:07.459 -06:00 [INF] HTTP GET /js/dashboard.js respondió 200 en 196.9920 ms
+2026-08-14 16:08:07.459 -06:00 [INF] HTTP GET /js/site.js respondió 200 en 197.7659 ms
+2026-08-14 16:08:07.463 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js respondió 200 en 202.5181 ms
+2026-08-14 16:08:07.463 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js respondió 200 en 202.8155 ms
+2026-08-14 16:08:07.463 -06:00 [INF] HTTP GET /css/site.css respondió 200 en 239.0057 ms
+2026-08-14 16:08:07.465 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css respondió 200 en 241.2714 ms
