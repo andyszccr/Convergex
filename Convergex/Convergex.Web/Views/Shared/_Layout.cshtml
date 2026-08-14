@@ -1,4 +1,9 @@
-﻿@{
+﻿@inject Convergex.Application.Interfaces.ISystemSettingService SettingService
+@{
+    var systemSettings = await SettingService.GetAsync();
+    var themeClass = systemSettings.Theme == "dark"
+        ? "theme-dark"
+        : "theme-light";
     var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? string.Empty;
     var action = ViewContext.RouteData.Values["action"]?.ToString() ?? string.Empty;
     var isDashboard = string.Equals(controller, "Dashboard", StringComparison.OrdinalIgnoreCase);
@@ -9,11 +14,13 @@
     var isHistory = string.Equals(controller, "History", StringComparison.OrdinalIgnoreCase);
     var isRates = string.Equals(controller, "ExchangeRates", StringComparison.OrdinalIgnoreCase);
     var isUsers = string.Equals(controller, "Users", StringComparison.OrdinalIgnoreCase);
-    var isAudit = string.Equals(controller, "Audit", StringComparison.OrdinalIgnoreCase);
+    var isAudit = string.Equals(controller, "Audit", StringComparison.OrdinalIgnoreCase)
+        || (string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase)
+            && string.Equals(action, "Audit", StringComparison.OrdinalIgnoreCase));
     var isReports = string.Equals(controller, "Reports", StringComparison.OrdinalIgnoreCase);
     var isProfile = string.Equals(controller, "Account", StringComparison.OrdinalIgnoreCase)
         && string.Equals(action, "Profile", StringComparison.OrdinalIgnoreCase);
-
+    var isSettings = string.Equals(controller, "Settings", StringComparison.OrdinalIgnoreCase);
     var fullName = User.Identity?.Name ?? "Usuario";
     var roleName = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? "Usuario";
     var initials = string.Concat(
@@ -35,7 +42,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Convergex.Web.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="@themeClass">
     <div class="app-frame" id="appFrame">
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">
@@ -71,9 +78,6 @@
                     <a class="sidebar-link @(isReports ? "active" : "")" asp-controller="Reports" asp-action="Index">
                         <i class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span>
                     </a>
-                }
-                @if (User.IsInRole("Administrador"))
-                {
                     <a class="sidebar-link @(isAudit ? "active" : "")" asp-controller="Audit" asp-action="Index">
                         <i class="bi bi-shield-check"></i><span>Auditoría</span>
                     </a>
@@ -84,8 +88,13 @@
                 <a class="sidebar-link @(isProfile ? "active" : "")" asp-controller="Account" asp-action="Profile">
                     <i class="bi bi-person-circle"></i><span>Mi perfil</span>
                 </a>
-                <a class="sidebar-link" asp-controller="Home" asp-action="Privacy">
-                    <i class="bi bi-gear"></i><span>Configuración</span>
+                <a class="sidebar-link @(isSettings ? "active" : "")"
+                   asp-controller="Settings"
+                   asp-action="Index">
+
+                    <i class="bi bi-gear"></i>
+                    <span>Configuración</span>
+
                 </a>
             </nav>
 

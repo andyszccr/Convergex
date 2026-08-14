@@ -19,6 +19,7 @@ public static class DependencyInjection
         services.AddScoped<IUnitConversionService, UnitConversionService>();
         services.AddScoped<IAuditService, AuditService>();
         services.AddScoped<IReportService, ReportService>();
+        services.AddScoped<ISystemSettingService, SystemSettingService>();
         return services;
     }
 }

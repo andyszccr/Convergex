@@ -800,4 +800,160 @@ a { text-decoration: none; color: inherit; }
   .chart-box {
     height: 220px;
   }
+
 }
+
+/* ==========================================
+   THEME - DARK MODE
+   ========================================== */
+
+body.theme-dark {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+    body.theme-dark .app-frame {
+        background-color: #111827;
+    }
+
+    body.theme-dark .app-content {
+        background-color: #111827;
+    }
+
+    body.theme-dark .page-main {
+        background-color: #111827;
+    }
+
+    body.theme-dark .topbar {
+        background-color: #0f172a;
+        border-color: #1f2937;
+    }
+
+    body.theme-dark .breadcrumb-title {
+        color: #f9fafb;
+    }
+
+    body.theme-dark .icon-btn {
+        background-color: #1f2937;
+        color: #d1d5db;
+        border-color: #374151;
+    }
+
+    body.theme-dark .topbar-search {
+        background-color: #1f2937;
+        border-color: #374151;
+    }
+
+        body.theme-dark .topbar-search input {
+            color: #f9fafb;
+        }
+
+    body.theme-dark .panel,
+    body.theme-dark .stat-card,
+    body.theme-dark .form-panel {
+        background-color: #1f2937;
+        color: #e5e7eb;
+        border-color: #374151;
+    }
+
+    body.theme-dark h1,
+    body.theme-dark h2,
+    body.theme-dark h3,
+    body.theme-dark h4,
+    body.theme-dark h5,
+    body.theme-dark h6,
+    body.theme-dark .welcome-title,
+    body.theme-dark .stat-value,
+    body.theme-dark .panel-head h2,
+    body.theme-dark .activity-body strong,
+    body.theme-dark .legend-item strong {
+        color: #f9fafb;
+    }
+
+    body.theme-dark p,
+    body.theme-dark small,
+    body.theme-dark .text-muted,
+    body.theme-dark .welcome-subtitle,
+    body.theme-dark .stat-label,
+    body.theme-dark .stat-hint,
+    body.theme-dark .legend-item,
+    body.theme-dark .activity-body span,
+    body.theme-dark .activity-list time {
+        color: #9ca3af !important;
+    }
+
+    body.theme-dark .date-chip,
+    body.theme-dark .chip {
+        background-color: #1f2937;
+        border-color: #374151;
+        color: #d1d5db;
+    }
+
+    body.theme-dark .form-label {
+        color: #e5e7eb;
+    }
+
+    body.theme-dark .form-control,
+    body.theme-dark .form-select {
+        background-color: #111827;
+        color: #f9fafb;
+        border-color: #374151;
+    }
+
+        body.theme-dark .form-control:focus,
+        body.theme-dark .form-select:focus {
+            background-color: #111827;
+            color: #f9fafb;
+            border-color: #3b82f6;
+        }
+
+        body.theme-dark .form-control::placeholder,
+        body.theme-dark .topbar-search input::placeholder {
+            color: #6b7280;
+        }
+
+    body.theme-dark .data-table {
+        color: #e5e7eb;
+    }
+
+        body.theme-dark .data-table th {
+            color: #9ca3af;
+            border-color: #374151;
+        }
+
+        body.theme-dark .data-table td {
+            color: #e5e7eb;
+            border-color: #374151;
+        }
+
+        body.theme-dark .data-table tbody tr:hover {
+            background-color: #273449;
+        }
+
+    body.theme-dark .btn-outline-secondary {
+        color: #d1d5db;
+        border-color: #6b7280;
+    }
+
+        body.theme-dark .btn-outline-secondary:hover {
+            background-color: #374151;
+            color: #ffffff;
+        }
+
+    body.theme-dark .app-footer {
+        color: #9ca3af;
+    }
+
+    body.theme-dark .dropdown-menu {
+        background-color: #1f2937;
+        border-color: #374151;
+    }
+
+    body.theme-dark .dropdown-item {
+        color: #e5e7eb;
+    }
+
+        body.theme-dark .dropdown-item:hover {
+            background-color: #374151;
+            color: #ffffff;
+        }

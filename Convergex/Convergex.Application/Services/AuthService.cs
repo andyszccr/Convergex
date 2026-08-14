@@ -15,23 +15,37 @@ public class AuthService : IAuthService
         _userRepository = userRepository;
     }
 
-    public async Task<AuthenticatedUserDto?> LoginAsync(LoginRequestDto request, CancellationToken cancellationToken = default)
+    public async Task<AuthenticatedUserDto?> LoginAsync(
+        LoginRequestDto request,
+        CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByEmailAsync(request.Email.Trim(), cancellationToken);
+        var user = await _userRepository.GetByEmailAsync(
+            request.Email.Trim(),
+            cancellationToken);
+
         if (user is null || !user.IsActive)
         {
             return null;
         }
 
-        var verification = _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, request.Password);
+        var verification = _passwordHasher.VerifyHashedPassword(
+            user,
+            user.PasswordHash,
+            request.Password);
+
         if (verification == PasswordVerificationResult.Failed)
         {
             return null;
         }
 
         user.LastLoginAt = DateTime.UtcNow;
-        await _userRepository.UpdateAsync(user, cancellationToken);
-        await _userRepository.SaveChangesAsync(cancellationToken);
+
+        await _userRepository.UpdateAsync(
+            user,
+            cancellationToken);
+
+        await _userRepository.SaveChangesAsync(
+            cancellationToken);
 
         return Map(user);
     }
@@ -40,18 +54,33 @@ public class AuthService : IAuthService
         string email,
         CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByEmailAsync(email.Trim(), cancellationToken);
+        var user = await _userRepository.GetByEmailAsync(
+            email.Trim(),
+            cancellationToken);
+
         if (user is null || !user.IsActive)
         {
-            return (true, "Si el correo existe, enviaremos instrucciones para restablecer la contraseña.");
+            return (
+                true,
+                "Si el correo existe, enviaremos instrucciones para restablecer la contraseña.");
         }
 
-        user.ResetToken = Guid.NewGuid().ToString("N")[..8].ToUpperInvariant();
-        user.ResetTokenExpiresAt = DateTime.UtcNow.AddHours(1);
-        await _userRepository.UpdateAsync(user, cancellationToken);
-        await _userRepository.SaveChangesAsync(cancellationToken);
+        user.ResetToken = Guid.NewGuid()
+            .ToString("N")[..8]
+            .ToUpperInvariant();
 
-        return (true, $"Token de recuperación generado (demo): {user.ResetToken}. Úsalo para restablecer tu contraseña.");
+        user.ResetTokenExpiresAt = DateTime.UtcNow.AddHours(1);
+
+        await _userRepository.UpdateAsync(
+            user,
+            cancellationToken);
+
+        await _userRepository.SaveChangesAsync(
+            cancellationToken);
+
+        return (
+            true,
+            $"Token de recuperación generado (demo): {user.ResetToken}. Úsalo para restablecer tu contraseña.");
     }
 
     public async Task<(bool Success, string Message)> ResetPasswordAsync(
@@ -60,28 +89,47 @@ public class AuthService : IAuthService
         string newPassword,
         CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByEmailAsync(email.Trim(), cancellationToken);
+        var user = await _userRepository.GetByEmailAsync(
+            email.Trim(),
+            cancellationToken);
+
         if (user is null
             || string.IsNullOrWhiteSpace(user.ResetToken)
-            || !string.Equals(user.ResetToken, token.Trim(), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(
+                user.ResetToken,
+                token.Trim(),
+                StringComparison.OrdinalIgnoreCase)
             || user.ResetTokenExpiresAt is null
             || user.ResetTokenExpiresAt < DateTime.UtcNow)
         {
-            return (false, "El token de recuperación no es válido o ha expirado.");
+            return (
+                false,
+                "El token de recuperación no es válido o ha expirado.");
         }
 
         if (newPassword.Length < 6)
         {
-            return (false, "La nueva contraseña debe tener al menos 6 caracteres.");
+            return (
+                false,
+                "La nueva contraseña debe tener al menos 6 caracteres.");
         }
 
-        user.PasswordHash = _passwordHasher.HashPassword(user, newPassword);
+        user.PasswordHash =
+            _passwordHasher.HashPassword(user, newPassword);
+
         user.ResetToken = null;
         user.ResetTokenExpiresAt = null;
-        await _userRepository.UpdateAsync(user, cancellationToken);
-        await _userRepository.SaveChangesAsync(cancellationToken);
 
-        return (true, "Contraseña actualizada correctamente. Ya puedes iniciar sesión.");
+        await _userRepository.UpdateAsync(
+            user,
+            cancellationToken);
+
+        await _userRepository.SaveChangesAsync(
+            cancellationToken);
+
+        return (
+            true,
+            "Contraseña actualizada correctamente. Ya puedes iniciar sesión.");
     }
 
     public async Task<(bool Success, string Message)> ChangePasswordAsync(
@@ -90,33 +138,66 @@ public class AuthService : IAuthService
         string newPassword,
         CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
+        var user = await _userRepository.GetByIdAsync(
+            userId,
+            cancellationToken);
+
         if (user is null)
         {
-            return (false, "Usuario no encontrado.");
+            return (
+                false,
+                "Usuario no encontrado.");
         }
 
-        var verification = _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, currentPassword);
-        if (verification == PasswordVerificationResult.Failed)
+        var verification =
+            _passwordHasher.VerifyHashedPassword(
+                user,
+                user.PasswordHash,
+                currentPassword);
+
+        if (verification ==
+            PasswordVerificationResult.Failed)
         {
-            return (false, "La contraseña actual es incorrecta.");
+            return (
+                false,
+                "La contraseña actual es incorrecta.");
         }
 
         if (newPassword.Length < 6)
         {
-            return (false, "La nueva contraseña debe tener al menos 6 caracteres.");
+            return (
+                false,
+                "La nueva contraseña debe tener al menos 6 caracteres.");
         }
 
-        user.PasswordHash = _passwordHasher.HashPassword(user, newPassword);
-        await _userRepository.UpdateAsync(user, cancellationToken);
-        await _userRepository.SaveChangesAsync(cancellationToken);
-        return (true, "Contraseña actualizada correctamente.");
+        user.PasswordHash =
+            _passwordHasher.HashPassword(
+                user,
+                newPassword);
+
+        await _userRepository.UpdateAsync(
+            user,
+            cancellationToken);
+
+        await _userRepository.SaveChangesAsync(
+            cancellationToken);
+
+        return (
+            true,
+            "Contraseña actualizada correctamente.");
     }
 
-    public async Task<AuthenticatedUserDto?> GetProfileAsync(int userId, CancellationToken cancellationToken = default)
+    public async Task<AuthenticatedUserDto?> GetProfileAsync(
+        int userId,
+        CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
-        return user is null ? null : Map(user);
+        var user = await _userRepository.GetByIdAsync(
+            userId,
+            cancellationToken);
+
+        return user is null
+            ? null
+            : Map(user);
     }
 
     public async Task<(bool Success, string Message)> UpdateProfileAsync(
@@ -125,22 +206,40 @@ public class AuthService : IAuthService
         string email,
         CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
+        var user = await _userRepository.GetByIdAsync(
+            userId,
+            cancellationToken);
+
         if (user is null)
         {
-            return (false, "Usuario no encontrado.");
+            return (
+                false,
+                "Usuario no encontrado.");
         }
 
-        if (await _userRepository.EmailExistsAsync(email.Trim(), userId, cancellationToken))
+        if (await _userRepository.EmailExistsAsync(
+            email.Trim(),
+            userId,
+            cancellationToken))
         {
-            return (false, "El correo electrónico ya está en uso.");
+            return (
+                false,
+                "El correo electrónico ya está en uso.");
         }
 
         user.FullName = fullName.Trim();
         user.Email = email.Trim().ToLowerInvariant();
-        await _userRepository.UpdateAsync(user, cancellationToken);
-        await _userRepository.SaveChangesAsync(cancellationToken);
-        return (true, "Perfil actualizado correctamente.");
+
+        await _userRepository.UpdateAsync(
+            user,
+            cancellationToken);
+
+        await _userRepository.SaveChangesAsync(
+            cancellationToken);
+
+        return (
+            true,
+            "Perfil actualizado correctamente.");
     }
 
     private static AuthenticatedUserDto Map(User user) => new()

@@ -18,6 +18,7 @@ public class ConvergexDbContext : DbContext
     public DbSet<User> Users => Set<User>();
     public DbSet<Role> Roles => Set<Role>();
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
+    public DbSet<SystemSetting> SystemSettings => Set<SystemSetting>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -106,6 +107,15 @@ public class ConvergexDbContext : DbContext
             entity.HasIndex(x => x.UserId);
             entity.HasIndex(x => x.Action);
             entity.HasIndex(x => x.EntityName);
+        });
+
+        modelBuilder.Entity<SystemSetting>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Language).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.Theme).HasMaxLength(20).IsRequired();
+            entity.Property(x => x.DefaultCurrencyCode).HasMaxLength(10).IsRequired();
+            entity.Property(x => x.TimeZoneId).HasMaxLength(100).IsRequired();
         });
     }
 }

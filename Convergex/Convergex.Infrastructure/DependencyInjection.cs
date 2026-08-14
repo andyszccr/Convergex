@@ -36,6 +36,7 @@ public static class DependencyInjection
         services.AddScoped<IExchangeRateRepository, ExchangeRateRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IAuditLogRepository, AuditLogRepository>();
+        services.AddScoped<ISystemSettingRepository, SystemSettingRepository>();
 
         services.AddScoped<IPdfReportGenerator, QuestPdfReportGenerator>();
         services.AddScoped<IExcelReportGenerator, ClosedXmlReportGenerator>();

@@ -15,22 +15,38 @@ public class CurrencyConversionController : Controller
     private readonly ICurrencyService _currencyService;
     private readonly IExchangeRateService _exchangeRateService;
     private readonly IExternalExchangeRateService _externalExchangeRateService;
+    private readonly ISystemSettingService _settingService;
 
     public CurrencyConversionController(
         ICurrencyConversionService conversionService,
         ICurrencyService currencyService,
         IExchangeRateService exchangeRateService,
-        IExternalExchangeRateService externalExchangeRateService)
+        IExternalExchangeRateService externalExchangeRateService,
+        ISystemSettingService settingService)
     {
         _conversionService = conversionService;
         _currencyService = currencyService;
         _exchangeRateService = exchangeRateService;
         _externalExchangeRateService = externalExchangeRateService;
+        _settingService = settingService;
     }
 
     [HttpGet]
     public async Task<IActionResult> Index(CancellationToken cancellationToken)
-        => View(await BuildAsync(new CurrencyConversionViewModel(), cancellationToken));
+    {
+        var model = new CurrencyConversionViewModel();
+        var settings = await _settingService.GetAsync(cancellationToken);
+        var currencies = await _currencyService.GetActiveAsync(cancellationToken);
+        var defaultCurrency = currencies.FirstOrDefault(x =>
+            string.Equals(x.Code, settings.DefaultCurrencyCode, StringComparison.OrdinalIgnoreCase));
+
+        if (defaultCurrency is not null)
+        {
+            model.FromCurrencyId = defaultCurrency.Id;
+        }
+
+        return View(await BuildAsync(model, cancellationToken));
+    }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
