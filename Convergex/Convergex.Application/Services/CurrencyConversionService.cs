@@ -1,5 +1,6 @@
+using System.Text.Json;
+using Convergex.Application.DTOs.Audit;
 using Convergex.Application.DTOs.Conversions;
-using Convergex.Application.DTOs.ExternalApis;
 using Convergex.Application.Interfaces;
 using Convergex.Domain.Entities;
 using Convergex.Domain.Enums;
@@ -13,6 +14,7 @@ public class CurrencyConversionService : ICurrencyConversionService
     private readonly IExchangeRateRepository _exchangeRateRepository;
     private readonly IConversionRepository _conversionRepository;
     private readonly IExternalExchangeRateService _externalExchangeRateService;
+    private readonly IAuditService _auditService;
     private readonly ILogger<CurrencyConversionService> _logger;
 
     public CurrencyConversionService(
@@ -20,12 +22,14 @@ public class CurrencyConversionService : ICurrencyConversionService
         IExchangeRateRepository exchangeRateRepository,
         IConversionRepository conversionRepository,
         IExternalExchangeRateService externalExchangeRateService,
+        IAuditService auditService,
         ILogger<CurrencyConversionService> logger)
     {
         _currencyRepository = currencyRepository;
         _exchangeRateRepository = exchangeRateRepository;
         _conversionRepository = conversionRepository;
         _externalExchangeRateService = externalExchangeRateService;
+        _auditService = auditService;
         _logger = logger;
     }
 
@@ -78,6 +82,25 @@ public class CurrencyConversionService : ICurrencyConversionService
 
         await _conversionRepository.AddAsync(conversion, cancellationToken);
         await _conversionRepository.SaveChangesAsync(cancellationToken);
+
+        await _auditService.LogAsync(new AuditLogEntryDto
+        {
+            Action = AuditAction.Conversion,
+            EntityName = "Conversion",
+            EntityId = conversion.Id.ToString(),
+            Detail = $"Conversión {from.Code} → {to.Code}: {request.Amount:N2} → {resultValue:N4} (tasa {rateInfo.Value:N6})",
+            NewValues = JsonSerializer.Serialize(new
+            {
+                conversion.FromCode,
+                conversion.ToCode,
+                conversion.Amount,
+                conversion.RateApplied,
+                conversion.Result,
+                conversion.UserName
+            }),
+            Status = AuditStatus.Success,
+            UserName = request.UserName
+        }, cancellationToken);
 
         return (true, "Conversión realizada y guardada en el historial.", new CurrencyConversionResultDto
         {
@@ -142,24 +165,21 @@ public class CurrencyConversionService : ICurrencyConversionService
 
     private async Task<decimal?> ResolveRateAsync(int fromId, int toId, CancellationToken cancellationToken)
     {
-        // Intentar obtener tasa directa de la base de datos
-        var direct = await _exchangeRateRepository.GetByPairAsync(fromId, toId, cancellationToken);
+        var direct = await _exchangeRateRepository.GetActiveByPairAsync(fromId, toId, cancellationToken);
         if (direct is not null)
         {
-            _logger.LogInformation("Tasa encontrada en BD: {From}/{To} = {Rate}", fromId, toId, direct.Rate);
-            return direct.Rate;
+            _logger.LogInformation("Tasa encontrada en BD: {From}/{To} = {Rate}", fromId, toId, direct.BuyRate);
+            return direct.BuyRate;
         }
 
-        // Intentar obtener tasa inversa de la base de datos
-        var inverse = await _exchangeRateRepository.GetByPairAsync(toId, fromId, cancellationToken);
-        if (inverse is not null && inverse.Rate != 0)
+        var inverse = await _exchangeRateRepository.GetActiveByPairAsync(toId, fromId, cancellationToken);
+        if (inverse is not null && inverse.SellRate != 0)
         {
-            var rate = Math.Round(1m / inverse.Rate, 8);
+            var rate = Math.Round(1m / inverse.SellRate, 8);
             _logger.LogInformation("Tasa inversa encontrada en BD: {From}/{To} = {Rate}", fromId, toId, rate);
             return rate;
         }
 
-        // Si no hay tasa en BD, consultar API externa (solo para USD/CRC)
         _logger.LogInformation("Consultando API externa para {From}/{To}", fromId, toId);
         var externalRate = await GetExternalRateAsync(fromId, toId, cancellationToken);
         if (externalRate.HasValue)
@@ -176,7 +196,6 @@ public class CurrencyConversionService : ICurrencyConversionService
     {
         try
         {
-            // Obtener los códigos de moneda
             var from = await _currencyRepository.GetByIdAsync(fromId, cancellationToken);
             var to = await _currencyRepository.GetByIdAsync(toId, cancellationToken);
 
@@ -185,13 +204,11 @@ public class CurrencyConversionService : ICurrencyConversionService
                 return null;
             }
 
-            // Solo soportamos USD/CRC por ahora desde la API externa
             if (from.Code == "USD" && to.Code == "CRC")
             {
                 var data = await _externalExchangeRateService.GetTdcRateAsync(cancellationToken);
                 if (data is not null)
                 {
-                    // Usar la tasa de venta para comprar USD con CRC
                     return Math.Round(data.Venta, 6);
                 }
             }
@@ -200,7 +217,6 @@ public class CurrencyConversionService : ICurrencyConversionService
                 var data = await _externalExchangeRateService.GetTdcRateAsync(cancellationToken);
                 if (data is not null)
                 {
-                    // Usar la tasa de compra para vender USD por CRC
                     return Math.Round(1m / data.Compra, 6);
                 }
             }

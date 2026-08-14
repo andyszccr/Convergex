@@ -115,6 +115,8 @@ public static class DbSeeder
 
     private static async Task SeedCatalogAsync(ConvergexDbContext context, CancellationToken cancellationToken)
     {
+        await SeedUnitsAsync(context, cancellationToken);
+
         if (await context.Currencies.AnyAsync(cancellationToken))
         {
             return;
@@ -129,27 +131,43 @@ public static class DbSeeder
         await context.SaveChangesAsync(cancellationToken);
 
         var now = DateTime.UtcNow;
+        const string seedAdminName = "Alexander Navarro";
         context.ExchangeRates.AddRange(
             new ExchangeRate
             {
-                BaseCurrencyId = usd.Id,
-                TargetCurrencyId = crc.Id,
-                Rate = 512.45m,
-                UpdatedAt = now.AddMinutes(-15)
+                BaseCurrencyId = usd.Id, TargetCurrencyId = crc.Id, BuyRate = 505.20m, SellRate = 515.80m,
+                EffectiveAt = now.AddDays(-2), CreatedAt = now.AddDays(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Historical, CreatedByName = seedAdminName
             },
             new ExchangeRate
             {
-                BaseCurrencyId = usd.Id,
-                TargetCurrencyId = eur.Id,
-                Rate = 0.92m,
-                UpdatedAt = now.AddHours(-2)
+                BaseCurrencyId = usd.Id, TargetCurrencyId = crc.Id, BuyRate = 508.10m, SellRate = 518.45m,
+                EffectiveAt = now.AddMinutes(-15), CreatedAt = now.AddMinutes(-15),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Active, CreatedByName = seedAdminName
             },
             new ExchangeRate
             {
-                BaseCurrencyId = eur.Id,
-                TargetCurrencyId = crc.Id,
-                Rate = 557.10m,
-                UpdatedAt = now.AddHours(-5)
+                BaseCurrencyId = usd.Id, TargetCurrencyId = eur.Id, BuyRate = 0.900m, SellRate = 0.940m,
+                EffectiveAt = now.AddDays(-2), CreatedAt = now.AddDays(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Historical, CreatedByName = seedAdminName
+            },
+            new ExchangeRate
+            {
+                BaseCurrencyId = usd.Id, TargetCurrencyId = eur.Id, BuyRate = 0.905m, SellRate = 0.935m,
+                EffectiveAt = now.AddHours(-2), CreatedAt = now.AddHours(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Active, CreatedByName = seedAdminName
+            },
+            new ExchangeRate
+            {
+                BaseCurrencyId = eur.Id, TargetCurrencyId = crc.Id, BuyRate = 548.00m, SellRate = 566.00m,
+                EffectiveAt = now.AddDays(-2), CreatedAt = now.AddDays(-2),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Historical, CreatedByName = seedAdminName
+            },
+            new ExchangeRate
+            {
+                BaseCurrencyId = eur.Id, TargetCurrencyId = crc.Id, BuyRate = 552.30m, SellRate = 562.90m,
+                EffectiveAt = now.AddHours(-5), CreatedAt = now.AddHours(-5),
+                Source = ExchangeRateSource.Manual, Status = ExchangeRateStatus.Active, CreatedByName = seedAdminName
             });
 
         var conversions = new List<Conversion>();
@@ -204,27 +222,25 @@ public static class DbSeeder
         }
 
         context.Units.AddRange(
-            // Longitud (base: metro)
-            new Unit { Code = "m", Name = "Metro", Symbol = "m", Category = UnitCategory.Length, FactorToBase = 1m },
-            new Unit { Code = "km", Name = "Kilómetro", Symbol = "km", Category = UnitCategory.Length, FactorToBase = 1000m },
-            new Unit { Code = "cm", Name = "Centímetro", Symbol = "cm", Category = UnitCategory.Length, FactorToBase = 0.01m },
-            new Unit { Code = "mm", Name = "Milímetro", Symbol = "mm", Category = UnitCategory.Length, FactorToBase = 0.001m },
-            new Unit { Code = "mi", Name = "Milla", Symbol = "mi", Category = UnitCategory.Length, FactorToBase = 1609.344m },
-            new Unit { Code = "ft", Name = "Pie", Symbol = "ft", Category = UnitCategory.Length, FactorToBase = 0.3048m },
-            new Unit { Code = "in", Name = "Pulgada", Symbol = "in", Category = UnitCategory.Length, FactorToBase = 0.0254m },
+            new Unit { Code = "m", Name = "Metro", Symbol = "m", Category = UnitCategory.Longitud, FactorToBase = 1m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "km", Name = "Kilómetro", Symbol = "km", Category = UnitCategory.Longitud, FactorToBase = 1000m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "cm", Name = "Centímetro", Symbol = "cm", Category = UnitCategory.Longitud, FactorToBase = 0.01m, DecimalPrecision = 2, RoundingMode = RoundingMode.Truncate, IsActive = true },
+            new Unit { Code = "mm", Name = "Milímetro", Symbol = "mm", Category = UnitCategory.Longitud, FactorToBase = 0.001m, DecimalPrecision = 2, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "mi", Name = "Milla", Symbol = "mi", Category = UnitCategory.Longitud, FactorToBase = 1609.344m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "ft", Name = "Pie", Symbol = "ft", Category = UnitCategory.Longitud, FactorToBase = 0.3048m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "in", Name = "Pulgada", Symbol = "in", Category = UnitCategory.Longitud, FactorToBase = 0.0254m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
 
-            // Peso (base: kilogramo)
-            new Unit { Code = "kg", Name = "Kilogramo", Symbol = "kg", Category = UnitCategory.Weight, FactorToBase = 1m },
-            new Unit { Code = "g", Name = "Gramo", Symbol = "g", Category = UnitCategory.Weight, FactorToBase = 0.001m },
-            new Unit { Code = "mg", Name = "Miligramo", Symbol = "mg", Category = UnitCategory.Weight, FactorToBase = 0.000001m },
-            new Unit { Code = "lb", Name = "Libra", Symbol = "lb", Category = UnitCategory.Weight, FactorToBase = 0.45359237m },
-            new Unit { Code = "t", Name = "Tonelada", Symbol = "t", Category = UnitCategory.Weight, FactorToBase = 1000m },
+            new Unit { Code = "kg", Name = "Kilogramo", Symbol = "kg", Category = UnitCategory.Peso, FactorToBase = 1m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "g", Name = "Gramo", Symbol = "g", Category = UnitCategory.Peso, FactorToBase = 0.001m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "mg", Name = "Miligramo", Symbol = "mg", Category = UnitCategory.Peso, FactorToBase = 0.000001m, DecimalPrecision = 6, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "lb", Name = "Libra", Symbol = "lb", Category = UnitCategory.Peso, FactorToBase = 0.45359237m, DecimalPrecision = 6, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "ozt", Name = "Onza troy", Symbol = "oz t", Category = UnitCategory.Peso, FactorToBase = 0.0311034768m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "t", Name = "Tonelada", Symbol = "t", Category = UnitCategory.Peso, FactorToBase = 1000m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
 
-            // Volumen (base: litro)
-            new Unit { Code = "L", Name = "Litro", Symbol = "L", Category = UnitCategory.Volume, FactorToBase = 1m },
-            new Unit { Code = "mL", Name = "Mililitro", Symbol = "mL", Category = UnitCategory.Volume, FactorToBase = 0.001m },
-            new Unit { Code = "m3", Name = "Metro cúbico", Symbol = "m³", Category = UnitCategory.Volume, FactorToBase = 1000m },
-            new Unit { Code = "gal", Name = "Galón", Symbol = "gal", Category = UnitCategory.Volume, FactorToBase = 3.78541m });
+            new Unit { Code = "L", Name = "Litro", Symbol = "L", Category = UnitCategory.Volumen, FactorToBase = 1m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "mL", Name = "Mililitro", Symbol = "mL", Category = UnitCategory.Volumen, FactorToBase = 0.001m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "m3", Name = "Metro cúbico", Symbol = "m³", Category = UnitCategory.Volumen, FactorToBase = 1000m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true },
+            new Unit { Code = "gal", Name = "Galón", Symbol = "gal", Category = UnitCategory.Volumen, FactorToBase = 3.78541m, DecimalPrecision = 4, RoundingMode = RoundingMode.HalfUp, IsActive = true });
 
         await context.SaveChangesAsync(cancellationToken);
     }

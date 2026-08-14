@@ -1,7 +1,9 @@
 using Convergex.Application;
+using Convergex.Application.Interfaces;
 using Convergex.Infrastructure;
 using Convergex.Persistence.Context;
 using Convergex.Persistence.Seed;
+using Convergex.Web.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -35,6 +37,8 @@ public class Program
             });
 
         builder.Services.AddAuthorization();
+        builder.Services.AddHttpContextAccessor();
+        builder.Services.AddScoped<ICurrentUserContext, HttpCurrentUserContext>();
         builder.Services.AddInfrastructure(builder.Configuration);
         builder.Services.AddApplication();
 

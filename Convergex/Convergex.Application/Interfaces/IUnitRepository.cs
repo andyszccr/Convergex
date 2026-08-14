@@ -9,6 +9,18 @@ public interface IUnitRepository
     Task<IReadOnlyList<Unit>> GetAllAsync(CancellationToken cancellationToken = default);
     Task<IReadOnlyList<Unit>> GetActiveAsync(CancellationToken cancellationToken = default);
     Task<IReadOnlyList<Unit>> GetActiveByCategoryAsync(UnitCategory category, CancellationToken cancellationToken = default);
+    Task<(IReadOnlyList<Unit> Items, int TotalCount)> GetPagedAsync(
+        UnitCategory? category,
+        string? search,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken = default);
     Task<Unit?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
     Task<Unit?> GetByCodeAsync(string code, CancellationToken cancellationToken = default);
+    Task<bool> NameExistsAsync(string name, int? excludeId = null, CancellationToken cancellationToken = default);
+    Task<bool> SymbolExistsAsync(string symbol, int? excludeId = null, CancellationToken cancellationToken = default);
+    Task AddAsync(Unit unit, CancellationToken cancellationToken = default);
+    Task UpdateAsync(Unit unit, CancellationToken cancellationToken = default);
+    Task DeleteAsync(Unit unit, CancellationToken cancellationToken = default);
+    Task SaveChangesAsync(CancellationToken cancellationToken = default);
 }

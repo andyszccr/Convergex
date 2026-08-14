@@ -2,15 +2,19 @@
 
 <article class="panel form-panel">
     <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-    <form asp-action="@(Model.IsEdit ? "Edit" : "Create")" asp-route-id="@(Model.IsEdit ? Model.Id : null)" method="post" class="row g-3">
-        <div class="col-md-4">
+    @if (Model.IsEdit)
+    {
+        <div class="alert alert-info">Al guardar se publicará una nueva tasa vigente para este par; la tasa actual pasará a estado <strong>Histórica</strong>.</div>
+    }
+    <form asp-action="@(Model.IsEdit ? "Edit" : "Create")" method="post" class="row g-3">
+        <div class="col-md-6">
             <label asp-for="BaseCurrencyId" class="form-label"></label>
             <select asp-for="BaseCurrencyId" asp-items="Model.Currencies" class="form-select">
                 <option value="">Seleccione...</option>
             </select>
             <span asp-validation-for="BaseCurrencyId" class="text-danger"></span>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <label asp-for="TargetCurrencyId" class="form-label"></label>
             <select asp-for="TargetCurrencyId" asp-items="Model.Currencies" class="form-select">
                 <option value="">Seleccione...</option>
@@ -18,12 +22,22 @@
             <span asp-validation-for="TargetCurrencyId" class="text-danger"></span>
         </div>
         <div class="col-md-4">
-            <label asp-for="Rate" class="form-label"></label>
-            <input asp-for="Rate" class="form-control" />
-            <span asp-validation-for="Rate" class="text-danger"></span>
+            <label asp-for="BuyRate" class="form-label"></label>
+            <input asp-for="BuyRate" class="form-control" type="number" step="any" />
+            <span asp-validation-for="BuyRate" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="SellRate" class="form-label"></label>
+            <input asp-for="SellRate" class="form-control" type="number" step="any" />
+            <span asp-validation-for="SellRate" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="EffectiveAt" class="form-label"></label>
+            <input asp-for="EffectiveAt" class="form-control" type="datetime-local" />
+            <span asp-validation-for="EffectiveAt" class="text-danger"></span>
         </div>
         <div class="col-12 d-flex gap-2">
-            <button type="submit" class="btn btn-primary-cx">@(Model.IsEdit ? "Guardar" : "Crear")</button>
+            <button type="submit" class="btn btn-primary-cx">@(Model.IsEdit ? "Publicar nueva tasa" : "Crear")</button>
             <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
         </div>
     </form>

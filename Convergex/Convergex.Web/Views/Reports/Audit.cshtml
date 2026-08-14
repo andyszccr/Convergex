@@ -1,0 +1,163 @@
+@model Convergex.Web.ViewModels.Reports.AuditReportViewModel
+@using Convergex.Domain.Enums
+@{
+    ViewData["Title"] = "Reportes - Auditoría";
+    ViewData["ActiveTab"] = "audit";
+    var f = Model.Filter;
+}
+
+<section class="module-page">
+    <div class="module-header">
+        <div>
+            <h1>Centro de Reportes</h1>
+            <p>Consulta, previsualiza y exporta la información operativa y estratégica de Convergex.</p>
+        </div>
+        <div class="module-actions">
+            <a asp-action="Export" asp-route-report="audit" asp-route-format="pdf"
+               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+               asp-route-keyword="@f.Keyword" asp-route-eventType="@f.EventType" asp-route-entityName="@f.EntityName"
+               class="btn btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> Exportar PDF</a>
+            <a asp-action="Export" asp-route-report="audit" asp-route-format="excel"
+               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+               asp-route-keyword="@f.Keyword" asp-route-eventType="@f.EventType" asp-route-entityName="@f.EntityName"
+               class="btn btn-outline-success"><i class="bi bi-file-earmark-excel"></i> Exportar Excel</a>
+        </div>
+    </div>
+
+    <partial name="_ReportTabs" />
+
+    <div class="kpi-grid">
+        <article class="stat-card">
+            <div class="stat-icon bg-blue"><i class="bi bi-shield-check"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Eventos totales</span>
+                <strong class="stat-value">@Model.Report.TotalEvents.ToString("N0")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-green"><i class="bi bi-check-circle"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Exitosos</span>
+                <strong class="stat-value">@Model.Report.SuccessCount.ToString("N0")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-orange"><i class="bi bi-x-circle"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Fallidos</span>
+                <strong class="stat-value">@Model.Report.FailedCount.ToString("N0")</strong>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-icon bg-violet"><i class="bi bi-bar-chart"></i></div>
+            <div class="stat-body">
+                <span class="stat-label">Evento más frecuente</span>
+                <strong class="stat-value" style="font-size:1.1rem">@(Model.Report.CountsByAction.FirstOrDefault()?.ActionName ?? "—")</strong>
+            </div>
+        </article>
+    </div>
+
+    <article class="panel form-panel">
+        <form method="get" class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Buscar</label>
+                <input name="keyword" value="@f.Keyword" class="form-control" placeholder="Usuario, IP o detalle..." />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Tipo de evento</label>
+                <select name="eventType" class="form-select">
+                    <option value="" selected="@(f.EventType is null)">Todos</option>
+                    <option value="Create" selected="@(f.EventType == AuditAction.Create)">Creación</option>
+                    <option value="Update" selected="@(f.EventType == AuditAction.Update)">Edición</option>
+                    <option value="Delete" selected="@(f.EventType == AuditAction.Delete)">Eliminación</option>
+                    <option value="Login" selected="@(f.EventType == AuditAction.Login)">Inicio de sesión</option>
+                    <option value="LoginFailed" selected="@(f.EventType == AuditAction.LoginFailed)">Inicio fallido</option>
+                    <option value="Logout" selected="@(f.EventType == AuditAction.Logout)">Cierre de sesión</option>
+                    <option value="Conversion" selected="@(f.EventType == AuditAction.Conversion)">Conversión</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Módulo</label>
+                <select name="entityName" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="Moneda" selected="@(f.EntityName == "Moneda")">Monedas</option>
+                    <option value="Unidad" selected="@(f.EntityName == "Unidad")">Unidades</option>
+                    <option value="TasaDeCambio" selected="@(f.EntityName == "TasaDeCambio")">Tasas de cambio</option>
+                    <option value="Usuario" selected="@(f.EntityName == "Usuario")">Usuarios</option>
+                    <option value="Rol" selected="@(f.EntityName == "Rol")">Roles</option>
+                    <option value="Conversion" selected="@(f.EntityName == "Conversion")">Conversiones</option>
+                    <option value="Auth" selected="@(f.EntityName == "Auth")">Autenticación</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Desde</label>
+                <input type="date" name="fromDate" value="@(f.FromDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Hasta</label>
+                <input type="date" name="toDate" value="@(f.ToDate?.ToString("yyyy-MM-dd"))" class="form-control" />
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary-cx">Filtrar</button>
+            </div>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Usuario</th>
+                        <th>Evento</th>
+                        <th>Módulo</th>
+                        <th>Entidad</th>
+                        <th>IP</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if (!Model.Report.Items.Any())
+                {
+                    <tr><td colspan="7" class="empty-cell">No hay eventos para los filtros seleccionados.</td></tr>
+                }
+                else
+                {
+                    foreach (var item in Model.Report.Items)
+                    {
+                        <tr>
+                            <td>@item.Timestamp.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss")</td>
+                            <td>@item.UserName</td>
+                            <td>@item.ActionName</td>
+                            <td>@item.EntityName</td>
+                            <td>@(item.EntityId ?? "—")</td>
+                            <td>@(item.IpAddress ?? "—")</td>
+                            <td>
+                                <span class="pill @(item.StatusName == "Éxito" ? "pill-green" : "pill-red")">@item.StatusName</span>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.TotalPages > 1)
+        {
+            <nav aria-label="Paginación de reporte" class="mt-3">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (var p = 1; p <= Model.TotalPages; p++)
+                    {
+                        <li class="page-item @(p == f.Page ? "active" : "")">
+                            <a class="page-link" asp-action="Audit"
+                               asp-route-fromDate="@(f.FromDate?.ToString("yyyy-MM-dd"))" asp-route-toDate="@(f.ToDate?.ToString("yyyy-MM-dd"))"
+                               asp-route-keyword="@f.Keyword" asp-route-eventType="@f.EventType" asp-route-entityName="@f.EntityName"
+                               asp-route-page="@p">@p</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    </article>
+</section>
