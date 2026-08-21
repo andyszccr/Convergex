@@ -77,7 +77,7 @@ public class ClosedXmlReportGenerator : IExcelReportGenerator
                 }
                 else
                 {
-                    cell.Value = value.DisplayText;
+                    cell.Value = SanitizeForSpreadsheet(value.DisplayText);
                 }
             }
         }
@@ -96,6 +96,18 @@ public class ClosedXmlReportGenerator : IExcelReportGenerator
         using var stream = new MemoryStream();
         workbook.SaveAs(stream);
         return stream.ToArray();
+    }
+
+    private static string SanitizeForSpreadsheet(string? value)
+    {
+        if (string.IsNullOrEmpty(value))
+        {
+            return value ?? string.Empty;
+        }
+
+        return value[0] is '=' or '+' or '-' or '@' or '\t' or '\r'
+            ? "'" + value
+            : value;
     }
 
     private static string TruncateSheetName(string value)

@@ -29,6 +29,11 @@ public class HistoryController : Controller
         CancellationToken cancellationToken,
         int page = 1)
     {
+        if (!User.IsInRole("Administrador"))
+        {
+            userName = User.Identity?.Name;
+        }
+
         var settings = await _settingService.GetAsync(cancellationToken);
 
         DateTime? fromUtc = fromDate.HasValue

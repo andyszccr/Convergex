@@ -28,8 +28,8 @@ public class ReportService : IReportService
     public async Task<ConversionsReportDto> GetConversionsReportAsync(
         ConversionsReportFilterDto filter, CancellationToken cancellationToken = default)
     {
-        var items = await _conversionRepository.GetHistoryAsync(
-            filter.Type, filter.UserName, filter.FromUtc, filter.ToUtc, cancellationToken);
+        var (items, _) = await _conversionRepository.GetHistoryPagedAsync(
+            filter.Type, filter.UserName, filter.FromUtc, filter.ToUtc, 1, ExportRowCap, cancellationToken);
 
         if (!string.IsNullOrWhiteSpace(filter.CurrencyCode))
         {
@@ -168,8 +168,8 @@ public class ReportService : IReportService
         UsersActivityReportFilterDto filter, CancellationToken cancellationToken = default)
     {
         var users = await _userRepository.GetAllAsync(cancellationToken);
-        var conversions = await _conversionRepository.GetHistoryAsync(
-            null, null, filter.FromUtc, filter.ToUtc, cancellationToken);
+        var (conversions, _) = await _conversionRepository.GetHistoryPagedAsync(
+            null, null, filter.FromUtc, filter.ToUtc, 1, ExportRowCap, cancellationToken);
 
         var query = users.AsEnumerable();
         if (filter.RoleId.HasValue)

@@ -1,3 +1,4 @@
+using Convergex.Application.Common;
 using Convergex.Application.DTOs.Units;
 using Convergex.Application.Interfaces;
 using Convergex.Domain.Entities;
@@ -61,7 +62,7 @@ public class UnitConversionService : IUnitConversionService
             return (false, "No se puede convertir entre estas unidades.", null);
         }
 
-        var resultValue = Math.Round(request.Amount * rate, 6);
+        var resultValue = DecimalFormatter.Round(request.Amount * rate, to.DecimalPrecision, to.RoundingMode);
 
         var conversion = new Conversion
         {

@@ -1,3 +1,17 @@
 node_modules/
 .DS_Store
 netlify/functions/node_modules
+
+# .NET build output
+bin/
+obj/
+*.user
+
+# Visual Studio
+.vs/
+
+# Runtime data (local SQLite DB, logs)
+*.db
+*.db-shm
+*.db-wal
+Convergex.Web/Logs/

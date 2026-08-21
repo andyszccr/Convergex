@@ -31,10 +31,13 @@
                     <option value="Unit">Unidad</option>
                 </select>
             </div>
-            <div class="col-md-3">
-                <label class="form-label">Usuario</label>
-                <input name="userName" value="@Model.UserName" class="form-control" />
-            </div>
+            @if (User.IsInRole("Administrador"))
+            {
+                <div class="col-md-3">
+                    <label class="form-label">Usuario</label>
+                    <input name="userName" value="@Model.UserName" class="form-control" />
+                </div>
+            }
             <div class="col-md-3">
                 <label class="form-label">Desde</label>
                 <input type="date" name="fromDate" value="@(Model.FromDate?.ToString("yyyy-MM-dd"))" class="form-control" />

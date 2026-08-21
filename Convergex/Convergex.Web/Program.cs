@@ -36,7 +36,7 @@ public class Program
 
         try
         {
-            Log.Information("Iniciando aplicación Convergex");
+            Log.Information("Iniciando aplicaciÃ³n Convergex");
 
             builder.Services
                 .AddControllersWithViews(options =>
@@ -75,7 +75,7 @@ public class Program
             app.UseSerilogRequestLogging(options =>
             {
                 options.MessageTemplate =
-                    "HTTP {RequestMethod} {RequestPath} respondió {StatusCode} en {Elapsed:0.0000} ms";
+                    "HTTP {RequestMethod} {RequestPath} respondiÃ³ {StatusCode} en {Elapsed:0.0000} ms";
                 options.GetLevel = (httpContext, elapsed, ex) =>
                 {
                     if (ex is not null || httpContext.Response.StatusCode >= 500)
@@ -93,7 +93,7 @@ public class Program
                 options.EnrichDiagnosticContext = (diagnosticContext, httpContext) =>
                 {
                     diagnosticContext.Set("RemoteIpAddress", httpContext.Connection.RemoteIpAddress?.ToString());
-                    diagnosticContext.Set("UserName", httpContext.User.Identity?.Name ?? "Anónimo");
+                    diagnosticContext.Set("UserName", httpContext.User.Identity?.Name ?? "AnÃ³nimo");
                 };
             });
 
@@ -116,11 +116,11 @@ public class Program
         }
         catch (Exception ex)
         {
-            Log.Fatal(ex, "La aplicación Convergex terminó inesperadamente");
+            Log.Fatal(ex, "La aplicaciÃ³n Convergex terminÃ³ inesperadamente");
         }
         finally
         {
-            Log.Information("Cerrando aplicación Convergex");
+            Log.Information("Cerrando aplicaciÃ³n Convergex");
             await Log.CloseAndFlushAsync();
         }
     }

@@ -19,9 +19,10 @@ public class ExchangeRateRepository : IExchangeRateRepository
         => _context.ExchangeRates.Include(x => x.BaseCurrency).Include(x => x.TargetCurrency);
 
     public Task<ExchangeRate?> GetActiveByPairAsync(int baseCurrencyId, int targetCurrencyId, CancellationToken cancellationToken = default)
-        => Query().FirstOrDefaultAsync(
-            x => x.BaseCurrencyId == baseCurrencyId && x.TargetCurrencyId == targetCurrencyId && x.Status == ExchangeRateStatus.Active,
-            cancellationToken);
+        => Query()
+            .Where(x => x.BaseCurrencyId == baseCurrencyId && x.TargetCurrencyId == targetCurrencyId && x.Status == ExchangeRateStatus.Active)
+            .OrderByDescending(x => x.EffectiveAt)
+            .FirstOrDefaultAsync(cancellationToken);
 
     public async Task<IReadOnlyList<ExchangeRate>> GetActiveAsync(CancellationToken cancellationToken = default)
         => await Query().AsNoTracking()

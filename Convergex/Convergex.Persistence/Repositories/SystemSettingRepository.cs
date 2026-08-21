@@ -19,6 +19,7 @@ public class SystemSettingRepository : ISystemSettingRepository
     {
         return _context.SystemSettings
             .AsNoTracking()
+            .OrderBy(s => s.Id)
             .FirstOrDefaultAsync(cancellationToken);
     }
 

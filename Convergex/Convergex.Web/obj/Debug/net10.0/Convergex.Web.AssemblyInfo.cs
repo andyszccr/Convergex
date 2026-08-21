@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Convergex.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b89439cc4e7918c6b94852dc974a769937aed196")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82b47d8139a3f9d9ecf3354b75d451e773bd907d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Convergex.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Convergex.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
